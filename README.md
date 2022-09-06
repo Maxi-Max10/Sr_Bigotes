@@ -2,7 +2,7 @@
 
 <hr>
 <div>
-	<h3>Technologias</h3>
+	<h3>Tecnologias</h3>
   	<ul>
 		<li>HTML & CSS</li>
 		<li>Bootstrap</li>
