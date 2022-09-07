@@ -19,12 +19,14 @@
 		Password: 2609
 	</p>
 	<p>
+<<<<<<< HEAD
 		Maximiliano Alderete
+=======
+		Maximiliano Alderete hola
+>>>>>>> acffd089e2a1d0e3e312c1a93464706cff04ce11
 		
-		<br>
 		Veronica Naranjo
 		
-		<br>
 		Nadia Lema
 	</p>
 	
