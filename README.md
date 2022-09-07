@@ -20,7 +20,9 @@
 	</p>
 	<p>
 		Maximiliano Alderete
+		
 		<br>
+		Veronica Naranjo
 		
 	</p>
 	
