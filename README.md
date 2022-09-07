@@ -23,17 +23,14 @@
 		 
 		
 
-=======
-=======
+
 		Maximiliano Alderete hola
->>>>>>> acffd089e2a1d0e3e312c1a93464706cff04ce11
 		
 		Veronica Naranjo
->>>>>>> 61639a6ed1901ba422bcc6a645e04166094019be
 		
 		Nadia Lema
-
 	
-	Maria Martinez 
+	 	Maria Martinez 
+		
 	
 </div>
