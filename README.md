@@ -21,6 +21,7 @@
 	<p>
 		Maximiliano Alderete
 		<br>
+		Daiana Ceron
 		
 	</p>
 	
