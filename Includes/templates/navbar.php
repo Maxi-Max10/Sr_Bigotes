@@ -43,7 +43,7 @@
             </li>
             <li style="display: inline-block;">
                 <a class="mob-close-toggle" style="cursor: pointer;width: 75px;">
-                    <i class="fas fa-times" style="color: white;"></i>
+                    <i class="fas fa-times" style="color: rgb(247, 10, 10);"></i>
                 </a>
             </li>
         </ul>
@@ -51,7 +51,7 @@
             <ul id="mobile-menu" class="menu">
                 <li>
                     <a href="index.php#home-section" class="a-mob-menu">
-                        HOME
+                        INICIO
                     </a>
                 </li>
                 <li>
