@@ -19,16 +19,21 @@
 		Password: 2609
 	</p>
 	<p>
-		Maximiliano Alderete
-<<<<<<< HEAD
-		<br>
-		Maria Martinez 
+
+		 
 		
+
 =======
->>>>>>> e27f07be02276ac99d30494959f6e23a490156bb
+=======
+		Maximiliano Alderete hola
+>>>>>>> acffd089e2a1d0e3e312c1a93464706cff04ce11
 		
-		<br>
+		Veronica Naranjo
+>>>>>>> 61639a6ed1901ba422bcc6a645e04166094019be
+		
 		Nadia Lema
-	</p>
+
+	
+	Maria Martinez 
 	
 </div>
