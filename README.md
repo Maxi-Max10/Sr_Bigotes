@@ -20,8 +20,9 @@
 	</p>
 	<p>
 		Maximiliano Alderete
-		<br>
 		
+		<br>
+		Nadia Lema
 	</p>
 	
 </div>
