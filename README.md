@@ -20,10 +20,15 @@
 	</p>
 	<p>
 		Maximiliano Alderete
+<<<<<<< HEAD
 		
 		<br>
 		Veronica Naranjo
+=======
+>>>>>>> e27f07be02276ac99d30494959f6e23a490156bb
 		
+		<br>
+		Nadia Lema
 	</p>
 	
 </div>
