@@ -19,11 +19,6 @@
 		Password: 2609
 	</p>
 	<p>
-
-		 
-		
-
-
 		Maximiliano Alderete hola
 		
 		Veronica Naranjo
@@ -31,7 +26,7 @@
 		Nadia Lema
 	
 	 	Maria Martinez 
-		
+
 		Daiana Ceron
 	
 </div>
