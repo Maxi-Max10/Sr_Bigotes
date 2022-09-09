@@ -13,7 +13,7 @@
                         <ul class="nav">
                             <li><a href="./#home-section">HOME</a></li>
                             <li><a href="./#about">ABOUT</a></li>
-                            <li><a href="./#services">SERVICES</a></li>
+                            <li><a href="./#services">NADIA</a></li>
                             <li><a href="./#gallery">GALLERY</a></li>
                             <li><a href="./#pricing">PRICING</a></li>
                             <li><a href="./#contact-us">CONTACT</a></li>
