@@ -12,7 +12,7 @@
                     <div class="mainmenu" id="mainmenu">
                         <ul class="nav">
                             <li><a href="./#home-section">INICIO</a></li>
-                            <li><a href="./#about">NADIA</a></li>
+                            <li><a href="./#about">NADIA FANTASMA</a></li>
                             <li><a href="./#services">SERVICIOS</a></li>
                             <li><a href="./#gallery">GALERIA</a></li>
                             <li><a href="./#pricing">PRECIOS</a></li>
