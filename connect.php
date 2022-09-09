@@ -2,7 +2,7 @@
     $dsn = 'mysql:host=localhost:3306;dbname=barbershop';
 	$user = 'root';
 	$pass = '';
-	$option = array(
+	/*$option = array(
 		PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
 	);
 	try
@@ -15,5 +15,5 @@
 	{
 		echo "Failed to connect with database ! ".$ex->getMessage();
 		die();
-	}
+	}*/
 ?>
