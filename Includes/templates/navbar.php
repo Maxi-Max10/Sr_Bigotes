@@ -12,11 +12,11 @@
                     <div class="mainmenu" id="mainmenu">
                         <ul class="nav">
                             <li><a href="./#home-section">HOME</a></li>
-                            <li><a href="./#about">ABOUT</a></li>
-                            <li><a href="./#services">SERVICES</a></li>
-                            <li><a href="./#gallery">GALLERY</a></li>
-                            <li><a href="./#pricing">PRICING</a></li>
-                            <li><a href="./#contact-us">CONTACT</a></li>
+                            <li><a href="./#about">NOSOTROS</a></li>
+                            <li><a href="./#services">SERVICIOS</a></li>
+                            <li><a href="./#gallery">GALERIA</a></li>
+                            <li><a href="./#pricing">PRECIOS</a></li>
+                            <li><a href="./#contact-us">CONTACTO</a></li>
                         </ul>
                     </div>
                     <div class="header-btn" style="margin-left:10px">
