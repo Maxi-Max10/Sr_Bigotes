@@ -31,10 +31,12 @@
 	<!-- BODY -->
 	
 	
-		<body>
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-			<a href="https://api.whatsapp.com/send?phone=2613353956&text=Hola%20Bienvenido" class="float" target="_blank">
-			<i class="fa fa-whatsapp my-float"></i>
-			</a>
+		<body>maxcdn
+			<div class="home-section" id="home-section">
+				<link rel="stylesheet" href="https://.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+				<a href="https://api.whatsapp.com/send?phone=2613353956&text=Hola%20Bienvenido" class="float" target="_blank">
+				<i class="fa fa-whatsapp my-float"></i>
+				</a>
+			</div>			
 		</body>
 	

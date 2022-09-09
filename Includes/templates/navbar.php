@@ -11,12 +11,12 @@
                 <div class="d-flex menu-wrap align-items-center main-menu-container">
                     <div class="mainmenu" id="mainmenu">
                         <ul class="nav">
-                            <li><a href="./#home-section">HOME</a></li>
-                            <li><a href="./#about">ABOUT</a></li>
-                            <li><a href="./#services">NADIA</a></li>
-                            <li><a href="./#gallery">GALLERY</a></li>
-                            <li><a href="./#pricing">PRICING</a></li>
-                            <li><a href="./#contact-us">CONTACT</a></li>
+                            <li><a href="./#home-section">INICIO</a></li>
+                            <li><a href="./#about">NADIA</a></li>
+                            <li><a href="./#services">SERVICIOS</a></li>
+                            <li><a href="./#gallery">GALERIA</a></li>
+                            <li><a href="./#pricing">PRECIOS</a></li>
+                            <li><a href="./#contact-us">CONTACTO</a></li>
                         </ul>
                     </div>
                     <div class="header-btn" style="margin-left:10px">
@@ -56,32 +56,32 @@
                 </li>
                 <li>
                     <a href="index.php#about" class="a-mob-menu">
-                        About Us
+                        Nosotros
                     </a>
                 </li>
                 <li>
                     <a href="index.php#services" class="a-mob-menu">
-                        Services
+                        Servicios
                     </a>
                 </li>
                 <li>
                     <a href="appointment.php" class="a-mob-menu">
-                        Book Now
+                        Turnos
                     </a>
                 </li>
                 <li>
                     <a href="index.php#gallery" class="a-mob-menu">
-                        GALLERY
+                        Galeria
                     </a>
                 </li>
                 <li>
                     <a href="index.php#pricing" class="a-mob-menu">
-                        PRICING
+                        Precios
                     </a>
                 </li>
                 <li>
                     <a href="index.php#contact-us" class="a-mob-menu">
-                        Contact US
+                        Contactos
                     </a>
                 </li>
 
