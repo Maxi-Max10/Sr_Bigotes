@@ -10,13 +10,10 @@
 ?>
 
     <!-- HOME SECTION -->
-    
-
 
     <section class="home-section" id="home-section">
 	    <div class="home-section-content">
 		    <div id="home-section-carousel" class="carousel slide" data-ride="carousel">
-                
                 <ol class="carousel-indicators">
                     <li data-target="#home-section-carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#home-section-carousel" data-slide-to="1"></li>
@@ -69,11 +66,9 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-                
             </div>
 		</div>
 	</section>
-   
 
     <!-- ABOUT SECTION -->
 
