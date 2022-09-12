@@ -112,46 +112,9 @@ body
 
 /*** END ABOUT SECTION STYLE ***/
 
-/*** START SERVICES SECTION STYLE ***/
-
-.services_section
-{
-    padding: 80px 0px; 
-    background-color: #fcf9f5;
-}
-
-.service_box 
-{
-    background-color: #fff;
-    padding: 40px 30px;
-    text-align: center;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
-    box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
-}
-
-.service_box i 
-{
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #9e8a78;
-    display: block;
-}
-
-/*** END SERVICES SECTION STYLE ****/
-
-/*** START HEADING LINE STYLE ***/
 
 
-.heading-line 
-{
-    margin-top: 20px;
-    height: 10px;
-    background: url(../images/heading-line.png) center center no-repeat;
-    position: relative;
-}
 
-/*** END HEADING LINE STYLE ***/
 
 /*** START BOOKING SECTION STYLE ***/
 
@@ -298,38 +261,6 @@ body
 /*** END BOOKING SECTION STYLE ***/
 
 
-/*** START GALLERY SECTION STYLE ***/
-
-.gallery-section
-{
-    border-bottom: 2px solid #eee;
-    background-color: #fcf9f5;
-    padding: 80px 0;
-}
-
-.gallery-section .gallery-img
-{
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    background-position: 50%;
-    background-repeat: no-repeat;
-}
-
-.gallery-section .gallery-column
-{
-    padding: 0px 5px !important;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.gallery-section .gallery-column:hover 
-{
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
-}
-
-/*** END GALLERY SECTION STYLE ***/
 
 
 

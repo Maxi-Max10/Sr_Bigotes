@@ -1,0 +1,12 @@
+/*** START HEADING LINE STYLE ***/
+
+
+.heading-line 
+{
+    margin-top: 20px;
+    height: 10px;
+    background: url(../images/heading-line.png) center center no-repeat !important;
+    position: relative;
+}
+
+/*** END HEADING LINE STYLE ***/

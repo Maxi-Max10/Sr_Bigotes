@@ -8,7 +8,7 @@
                         <script type="text/javascript"> 
                             document.write(new Date().getFullYear())
                         </script>
-                        Copyright Señor Bigote 
+                        Copyright all rights reserver | Señor Bigotes
                     </div>
                 </div>
                 </div>

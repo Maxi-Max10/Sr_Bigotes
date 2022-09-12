@@ -82,9 +82,9 @@
                         <h2>Señor Bigotes <br>Science 1991</h2>
                         <img src="Design/images/about-logo.png" alt="logo">
                         <p style="color: #777">
-                            Barber is a person whose occupation is mainly to cut dress groom style and shave men's and boys' hair. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops are also places of social interaction and public discourse. In some instances, barbershops are also public forums.
+                        El peluquero es una persona cuya ocupación es principalmente cortar el cabello al estilo de los novios y afeitar el cabello de hombres y niños. El lugar de trabajo de un barbero se conoce como "barbería". Las barberías también son lugares de interacción social y discurso público. En algunos casos, las peluquerías también son foros públicos.
                         </p>
-                        <a href="#" class="default_btn" style="opacity: 1;">More about us</a>
+                        <a href="#" class="default_btn" style="opacity: 1;">Acerca de nosotros</a>
                     </div>
                 </div>
                 <div class="col-md-6  d-none d-md-block">
@@ -179,7 +179,7 @@
 
     <section class="gallery-section" id="gallery">
         <div class="section_heading">
-            <h3>Trendy Salon & Spa</h3>
+            
             <h2>Galeria</h2>
             <div class="heading-line"></div>
         </div>
@@ -234,8 +234,8 @@
     <section id="team" class="team_section">
         <div class="container">
             <div class="section_heading ">
-                <h3>Trendy Salon & Spa</h3>
-                <h2>Our Barbers</h2>
+                
+                <h2>Nuestros Peluqueros</h2>
                 <div class="heading-line"></div>
             </div>
             <ul class="team_members row"> 
@@ -269,20 +269,22 @@
         <div class="container">
             <div id="reviews-carousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
+                    <!--
                     <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#reviews-carousel" data-slide-to="1"></li>
                     <li data-target="#reviews-carousel" data-slide-to="2"></li>
+                    -->
                 </ol>
                 <div class="carousel-inner">
                     <!-- REVIEW 1 -->
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide" style="visibility: hidden;">
                         <div class="carousel-caption d-md-block">
-                            <h3>Hola</h3>
+                            <h3>La mejor propina es un cliente satisfecho</h3>
                             <p>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti aut ex nihil ratione distinctio perspiciatis quidem voluptatibus soluta voluptas,
+                               La vida se ve mejor después de un corte de cabello.
                                 <br>
-                                obcaecati, libero odio laborum doloribus quaerat earum quis sapiente. Suscipit!
+                                
                             </p>
                         </div>
                     </div>

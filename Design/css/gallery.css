@@ -1,0 +1,32 @@
+/*** START GALLERY SECTION STYLE ***/
+
+.gallery-section
+{
+    border-bottom: 2px solid #eee;
+    background-color: #61616130;
+    padding: 80px 0;
+}
+
+.gallery-section .gallery-img
+{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.gallery-section .gallery-column
+{
+    padding: 0px 5px !important;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.gallery-section .gallery-column:hover 
+{
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+/*** END GALLERY SECTION STYLE ***/
