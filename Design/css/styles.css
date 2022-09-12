@@ -1,0 +1,127 @@
+/*** START SECTION HEADING STYLE ***/
+
+.section_heading
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section_heading h3
+{
+    color: #9e8a78;
+    font-weight: 400;
+    font-family: 'Prata', sans-serif;
+    font-size: 17px;
+}
+
+.section_heading h2
+{
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+/*** END SECTION HEADING STYLE ***/
+
+
+/*** START TEAM SECTION STYLE ***/
+
+.team_section
+{
+    border-bottom: 2px solid #eee;
+    padding:80px 0px;
+}
+
+.team_section .team_members .team_member 
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.team_section .team_members .team_member img 
+{
+    width: 100%;
+}
+
+/*** END TEAM SECTION STYLE ***/
+
+/*** START REVIEWS SECTION STYLE ***/
+
+.testimonial_section 
+{
+    background-image: url(../images/testimonial.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    /*padding: 200px 0;*/
+}
+
+/*** END REVIEWS SECTION STYLE ****/
+
+/*** START PRICING SECTION STYLE ***/
+
+.pricing_section
+{
+	border-bottom: 2px solid #eee;
+    background-color: #fcf9f5;
+    padding: 80px 0;
+}
+.pricing_section .price_wrap h3 
+{
+    background-color: #080808;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+.pricing_section .price_wrap .price_list li 
+{
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.pricing_section .price_wrap .price_list li h4 
+{
+    position: relative;
+    color: #333;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.pricing_section .price_wrap .price_list li h4:after 
+{
+    color: #bbb;
+    content: "" ;
+    font-weight: normal;
+    margin-left: 10px;
+    position: absolute;
+    top: -2px;
+    white-space: nowrap;
+    width: 0;
+}
+
+.pricing_section .price_wrap .price_list li p 
+{
+    margin: 0;
+    color: #777;
+}
+
+.pricing_section .price_wrap .price_list li span.price 
+{
+    font-family: "Prata",sans-serif;
+    font-size: 24px;
+    color: #949494;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*** END PRICING SECTION STYLE ***/

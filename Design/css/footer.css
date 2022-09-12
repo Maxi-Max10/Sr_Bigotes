@@ -1,0 +1,179 @@
+
+/*** START WIDGET SECTION - FOOTER STYLE ***/
+
+.widget_section
+{
+    background: #360033;  
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);  
+    background: linear-gradient(to right, #0b8793, #360033); 
+    padding: 100px 0;
+}
+
+.widget_social 
+{
+    display: block;
+    text-align: left;
+}
+.widget_social li 
+{
+    display: inline-block;
+}
+.widget_social li a 
+{
+    color: rgba(20, 20, 23, 0.88);
+    font-size: 12px;
+    margin-right: 20px;
+}
+.footer_widget p 
+{
+    color: rgb(175, 175, 175);
+}
+.footer_widget h3 
+{
+    color: #fff;
+}
+.subscribe_form 
+{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+.subscribe_form .form_input 
+{
+    display: block;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 10px;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.opening_time li 
+{
+    color: #999;
+    line-height: 35px;
+}
+.subscribe_form .submit 
+{
+    background-color: #9e8a78;
+    color: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 10px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.subscribe_form .submit:hover 
+{
+    background-color: #897666;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*** END WIDGET SECTION - FOOTER STYLE ***/
+
+/*** START CONTACT US SECTION STYLE ***/
+
+.contact-section
+{
+	padding:100px 0px;
+}
+
+.contact-info h2
+{
+	font-size: 36px;
+	color: #303133;
+	margin: 0 0 8px;
+	font-weight: 400;
+	line-height: 48px;
+	letter-spacing: -0.04em;
+	font-family: 'Prata', sans-serif;
+}
+
+.contact-info h3 
+{
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info h4 
+{
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.contact-form 
+{
+    background-color: #fff;
+    padding: 50px 40px;
+    -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+    box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+    border-radius: 3px;
+}
+
+.form-control
+{
+    background-color: #fff;
+    border-radius: 0;
+    padding: 25px 10px;
+    box-shadow: none;
+    border: 2px solid #eee;
+}
+
+.form-control:focus 
+{
+    border-color: #9e8a78;
+    box-shadow: none;
+    outline: none;
+}
+
+
+
+/*** END CONTACT US SECTION STYLE ***/
+
+/*** START FOOTER BOTTOM STYLE ***/
+
+
+.footer_section 
+{
+    display: block;
+    background: #000000;  
+    padding: 30px 0;
+}
+
+.footer_section .copyright 
+{
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer_social 
+{
+    display: block;
+    text-align: right;
+}
+
+.footer_social li 
+{
+    display: inline-block;
+}
+.footer_social li a 
+{
+    font-family: "Work Sans",sans-serif;
+    color: #ddd;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+/*** END FOOTER BOTTOM STYLE ***/
