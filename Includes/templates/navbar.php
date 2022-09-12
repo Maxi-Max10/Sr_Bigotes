@@ -51,37 +51,37 @@
             <ul id="mobile-menu" class="menu">
                 <li>
                     <a href="index.php#home-section" class="a-mob-menu">
-                        HOME
+                        INICIO
                     </a>
                 </li>
                 <li>
                     <a href="index.php#about" class="a-mob-menu">
-                        About Us
+                        SOBRE NOSOTROS
                     </a>
                 </li>
                 <li>
                     <a href="index.php#services" class="a-mob-menu">
-                        Services
+                        SERVICIOS
                     </a>
                 </li>
                 <li>
                     <a href="appointment.php" class="a-mob-menu">
-                        Book Now
+                        RESERVA
                     </a>
                 </li>
                 <li>
                     <a href="index.php#gallery" class="a-mob-menu">
-                        GALLERY
+                        GALERIA
                     </a>
                 </li>
                 <li>
                     <a href="index.php#pricing" class="a-mob-menu">
-                        PRICING
+                        PRECIOS
                     </a>
                 </li>
                 <li>
                     <a href="index.php#contact-us" class="a-mob-menu">
-                        Contact US
+                        CONTACTOS
                     </a>
                 </li>
 

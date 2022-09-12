@@ -735,9 +735,9 @@ a.mob-menu-toggle
     z-index: 10000;
     text-decoration: none !important;
     text-align: center;
-    box-shadow: 0 0px 30px 0 rgba(0,0,0,.12);
+    box-shadow: 0 0px 30px 0 #3114b44b;
     border-radius: 50%;
-    background: #9e8a78;
+    background: #0a0a0a;
 }
 
 
@@ -760,7 +760,9 @@ a.mob-menu-toggle
     transform: translate(0, 0);
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
-    background: #333333 !important;
+    background: #360033;  
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);  
+    background: linear-gradient(to right, #0b8793, #360033); 
     overflow: hidden;
     padding-top: 20px;
     padding-bottom: 80px;
