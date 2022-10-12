@@ -10,7 +10,7 @@
 		<meta name="author" content="">
 		<title>Señor Bigotes</title>
 
-		<!-- EXTERNAL CSS LINKS -->
+		<!-- LINKS EXTERNOS DE CSS-->
 
 		<link rel="stylesheet" type="text/css" href="Design/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="Design/fonts/css/all.min.css">
@@ -21,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="Design/css/gallery.css">
 		<link rel="stylesheet" type="text/css" href="Design/css/service.css">
 		<link rel="stylesheet" type="text/css" href="Design/css/heading.css">
+		<link rel="stylesheet" type="text/css" href="Design/css/booking.css">
 		
 		<link rel="stylesheet" type="text/css" href="Design/css/responsive.css">
 		<link rel="stylesheet" type="text/css" href="Design/css/barber-icons.css">

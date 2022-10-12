@@ -100,7 +100,7 @@
 
     <!-- SERVICES SECTION -->
 
-    <section class="services_section" id="services">
+    <section class="services_section" id="servicios">
         <div class="container">
             <div class="section_heading">
                 
@@ -338,7 +338,7 @@
 
             <?php
 
-                $stmt = $con->prepare("Select * from service_categories");
+                $stmt = $con->prepare("Select * from categoria_servicios");
                 $stmt->execute();
                 $categories = $stmt->fetchAll();
 
@@ -357,10 +357,10 @@
 
                     foreach($categories as $category)
                     {
-                        $stmt = $con->prepare("Select * from services where category_id = ?");
-                        $stmt->execute(array($category['category_id']));
+                        $stmt = $con->prepare("Select * from servicios where id_categoria = ?");
+                        $stmt->execute(array($category['id_categoria']));
                         $totalServices =  $stmt->rowCount();
-                        $services = $stmt->fetchAll();
+                        $servicios = $stmt->fetchAll();
 
                         if($totalServices > 0)
                         {
@@ -368,18 +368,18 @@
 
                             <div class="col-lg-4 col-md-6 sm-padding">
                                 <div class="price_wrap">
-                                    <h3><?php echo $category['category_name'] ?></h3>
+                                    <h3><?php echo $category['nombre_categoria'] ?></h3>
                                     <ul class="price_list">
                                         <?php
 
-                                            foreach($services as $service)
+                                            foreach($servicios as $service)
                                             {
                                                 ?>
 
                                                     <li>
-                                                        <h4><?php echo $service['service_name'] ?></h4>
-                                                        <p><?php echo $service['service_description'] ?></p>
-                                                        <span class="price">$<?php echo $service['service_price'] ?></span>
+                                                        <h4><?php echo $service['nombre_servicio'] ?></h4>
+                                                        <p><?php echo $service['descripcion_servicio'] ?></p>
+                                                        <span class="price">$<?php echo $service['precio_servicio'] ?></span>
                                                     </li>
 
                                                 <?php
@@ -474,7 +474,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="footer_widget">
-                        <img src="Design/images/bigote.logo.png" alt="Brand">
+                        <img src="Design/images/bigote.logo.png" alt="Brand" width= 150>
                         <p>
                            Nuestra barbería está creada para hombres que aprecian la calidad superior, el tiempo la apariencia.
                         </p>
@@ -489,7 +489,7 @@
                      <div class="footer_widget">
                         <h3>Dirección</h3>
                         <p>
-                            Calle Puyredón 250, Rodeo del Medio, Maipú. Mendoza                        </p>
+                            Calle Pueyredón 250, Rodeo del Medio, Maipú, Mendoza.                       
                         <p>
                             contact@señorbigote.com
                             <br>
@@ -500,7 +500,8 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer_widget">
                         <h3>
-                            Horario de apertura                        </h3>
+                            Horario de apertura                        
+                        </h3>
                         <ul class="opening_time">
                             <p>Martes - Sabado 9:00am - 20:30pm</p>
                         </ul>
