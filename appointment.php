@@ -56,14 +56,14 @@
 
 					if($client_count > 0)
 					{
-						$client_id = $client_result["cliente_id"];
+						$cliente_id = $client_result["cliente_id"];
 					}
 					else
 					{
 						$stmtgetCurrentClientID = $con->prepare("SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'sr_bigotes' AND TABLE_NAME = 'clientes'");
             
 						$stmtgetCurrentClientID->execute();
-						$client_id = $stmtgetCurrentClientID->fetch();
+						$cliente_id = $stmtgetCurrentClientID->fetch();
 
 						$stmtClient = $con->prepare("insert into clientes(nombre,apellido,celular,client_email) 
 									values(?,?,?,?)");
@@ -79,7 +79,7 @@
                     $id_citas = $stmtgetCurrentAppointmentID->fetch();
                     
                     $stmt_appointment = $con->prepare("insert into citas(fecha_creado, cliente_id, empleado_id, hora_comienzo, hora_fin ) values(?, ?, ?, ?, ?)");
-                    $stmt_appointment->execute(array(Date("Y-m-d H:i"),$client_id[0],$selected_employee,$hora_inicio,$end_time));
+                    $stmt_appointment->execute(array(Date("Y-m-d H:i"),$cliente_id[0],$selected_employee,$hora_inicio,$end_time));
 
                     foreach($selected_services as $service)
                     {

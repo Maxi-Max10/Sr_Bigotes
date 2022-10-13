@@ -7,10 +7,10 @@
 
 	if(isset($_POST['do']) && $_POST['do'] == "Delete")
 	{
-		$service_id = $_POST['service_id'];
+		$servicio_id = $_POST['servicio_id'];
 
-        $stmt = $con->prepare("DELETE from services where service_id = ?");
-        $stmt->execute(array($service_id));    
+        $stmt = $con->prepare("DELETE from servicios where servicio_id = ?");
+        $stmt->execute(array($servicio_id));    
 	}
 	
 ?>

@@ -27,7 +27,7 @@
 
             <!-- Clients Table -->
             <?php
-                $stmt = $con->prepare("SELECT * FROM clients");
+                $stmt = $con->prepare("SELECT * FROM clientes");
                 $stmt->execute();
                 $rows_clients = $stmt->fetchAll(); 
             ?>
@@ -55,16 +55,16 @@
                                     {
                                         echo "<tr>";
                                             echo "<td>";
-                                                echo $client['client_id'];
+                                                echo $client['cliente_id'];
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $client['first_name'];
+                                                echo $client['nombre'];
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $client['last_name'];
+                                                echo $client['apellido'];
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $client['phone_number'];
+                                                echo $client['celular'];
                                             echo "</td>";
                                             echo "<td>";
                                                 echo $client['client_email'];

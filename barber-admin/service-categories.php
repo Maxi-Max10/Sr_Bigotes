@@ -27,7 +27,7 @@
 
             <!-- Service Categories Table -->
             <?php
-                $stmt = $con->prepare("SELECT * FROM service_categories");
+                $stmt = $con->prepare("SELECT * FROM categoria_servicios");
                 $stmt->execute();
                 $rows_categories = $stmt->fetchAll(); 
             ?>
@@ -55,8 +55,8 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label for="category_name">Category name</label>
-                                        <input type="text" id="category_name_input" class="form-control" placeholder="Category Name" name="category_name">
+                                        <label for="nombre_categoria">Category name</label>
+                                        <input type="text" id="category_name_input" class="form-control" placeholder="Category Name" name="nombre_categoria">
                                         <div class="invalid-feedback" id="required_category_name" style="display: none;">
                                             Category name is required!
                                         </div>
@@ -86,16 +86,16 @@
                                 {
                                     echo "<tr>";
                                         echo "<td>";
-                                            echo $category['category_id'];
+                                            echo $category['id_categoria'];
                                         echo "</td>";
                                         echo "<td>";
-                                            echo $category['category_name'];
+                                            echo $category['nombre_categoria'];
                                         echo "</td>";
                                         echo "<td>";
-                                            if(strtolower($category["category_name"]) != "uncategorized")
+                                            if(strtolower($category["nombre_categoria"]) != "uncategorized")
                                             {
-                                                $delete_data = "delete_".$category["category_id"];
-                                                $edit_data = "edit_".$category["category_id"];
+                                                $delete_data = "delete_".$category["id_categoria"];
+                                                $edit_data = "edit_".$category["id_categoria"];
                                             ?>
                                             <!-- DELETE & EDIT BUTTONS -->
                                             <ul>
@@ -115,16 +115,16 @@
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <div class="form-group">
-                                                                        <label for="category_name">Category Name</label>
-                                                                        <input type="text" class="form-control" id="<?php echo "input_category_name_".$category["category_id"]; ?>" value="<?php echo $category["category_name"]; ?>">
-                                                                        <div class="invalid-feedback" id = "<?php echo "invalid_input_".$category["category_id"]; ?>">
+                                                                        <label for="nombre_categoria">Category Name</label>
+                                                                        <input type="text" class="form-control" id="<?php echo "input_category_name_".$category["id_categoria"]; ?>" value="<?php echo $category["nombre_categoria"]; ?>">
+                                                                        <div class="invalid-feedback" id = "<?php echo "invalid_input_".$category["id_categoria"]; ?>">
                                                                             Category name is required.
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                                    <button type="button" data-id = "<?php echo $category['category_id']; ?>" class="btn btn-success edit_category_bttn">Save</button>
+                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-success edit_category_bttn">Save</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -146,11 +146,11 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    Are you sure you want to delete this Category "<?php echo $category['category_name']; ?>"?
+                                                                    Are you sure you want to delete this Category "<?php echo $category['nombre_categoria']; ?>"?
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                                    <button type="button" data-id = "<?php echo $category['category_id']; ?>" class="btn btn-danger delete_category_bttn">Delete</button>
+                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Delete</button>
                                                                 </div>
                                                             </div>
                                                         </div>

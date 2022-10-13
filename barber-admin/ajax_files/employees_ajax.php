@@ -7,10 +7,10 @@
 
 	if(isset($_POST['do']) && $_POST['do'] == "Delete")
 	{
-		$employee_id = $_POST['employee_id'];
+		$empleado_id = $_POST['empleado_id'];
 
-        $stmt = $con->prepare("DELETE from employees where employee_id = ?");
-        $stmt->execute(array($employee_id));    
+        $stmt = $con->prepare("DELETE from empleados where empleado_id = ?");
+        $stmt->execute(array($empleado_id));    
 	}
 	
 ?>

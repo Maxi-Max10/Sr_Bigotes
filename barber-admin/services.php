@@ -43,7 +43,7 @@
 
                 if($do == 'Manage')
                 {
-                    $stmt = $con->prepare("SELECT * FROM services s, service_categories sc where s.category_id = sc.category_id");
+                    $stmt = $con->prepare("SELECT * FROM servicios s, categoria_servicios sc where s.id_categoria = sc.id_categoria");
                     $stmt->execute();
                     $rows_services = $stmt->fetchAll();
                 ?>
@@ -79,22 +79,22 @@
                                         {
                                             echo "<tr>";
                                                 echo "<td>";
-                                                    echo $service['service_name'];
+                                                    echo $service['nombre_servicio'];
                                                 echo "</td>";
                                                 echo "<td>";
-                                                    echo $service['category_name'];
+                                                    echo $service['nombre_categoria'];
                                                 echo "</td>";
                                                 echo "<td style = 'width:30%'>";
-                                                    echo $service['service_description'];
+                                                    echo $service['descripcion_servicio'];
                                                 echo "</td>";
                                                 echo "<td>";
-                                                    echo $service['service_price'];
+                                                    echo $service['precio_servicio'];
                                                 echo "</td>";
                                                 echo "<td>";
-                                                    echo $service['service_duration'];
+                                                    echo $service['duracion_servicio'];
                                                 echo "</td>";
                                                 echo "<td>";
-                                                    $delete_data = "delete_".$service["service_id"];
+                                                    $delete_data = "delete_".$service["servicio_id"];
                                                     ?>
                                                         <ul class="list-inline m-0">
 
@@ -102,7 +102,7 @@
 
                                                             <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                                                 <button class="btn btn-success btn-sm rounded-0">
-                                                                    <a href="services.php?do=Edit&service_id=<?php echo $service['service_id']; ?>" style="color: white;">
+                                                                    <a href="services.php?do=Edit&servicio_id=<?php echo $service['servicio_id']; ?>" style="color: white;">
                                                                         <i class="fa fa-edit"></i>
                                                                     </a>
                                                                 </button>
@@ -125,11 +125,11 @@
                                                                                 </button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                Are you sure you want to delete this Service "<?php echo $service['service_name']; ?>"?
+                                                                                Are you sure you want to delete this Service "<?php echo $service['nombre_servicio']; ?>"?
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                                                <button type="button" data-id = "<?php echo $service['service_id']; ?>" class="btn btn-danger delete_service_bttn">Delete</button>
+                                                                                <button type="button" data-id = "<?php echo $service['servicio_id']; ?>" class="btn btn-danger delete_service_bttn">Delete</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -160,13 +160,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="service_name">Service Name</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['service_name']))?htmlspecialchars($_POST['service_name']):'' ?>" placeholder="Service Name" name="service_name">
+                                            <label for="nombre_servicio">Service Name</label>
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['nombre_servicio']))?htmlspecialchars($_POST['nombre_servicio']):'' ?>" placeholder="Service Name" name="nombre_servicio">
                                             <?php
                                                 $flag_add_service_form = 0;
                                                 if(isset($_POST['add_new_service']))
                                                 {
-                                                    if(empty(test_input($_POST['service_name'])))
+                                                    if(empty(test_input($_POST['nombre_servicio'])))
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
@@ -182,7 +182,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <?php
-                                            $stmt = $con->prepare("SELECT * FROM service_categories");
+                                            $stmt = $con->prepare("SELECT * FROM categoria_servicios");
                                             $stmt->execute();
                                             $rows_categories = $stmt->fetchAll();
                                         ?>
@@ -192,8 +192,8 @@
                                                 <?php
                                                     foreach($rows_categories as $category)
                                                     {
-                                                        echo "<option value = '".$category['category_id']."'>";
-                                                            echo $category['category_name'];
+                                                        echo "<option value = '".$category['id_categoria']."'>";
+                                                            echo $category['nombre_categoria'];
                                                         echo "</option>";
                                                     }
                                                 ?>
@@ -204,13 +204,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="service_duration">Service Duration(min)</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['service_duration']))?htmlspecialchars($_POST['service_duration']):'' ?>" placeholder="Service Duration" name="service_duration">
+                                            <label for="duracion_servicio">Service Duration(min)</label>
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['duracion_servicio']))?htmlspecialchars($_POST['duracion_servicio']):'' ?>" placeholder="Service Duration" name="duracion_servicio">
                                             <?php
 
                                                 if(isset($_POST['add_new_service']))
                                                 {
-                                                    if(empty(test_input($_POST['service_duration'])))
+                                                    if(empty(test_input($_POST['duracion_servicio'])))
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
@@ -220,7 +220,7 @@
 
                                                         $flag_add_service_form = 1;
                                                     }
-                                                    elseif(!ctype_digit(test_input($_POST['service_duration'])))
+                                                    elseif(!ctype_digit(test_input($_POST['duracion_servicio'])))
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
@@ -236,13 +236,13 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="service_price">Service Price($)</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['service_price']))?htmlspecialchars($_POST['service_price']):'' ?>" placeholder="Service Price" name="service_price">
+                                            <label for="precio_servicio">Service Price($)</label>
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['precio_servicio']))?htmlspecialchars($_POST['precio_servicio']):'' ?>" placeholder="Service Price" name="precio_servicio">
                                             <?php
 
                                                 if(isset($_POST['add_new_service']))
                                                 {
-                                                    if(empty(test_input($_POST['service_price'])))
+                                                    if(empty(test_input($_POST['precio_servicio'])))
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
@@ -252,7 +252,7 @@
 
                                                         $flag_add_service_form = 1;
                                                     }
-                                                    elseif(!is_numeric(test_input($_POST['service_price'])))
+                                                    elseif(!is_numeric(test_input($_POST['precio_servicio'])))
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
@@ -270,13 +270,13 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="service_description">Service Description</label>
-                                            <textarea class="form-control" name="service_description" style="resize: none;"><?php echo (isset($_POST['service_description']))?htmlspecialchars($_POST['service_description']):''; ?></textarea>
+                                            <label for="descripcion_servicio">Service Description</label>
+                                            <textarea class="form-control" name="descripcion_servicio" style="resize: none;"><?php echo (isset($_POST['descripcion_servicio']))?htmlspecialchars($_POST['descripcion_servicio']):''; ?></textarea>
                                             <?php
 
                                                 if(isset($_POST['add_new_service']))
                                                 {
-                                                    if(empty(test_input($_POST['service_description'])))
+                                                    if(empty(test_input($_POST['descripcion_servicio'])))
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
@@ -286,7 +286,7 @@
 
                                                         $flag_add_service_form = 1;
                                                     }
-                                                    elseif(strlen(test_input($_POST['service_description'])) > 250)
+                                                    elseif(strlen(test_input($_POST['descripcion_servicio'])) > 250)
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
@@ -313,16 +313,16 @@
                                 /*** ADD NEW SERVICE ***/
                                 if(isset($_POST['add_new_service']) && $_SERVER['REQUEST_METHOD'] == 'POST' && $flag_add_service_form == 0)
                                 {
-                                    $service_name = test_input($_POST['service_name']);
+                                    $nombre_servicio = test_input($_POST['nombre_servicio']);
                                     $service_category = $_POST['service_category'];
-                                    $service_duration = test_input($_POST['service_duration']);
-                                    $service_price = test_input($_POST['service_price']);
-                                    $service_description = test_input($_POST['service_description']);
+                                    $duracion_servicio = test_input($_POST['duracion_servicio']);
+                                    $precio_servicio = test_input($_POST['precio_servicio']);
+                                    $descripcion_servicio = test_input($_POST['descripcion_servicio']);
 
                                     try
                                     {
-                                        $stmt = $con->prepare("insert into services(service_name,service_description,service_price,service_duration,category_id) values(?,?,?,?,?) ");
-                                        $stmt->execute(array($service_name,$service_description,$service_price,$service_duration,$service_category));
+                                        $stmt = $con->prepare("insert into servicios(nombre_servicio,descripcion_servicio,precio_servicio,duracion_servicio,id_categoria) values(?,?,?,?,?) ");
+                                        $stmt->execute(array($nombre_servicio,$descripcion_servicio,$precio_servicio,$duracion_servicio,$service_category));
                                         
                                         ?> 
                                             <!-- SUCCESS MESSAGE -->
@@ -354,12 +354,12 @@
                 }
                 elseif($do == "Edit")
                 {
-                    $service_id = (isset($_GET['service_id']) && is_numeric($_GET['service_id']))?intval($_GET['service_id']):0;
+                    $servicio_id = (isset($_GET['servicio_id']) && is_numeric($_GET['servicio_id']))?intval($_GET['servicio_id']):0;
 
-                    if($service_id)
+                    if($servicio_id)
                     {
-                        $stmt = $con->prepare("Select * from services where service_id = ?");
-                        $stmt->execute(array($service_id));
+                        $stmt = $con->prepare("Select * from servicios where servicio_id = ?");
+                        $stmt->execute(array($servicio_id));
                         $service = $stmt->fetch();
                         $count = $stmt->rowCount();
 
@@ -371,21 +371,21 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Edit Service</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form method="POST" action="services.php?do=Edit&service_id=<?php echo $service_id; ?>">
+                                    <form method="POST" action="services.php?do=Edit&servicio_id=<?php echo $servicio_id; ?>">
                                         <!-- SERVICE ID -->
-                                        <input type="hidden" name="service_id" value="<?php echo $service['service_id'];?>">
+                                        <input type="hidden" name="servicio_id" value="<?php echo $service['servicio_id'];?>">
 
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="service_name">Service Name</label>
-                                                    <input type="text" class="form-control" value="<?php echo $service['service_name'] ?>" placeholder="Service Name" name="service_name">
+                                                    <label for="nombre_servicio">Service Name</label>
+                                                    <input type="text" class="form-control" value="<?php echo $service['nombre_servicio'] ?>" placeholder="Service Name" name="nombre_servicio">
                                                     <?php
                                                         $flag_edit_service_form = 0;
 
                                                         if(isset($_POST['edit_service_sbmt']))
                                                         {
-                                                            if(empty(test_input($_POST['service_name'])))
+                                                            if(empty(test_input($_POST['nombre_servicio'])))
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
@@ -402,7 +402,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <?php
-                                                    $stmt = $con->prepare("SELECT * FROM service_categories");
+                                                    $stmt = $con->prepare("SELECT * FROM categoria_servicios");
                                                     $stmt->execute();
                                                     $rows_categories = $stmt->fetchAll();
                                                 ?>
@@ -412,16 +412,16 @@
                                                         <?php
                                                             foreach($rows_categories as $category)
                                                             {
-                                                                if($category['category_id'] == $service['category_id'])
+                                                                if($category['id_categoria'] == $service['id_categoria'])
                                                                 {
-                                                                    echo "<option value = '".$category['category_id']."' selected>";
-                                                                        echo $category['category_name'];
+                                                                    echo "<option value = '".$category['id_categoria']."' selected>";
+                                                                        echo $category['nombre_categoria'];
                                                                     echo "</option>";
                                                                 }
                                                                 else
                                                                 {
-                                                                    echo "<option value = '".$category['category_id']."'>";
-                                                                        echo $category['category_name'];
+                                                                    echo "<option value = '".$category['id_categoria']."'>";
+                                                                        echo $category['nombre_categoria'];
                                                                     echo "</option>";
                                                                 }
                                                             }
@@ -433,13 +433,13 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="service_duration">Service Duration(min)</label>
-                                                    <input type="text" class="form-control" value="<?php echo $service['service_duration'] ?>" placeholder="Service Duration" name="service_duration">
+                                                    <label for="duracion_servicio">Service Duration(min)</label>
+                                                    <input type="text" class="form-control" value="<?php echo $service['duracion_servicio'] ?>" placeholder="Service Duration" name="duracion_servicio">
                                                     <?php
 
                                                         if(isset($_POST['edit_service_sbmt']))
                                                         {
-                                                            if(empty(test_input($_POST['service_duration'])))
+                                                            if(empty(test_input($_POST['duracion_servicio'])))
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
@@ -449,7 +449,7 @@
 
                                                                 $flag_edit_service_form = 1;
                                                             }
-                                                            elseif(!ctype_digit(test_input($_POST['service_duration'])))
+                                                            elseif(!ctype_digit(test_input($_POST['duracion_servicio'])))
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
@@ -465,13 +465,13 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="service_price">Service Price($)</label>
-                                                    <input type="text" class="form-control" value="<?php echo $service['service_price'] ?>" placeholder="Service Price" name="service_price">
+                                                    <label for="precio_servicio">Service Price($)</label>
+                                                    <input type="text" class="form-control" value="<?php echo $service['precio_servicio'] ?>" placeholder="Service Price" name="precio_servicio">
                                                     <?php
 
                                                         if(isset($_POST['edit_service_sbmt']))
                                                         {
-                                                            if(empty(test_input($_POST['service_price'])))
+                                                            if(empty(test_input($_POST['precio_servicio'])))
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
@@ -481,7 +481,7 @@
 
                                                                 $flag_edit_service_form = 1;
                                                             }
-                                                            elseif(!is_numeric(test_input($_POST['service_price'])))
+                                                            elseif(!is_numeric(test_input($_POST['precio_servicio'])))
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
@@ -499,13 +499,13 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="service_description">Service Description</label>
-                                                    <textarea class="form-control" name="service_description" style="resize: none;"><?php echo $service['service_description']; ?></textarea>
+                                                    <label for="descripcion_servicio">Service Description</label>
+                                                    <textarea class="form-control" name="descripcion_servicio" style="resize: none;"><?php echo $service['descripcion_servicio']; ?></textarea>
                                                     <?php
 
                                                         if(isset($_POST['edit_service_sbmt']))
                                                         {
-                                                            if(empty(test_input($_POST['service_description'])))
+                                                            if(empty(test_input($_POST['descripcion_servicio'])))
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
@@ -515,7 +515,7 @@
 
                                                                 $flag_edit_service_form = 1;
                                                             }
-                                                            elseif(strlen(test_input($_POST['service_description'])) > 250)
+                                                            elseif(strlen(test_input($_POST['descripcion_servicio'])) > 250)
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
@@ -539,17 +539,17 @@
                                         /*** EDIT SERVICE ***/
                                         if(isset($_POST['edit_service_sbmt']) && $_SERVER['REQUEST_METHOD'] == 'POST' && $flag_edit_service_form == 0)
                                         {
-                                            $service_id = $_POST['service_id'];
-                                            $service_name = test_input($_POST['service_name']);
+                                            $servicio_id = $_POST['servicio_id'];
+                                            $nombre_servicio = test_input($_POST['nombre_servicio']);
                                             $service_category = $_POST['service_category'];
-                                            $service_duration = test_input($_POST['service_duration']);
-                                            $service_price = test_input($_POST['service_price']);
-                                            $service_description = test_input($_POST['service_description']);
+                                            $duracion_servicio = test_input($_POST['duracion_servicio']);
+                                            $precio_servicio = test_input($_POST['precio_servicio']);
+                                            $descripcion_servicio = test_input($_POST['descripcion_servicio']);
 
                                             try
                                             {
-                                                $stmt = $con->prepare("update services set service_name = ?, service_description = ?, service_price = ?, service_duration = ?, category_id = ? where service_id = ? ");
-                                                $stmt->execute(array($service_name,$service_description,$service_price,$service_duration,$service_category,$service_id));
+                                                $stmt = $con->prepare("update servicios set nombre_servicio = ?, descripcion_servicio = ?, precio_servicio = ?, duracion_servicio = ?, id_categoria = ? where servicio_id = ? ");
+                                                $stmt->execute(array($nombre_servicio,$descripcion_servicio,$precio_servicio,$duracion_servicio,$service_category,$servicio_id));
                                                 
                                                 ?> 
                                                     <!-- SUCCESS MESSAGE -->

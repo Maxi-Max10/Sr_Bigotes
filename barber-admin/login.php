@@ -46,24 +46,24 @@
 
 					if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signin-button']))
 					{
-						$username = test_input($_POST['username']);
+						$usuario = test_input($_POST['usuario']);
 						$password = test_input($_POST['password']);
 						$hashedPass = sha1($password); //cifro contraseña
 						
 
 						//Check if User Exist In database
 
-						$stmt = $con->prepare("Select admin_id, username,password FROM barber_admin WHERE username = ? and password = ?");
-						$stmt->execute(array($username,$hashedPass));
+						$stmt = $con->prepare("Select admin_id, usuario,password FROM barber_admin WHERE usuario = ? and password = ?");
+						$stmt->execute(array($usuario,$hashedPass));
 						$row = $stmt->fetch();
 						$count = $stmt->rowCount();
 
-						// Check if count > 0 which mean that the database contain a record about this username
+						// Check if count > 0 which mean that the database contain a record about this usuario
 
 						if($count > 0)
 						{
 
-							$_SESSION['username_barbershop_Xw211qAAsq4'] = $username;
+							$_SESSION['username_barbershop_Xw211qAAsq4'] = $usuario;
 							$_SESSION['password_barbershop_Xw211qAAsq4'] = $password;
 							$_SESSION['admin_id_barbershop_Xw211qAAsq4'] = $row['admin_id'];
 							header('Location: index.php');
@@ -92,7 +92,7 @@
 
 				<div class="form-input">
 					<span class="txt1">Usuario</span>
-					<input type="text" name="username" class = "form-control" oninput = "getElementById('required_username').style.display = 'none'" autocomplete="off">
+					<input type="text" name="usuario" class = "form-control" oninput = "getElementById('required_username').style.display = 'none'" autocomplete="off">
 					<span class="invalid-feedback" id="required_username">Usuario Requerido!</span>
 				</div>
 				

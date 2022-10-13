@@ -6,9 +6,9 @@
 	
 	if(isset($_POST['do']) && $_POST['do'] == "Add")
 	{
-        $category_name = test_input($_POST['category_name']);
+        $nombre_categoria = test_input($_POST['nombre_categoria']);
 
-        $checkItem = checkItem("category_name","service_categories",$category_name);
+        $checkItem = checkItem("nombre_categoria","categoria_servicios",$nombre_categoria);
 
         if($checkItem != 0)
         {
@@ -20,8 +20,8 @@
         elseif($checkItem == 0)
         {
         	//Insert into the database
-            $stmt = $con->prepare("insert into service_categories(category_name) values(?) ");
-            $stmt->execute(array($category_name));
+            $stmt = $con->prepare("insert into categoria_servicios(nombre_categoria) values(?) ");
+            $stmt->execute(array($nombre_categoria));
 
             $data['alert'] = "Success";
             $data['message'] = "The new category has been inserted successfully !";
@@ -33,32 +33,32 @@
 
     if(isset($_POST['action']) && $_POST['action'] == "Delete")
 	{
-        $category_id = $_POST['category_id'];
+        $id_categoria = $_POST['id_categoria'];
         
         try
         {
             $con->beginTransaction();
 
-            $stmt_services = $con->prepare("select service_id from services where category_id = ?");
-            $stmt_services->execute(array($category_id));
+            $stmt_services = $con->prepare("select servicio_id from servicios where id_categoria = ?");
+            $stmt_services->execute(array($id_categoria));
             $services = $stmt_services->fetchAll();
             $services_count = $stmt_services->rowCount();
 
             if($services_count > 0)
             {
-                $stmt_service_uncategorized = $con->prepare("select category_id from service_categories where LOWER(category_name) = ?");
+                $stmt_service_uncategorized = $con->prepare("select id_categoria from categoria_servicios where LOWER(nombre_categoria) = ?");
                 $stmt_service_uncategorized->execute(array("uncategorized"));
                 $uncategorized_id = $stmt_service_uncategorized->fetch();
 
                 foreach($services as $service)
                 {
-                    $stmt_update_service = $con->prepare("UPDATE services set category_id = ? where service_id = ?");
-                    $stmt_update_service->execute(array($uncategorized_id["category_id"], $service["service_id"]));
+                    $stmt_update_service = $con->prepare("UPDATE servicios set id_categoria = ? where servicio_id = ?");
+                    $stmt_update_service->execute(array($uncategorized_id["id_categoria"], $service["servicio_id"]));
                 }
             }
 
-            $stmt = $con->prepare("DELETE from service_categories where category_id = ?");
-            $stmt->execute(array($category_id));
+            $stmt = $con->prepare("DELETE from categoria_servicios where id_categoria = ?");
+            $stmt->execute(array($id_categoria));
             $con->commit();
             $data['alert'] = "Success";
             $data['message'] = "The new category has been inserted successfully !";
@@ -81,10 +81,10 @@
     
     if(isset($_POST['action']) && $_POST['action'] == "Edit")
 	{
-        $category_id = $_POST['category_id'];
-        $category_name = test_input($_POST['category_name']);
+        $id_categoria = $_POST['id_categoria'];
+        $nombre_categoria = test_input($_POST['nombre_categoria']);
 
-        $checkItem = checkItem("category_name","service_categories",$category_name);
+        $checkItem = checkItem("nombre_categoria","categoria_servicios",$nombre_categoria);
 
         if($checkItem != 0)
         {
@@ -98,8 +98,8 @@
 
             try
             {
-                $stmt = $con->prepare("UPDATE service_categories set category_name = ? where category_id = ?");
-                $stmt->execute(array($category_name, $category_id));
+                $stmt = $con->prepare("UPDATE categoria_servicios set nombre_categoria = ? where id_categoria = ?");
+                $stmt->execute(array($nombre_categoria, $id_categoria));
 
                 $data['alert'] = "Success";
                 $data['message'] = "Category name has been updated successfully!";
