@@ -1,0 +1,70 @@
+
+/*
+    ======================================
+    
+    DASHBOARD PAGE STYLE
+
+    ========================================
+*/
+
+
+.tab button.active 
+{
+    color: #fff;
+    border-bottom: 4px solid #ffd943;
+}
+
+.tab button 
+{
+    background: inherit;
+    color: #ffffff9c;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-bottom: 4px solid transparent;
+}
+
+.tabcontent 
+{
+    display: none;
+}
+
+/*
+    ======================================
+    
+    EMPLOYEES SCHEDULE PAGE STYLE
+
+    ========================================
+*/
+
+input[type=checkbox] 
+{
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    -webkit-box-flex: 20px;
+    border: 1px solid #dcdddf;
+    cursor: pointer;
+}
+.day-name
+{
+    font-size: 20px;
+    color: #253246;
+    text-transform: capitalize;
+    width: 60px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.worktime-day
+{
+    margin: 10px 0px;
+    border-bottom: 1px solid #eee;
+    min-height: 60px;
+    align-items: center;
+}
+
+

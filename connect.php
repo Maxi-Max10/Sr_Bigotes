@@ -9,11 +9,11 @@
 	{
 		$con = new PDO($dsn,$user,$pass,$option);
 		$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-		//echo 'Good Very Good !';
+		
 	}
 	catch(PDOException $ex)
 	{
-		echo "Failed to connect with database ! ".$ex->getMessage();
+		echo "Fallo la conexion con la base de datos ".$ex->getMessage();
 		die();
 	}
 ?>
