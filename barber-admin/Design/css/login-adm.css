@@ -82,7 +82,7 @@ body {
     background: #360033;  
     background: -webkit-linear-gradient(to right, #0b8793, #360033);  
     background: linear-gradient(to right, #0b8793, #360033);
-    cursor: pointer;
+    
 }
 
 
@@ -114,7 +114,7 @@ input:focus .border
 .login100-form-title 
 {
     font-size: 30px;
-    color: #555555;
+    color: red;
     line-height: 1.2;
     text-transform: uppercase;
     text-align: left;
@@ -127,7 +127,7 @@ input:focus .border
 .txt1
 {
     font-size: 13px;
-    color: #555555;
+    color: red;
     line-height: 1.4;
     text-transform: uppercase;
     padding-bottom: 11px;

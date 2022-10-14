@@ -31,7 +31,7 @@
 		<!-- CSS FILES -->
 		<link href="Design/css/sb-admin-2.min.css" rel="stylesheet">
 		<link href="Design/css/main.css" rel="stylesheet">
-        <link rel="stylesheet" href="Design/css/login.css">
+        <link rel="stylesheet" href="Design/css/login-adm.css">
 	</head>
 	<body>
 		<div class="login">
