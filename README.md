@@ -29,9 +29,6 @@
 		Veronica Naranjo
 		
 		Nadia Lema
-	
-	 	Maria Martinez 
-		
-		Daiana Ceron
+	</p>
 	
 </div>
