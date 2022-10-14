@@ -18,7 +18,7 @@ $(function ()
 
 function validateLogInForm() 
 {
-	var username_input = document.forms["login-form"]["username"].value;
+	var username_input = document.forms["login-form"]["usuario"].value;
 	var password_input = document.forms["login-form"]["password"].value;
 
 	if (username_input == "" && password_input == "") 
@@ -81,19 +81,19 @@ function openTab(evt, tabName)
 $('.cancel_appointment_button').click(function()
 {
 
-    var appointment_id = $(this).data('id');
-    var cancellation_reason = $('#appointment_cancellation_reason_'+appointment_id).val();
+    var id_citas = $(this).data('id');
+    var razon_cancelacion = $('#appointment_cancellation_reason_'+id_citas).val();
     var do_ = 'Cancel Appointment';
 
 
     $.ajax({
         url: "ajax_files/appointments_ajax.php",
         type: "POST",
-        data:{do:do_,appointment_id:appointment_id,cancellation_reason:cancellation_reason},
+        data:{do:do_,id_citas:id_citas,razon_cancelacion:razon_cancelacion},
         success: function (data) 
         {
             //Hide Modal
-            $('#cancel_appointment_'+appointment_id).modal('hide');
+            $('#cancel_appointment_'+id_citas).modal('hide');
             
             //Show Success Message
             swal("Cancel Appointment","The Appointment has been canceled successfully!", "success").then((value) => 
@@ -121,10 +121,10 @@ $('.cancel_appointment_button').click(function()
 
 $('#add_category_bttn').click(function()
 {
-    var category_name = $("#category_name_input").val();
+    var nombre_categoria = $("#category_name_input").val();
     var do_ = "Add";
 
-    if($.trim(category_name) == "")
+    if($.trim(nombre_categoria) == "")
     {
         $('#required_category_name').css('display','block');
     }
@@ -134,7 +134,7 @@ $('#add_category_bttn').click(function()
         {
             url:"ajax_files/service_categories_ajax.php",
             method:"POST",
-            data:{category_name:category_name,do:do_},
+            data:{nombre_categoria:nombre_categoria,do:do_},
             dataType:"JSON",
             success: function (data) 
             {
@@ -173,14 +173,14 @@ $('#add_category_bttn').click(function()
 
 $('.delete_category_bttn').click(function()
 {
-    var category_id = $(this).data('id');
+    var id_categoria = $(this).data('id');
     var action = "Delete";
 
     $.ajax(
     {
         url:"ajax_files/service_categories_ajax.php",
         method:"POST",
-        data:{category_id:category_id,action:action},
+        data:{id_categoria:id_categoria,action:action},
         dataType:"JSON",
         success: function (data) 
         {
@@ -207,14 +207,14 @@ $('.delete_category_bttn').click(function()
 
 $('.edit_category_bttn').click(function()
 {
-    var category_id = $(this).data('id');
-    var category_name = $("#input_category_name_"+category_id).val();
+    var id_categoria = $(this).data('id');
+    var nombre_categoria = $("#input_category_name_"+id_categoria).val();
 
     var action = "Edit";
 
-    if($.trim(category_name) == "")
+    if($.trim(nombre_categoria) == "")
     {
-        $('#invalid_input_'+category_id).css('display','block');
+        $('#invalid_input_'+id_categoria).css('display','block');
     }
     else
     {
@@ -222,7 +222,7 @@ $('.edit_category_bttn').click(function()
         {
             url:"ajax_files/service_categories_ajax.php",
             method:"POST",
-            data:{category_id:category_id,category_name:category_name,action:action},
+            data:{id_categoria:id_categoria,nombre_categoria:nombre_categoria,action:action},
             dataType:"JSON",
             success: function (data) 
             {
@@ -259,14 +259,14 @@ $('.edit_category_bttn').click(function()
 
 $('.delete_service_bttn').click(function()
 {
-    var service_id = $(this).data('id');
+    var servicio_id = $(this).data('id');
     var do_ = "Delete";
 
     $.ajax(
     {
         url:"ajax_files/services_ajax.php",
         method:"POST",
-        data:{service_id:service_id,do:do_},
+        data:{servicio_id:servicio_id,do:do_},
         success: function (data) 
         {
             swal("Delete Service","The service has been deleted successfully!", "success").then((value) => {
@@ -312,14 +312,14 @@ $(".sb-worktime-day-switch").click(function()
 
  $('.delete_employee_bttn').click(function()
 {
-    var employee_id = $(this).data('id');
+    var empleado_id = $(this).data('id');
     var do_ = "Delete";
 
     $.ajax(
     {
         url:"ajax_files/employees_ajax.php",
         method:"POST",
-        data:{employee_id:employee_id,do:do_},
+        data:{empleado_id:empleado_id,do:do_},
         success: function (data) 
         {
             swal("Delete Employee","The employee has been deleted successfully!", "success").then((value) => {

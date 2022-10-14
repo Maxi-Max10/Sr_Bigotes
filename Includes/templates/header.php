@@ -19,7 +19,7 @@
 		<link rel="stylesheet" type="text/css" href="Design/css/navar.css">
 		<link rel="stylesheet" type="text/css" href="Design/css/footer.css">
 		<link rel="stylesheet" type="text/css" href="Design/css/gallery.css">
-		<link rel="stylesheet" type="text/css" href="Design/css/service.css">
+		<link rel="stylesheet" type="text/css" href="Design/css/servicios.css">
 		<link rel="stylesheet" type="text/css" href="Design/css/heading.css">
 		<link rel="stylesheet" type="text/css" href="Design/css/booking.css">
 		

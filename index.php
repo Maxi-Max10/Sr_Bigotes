@@ -79,7 +79,7 @@
                 <div class="col-md-6">
                     <div class="about_content" style="text-align: center;">
                         <h3>Introducción</h3>
-                        <h2>Señor Bigotes <br>Science 1991</h2>
+                        <h2>Señor Bigotes <br>Desde 1991</h2>
                         <img src="Design/images/about-logo.png" alt="logo">
                         <p style="color: #777">
                         El peluquero es una persona cuya ocupación es principalmente cortar el cabello al estilo de los novios y afeitar el cabello de hombres y niños. El lugar de trabajo de un barbero se conoce como "barbería". Las barberías también son lugares de interacción social y discurso público. En algunos casos, las peluquerías también son foros públicos.
@@ -100,12 +100,12 @@
 
     <!-- SERVICES SECTION -->
 
-    <section class="services_section" id="servicios">
+    <section class="services_section" id="services">
         <div class="container">
             <div class="section_heading">
                 
                 <h2>Nuestros servicios</h2>
-                <div class="heading-line"></div>
+                <div class=""></div>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 padd_col_res">
@@ -181,7 +181,7 @@
         <div class="section_heading">
             
             <h2>Galeria</h2>
-            <div class="heading-line"></div>
+            <div class=""></div>
         </div>
         <div class="container">
             <div class="row">
@@ -229,14 +229,14 @@
         </div>
     </section>
 
-    <!-- TEAM SECTION -->
+    <!-- TEAM SECTION 
 
     <section id="team" class="team_section">
         <div class="container">
             <div class="section_heading ">
                 
                 <h2>Nuestros Peluqueros</h2>
-                <div class="heading-line"></div>
+                <div class=""></div>
             </div>
             <ul class="team_members row"> 
                 <li class="col-lg-3 col-md-6 padd_col_res">
@@ -254,14 +254,15 @@
                         <img src="Design/images/team-3.jpg" alt="Team Member">
                     </div>
                 </li>
-                <li class="col-lg-3 col-md-6 padd_col_res">
+                 <li class="col-lg-3 col-md-6 padd_col_res">
                     <div class="team_member">
                         <img src="Design/images/team-4.jpg" alt="Team Member">
                     </div>
-                </li>
+                </li> 
             </ul>
         </div>
     </section>
+    -->
 
     <!-- REVIEWS SECTION -->
 
@@ -350,7 +351,7 @@
             <div class="section_heading">
                 <h3>Saca turno y ahorra un 20% en limpeza facial</h3>
                 <h2>Lista de precios</h2>
-                <div class="heading-line"></div>
+                <div class=""></div>
             </div>
             <div class="row">
                 <?php
@@ -469,7 +470,7 @@
     -->
 
     <!-- WIDGET SECTION / FOOTER -->
-    <section class="widget_section">
+    <section class="widget_section" id="contact-us">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">

@@ -42,14 +42,14 @@
                                 </label>
                                 <div style="display:inline-block;margin-bottom: 10px;">
                                     <?php 
-                                        $stmt = $con->prepare('select * from employees');
+                                        $stmt = $con->prepare('select * from empleados');
                                         $stmt->execute();
-                                        $employees = $stmt->fetchAll();
+                                        $empleados = $stmt->fetchAll();
                                     
                                         echo "<select class='form-control' name='employee_selected'>";
-                                            foreach ($employees as $employee) 
+                                            foreach ($empleados as $employee) 
                                             {
-                                                echo "<option value=".$employee['employee_id']." ".((isset($_POST['employee_selected']) && $_POST['employee_selected'] == $employee['employee_id'])?'selected':'').">".$employee['first_name']." ".$employee['last_name']."</option>";
+                                                echo "<option value=".$employee['empleado_id']." ".((isset($_POST['employee_selected']) && $_POST['employee_selected'] == $employee['empleado_id'])?'selected':'').">".$employee['nombre']." ".$employee['apellido']."</option>";
                                             }
                                         echo "</select>";                                    
                                     ?>
@@ -75,13 +75,13 @@
                             {
                         ?>
                                 <form method="POST" action="employees-schedule.php">
-                                    <input type="hidden" name="employee_id" value="<?php echo $_POST['employee_selected'];?>" hidden>     
+                                    <input type="hidden" name="empleado_id" value="<?php echo $_POST['employee_selected'];?>" hidden>     
                                     <div class="worktime-days">
                                         <?php
-                                            $employee_id = $_POST['employee_selected'];
-                                            $stmt = $con->prepare('select * from employees e, employees_schedule es where es.employee_id = e.employee_id and e.employee_id = ?');
-                                            $stmt->execute(array($employee_id));
-                                            $employees = $stmt->fetchAll();
+                                            $empleado_id = $_POST['employee_selected'];
+                                            $stmt = $con->prepare('select * from empleados e, horario_empleados es where es.empleado_id = e.empleado_id and e.empleado_id = ?');
+                                            $stmt->execute(array($empleado_id));
+                                            $empleados = $stmt->fetchAll();
             
                                             $days = array("1"=>"Monday",
                                                 "2"=>"Tuesday",
@@ -93,9 +93,9 @@
                                         
                                             //Available days
                                             $av_days = array();
-                                            foreach($employees as $employee)
+                                            foreach($empleados as $employee)
                                             {
-                                                $av_days[] = $employee['day_id'];
+                                                $av_days[] = $employee['id_dia'];
                                             }
                                         
                                             foreach($days as $key => $value)
@@ -111,16 +111,16 @@
                                                         echo "</span>";
                                                     echo "</div>";
                                                     
-                                                    foreach($employees as $employee)
+                                                    foreach($empleados as $employee)
                                                     {
-                                                        if(in_array($key,$av_days) && $employee['day_id'] == $key)
+                                                        if(in_array($key,$av_days) && $employee['id_dia'] == $key)
                                                         {
                                                             echo "<div class='time_ col-md-8 row'>";
                                                             echo "<div class='form-group col-md-6'>";
-                                                            echo "<input type='time' name='".$value."-from' value='".$employee['from_hour']."' class='form-control'>";
+                                                            echo "<input type='time' name='".$value."-from' value='".$employee['desde_hora']."' class='form-control'>";
                                                             echo "</div>";
                                                             echo "<div class='form-group col-md-6'>";
-                                                            echo "<input type='time' name='".$value."-to' value='".$employee['to_hour']."'  class='form-control'>";
+                                                            echo "<input type='time' name='".$value."-to' value='".$employee['hasta_hora']."'  class='form-control'>";
                                                             echo "</div>";
                                                             echo "</div>";
                                                         
@@ -177,15 +177,15 @@
                                "5"=>"Friday",
                                "6"=>"Saturday",
                                "7"=>"Sunday") ;
-                            $stmt = $con->prepare("delete from employees_schedule where employee_id = ?");
-                            $stmt->execute(array($_POST['employee_id']));
+                            $stmt = $con->prepare("delete from horario_empleados where empleado_id = ?");
+                            $stmt->execute(array($_POST['empleado_id']));
                             
                             foreach($days as $key=>$value)
                             {
                                 if(isset($_POST[$value]))
                                 {   
-                                    $stmt = $con->prepare("insert into employees_schedule(employee_id,day_id,from_hour,to_hour) values(?, ?, ?,?)");
-                                    $stmt->execute(array($_POST['employee_id'],$key,$_POST[$value.'-from'],$_POST[$value.'-to']));
+                                    $stmt = $con->prepare("insert into horario_empleados(empleado_id,id_dia,desde_hora,hasta_hora) values(?, ?, ?,?)");
+                                    $stmt->execute(array($_POST['empleado_id'],$key,$_POST[$value.'-from'],$_POST[$value.'-to']));
                                     
                                     $message = "You have successfully updated employee schedule!";
                                     
