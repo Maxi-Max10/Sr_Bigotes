@@ -100,12 +100,12 @@
 
     <!-- SERVICES SECTION -->
 
-    <section class="services_section" id="servicios">
+    <section class="services_section" id="services">
         <div class="container">
             <div class="section_heading">
                 
                 <h2>Nuestros servicios</h2>
-                <div class="heading-line"></div>
+                <div class=""></div>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 padd_col_res">
@@ -181,7 +181,7 @@
         <div class="section_heading">
             
             <h2>Galeria</h2>
-            <div class="heading-line"></div>
+            <div class=""></div>
         </div>
         <div class="container">
             <div class="row">
@@ -236,7 +236,7 @@
             <div class="section_heading ">
                 
                 <h2>Nuestros Peluqueros</h2>
-                <div class="heading-line"></div>
+                <div class=""></div>
             </div>
             <ul class="team_members row"> 
                 <li class="col-lg-3 col-md-6 padd_col_res">
@@ -254,11 +254,11 @@
                         <img src="Design/images/team-3.jpg" alt="Team Member">
                     </div>
                 </li>
-                <li class="col-lg-3 col-md-6 padd_col_res">
+                <!-- <li class="col-lg-3 col-md-6 padd_col_res">
                     <div class="team_member">
                         <img src="Design/images/team-4.jpg" alt="Team Member">
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </section>
@@ -350,7 +350,7 @@
             <div class="section_heading">
                 <h3>Saca turno y ahorra un 20% en limpeza facial</h3>
                 <h2>Lista de precios</h2>
-                <div class="heading-line"></div>
+                <div class=""></div>
             </div>
             <div class="row">
                 <?php
@@ -469,7 +469,7 @@
     -->
 
     <!-- WIDGET SECTION / FOOTER -->
-    <section class="widget_section">
+    <section class="widget_section" id="contact-us">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
