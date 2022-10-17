@@ -34,10 +34,12 @@
         <link rel="stylesheet" href="Design/css/login-adm.css">
 	</head>
 	<body>
+		
 		<div class="login">
 			<form class="login-container validate-form" name="login-form" method="POST" action="login.php" onsubmit="return validateLogInForm()">
 				<span class="login100-form-title p-b-32">
 					Bienvenido
+				
 				</span>
 
 				<!-- PHP SCRIPT WHEN SUBMIT -->
@@ -114,8 +116,22 @@
 
 				<span class="forgotPW">Olvido su contraseña? <a href="#">Restablecer</a></span>
 			</form>
+
+
+
 		</div>
+		  
+		            
 		
+
+
+
+
+
+
+
+
+
 		<!-- Footer 
 		<footer class="sticky-footer bg-white">
 			<div class="container my-auto">
