@@ -145,7 +145,7 @@
                                     	echo "</span>";
                                     	echo "<div class = 'service_price_field'>";
     										echo "<span style = 'font-weight: bold;'>";
-                                    			echo $row['precio_servicio']."$";
+                                    			echo "$".$row ['precio_servicio'];
                                     		echo "</span>";
                                     	echo "</div>";
                                     ?>
