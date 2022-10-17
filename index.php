@@ -349,7 +349,7 @@
 
         <div class="container">
             <div class="section_heading">
-                <h3>Saca turno y ahorra un 20% en limpeza facial</h3>
+                
                 <h2>Lista de precios</h2>
                 <div class=""></div>
             </div>

@@ -6,7 +6,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="navbar-brand">
-                    <img src="Design/images/bigote.logo.png" alt="" while= 10>
+                    <img src="Design/images/bigote.logo.png" alt="" width="160">
                 </a>
                 <div class="d-flex menu-wrap align-items-center main-menu-container">
                     <div class="mainmenu" id="mainmenu">
