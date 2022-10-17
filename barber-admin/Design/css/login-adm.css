@@ -1,15 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-body {
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(to top, #141416 0%, #000000 100%);
+/*
+    ======================================
+    
+    DASHBOARD PAGE STYLE
+
+    ========================================
+*/
+
+
+.tab button.active 
+{
+    color: #fff;
+    border-bottom: 4px solid #ffd943;
 }
+
+.tab button 
+{
+    background: inherit;
+    color: #ffffff9c;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-bottom: 4px solid transparent;
+}
+
+.tabcontent 
+{
+    display: none;
+}
+
+/*
+    ======================================
+    
+    EMPLOYEES SCHEDULE PAGE STYLE
+
+    ========================================
+*/
+
+input[type=checkbox] 
+{
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    -webkit-box-flex: 20px;
+    border: 1px solid #dcdddf;
+    cursor: pointer;
+}
+.day-name
+{
+    font-size: 20px;
+    color: #253246;
+    text-transform: capitalize;
+    width: 60px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.worktime-day
+{
+    margin: 10px 0px;
+    border-bottom: 1px solid #eee;
+    min-height: 60px;
+    align-items: center;
+}
+
+
+/*
+    ======================================
+    
+    BARBERSHOP LOGIN PAGE STYLE
+
+    ======================================
+*/
+
 
 .login 
 {
     max-width: 560px;
-    background: rgba(246, 244, 244, 0.083);
+    background: #fff;
     position: relative;
     margin: 15px auto;
     padding: 55px 85px 55px 85px;
@@ -62,7 +133,7 @@ body {
 
 .login button[type="submit"] 
 {
-  
+  background: #28d;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
@@ -71,12 +142,6 @@ body {
   width: 100%;
   border: none;
   border-radius: 3px;
-  width: 100%;
-  letter-spacing: 1px;
-    background: #360033;  
-    background: -webkit-linear-gradient(to right, #0b8793, #360033);  
-    background: linear-gradient(to right, #0b8793, #360033);
-    
 }
 
 
@@ -108,24 +173,22 @@ input:focus .border
 .login100-form-title 
 {
     font-size: 30px;
-    color: red;
+    color: #555555;
     line-height: 1.2;
     text-transform: uppercase;
     text-align: left;
     width: 100%;
     display: block;
     padding-bottom: 32px;
-    text-align: center;
 }
 
 .txt1
 {
     font-size: 13px;
-    color: red;
+    color: #555555;
     line-height: 1.4;
     text-transform: uppercase;
     padding-bottom: 11px;
     display: block;
     font-weight: bold;
-    
 }
