@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="Design/css/login-adm.css">
 	</head>
 	<body>
+		<div class ="login-container">
 		<div class="login">
 			<form class="login-container validate-form" name="login-form" method="POST" action="login.php" onsubmit="return validateLogInForm()">
 				<span class="login100-form-title p-b-32">
@@ -115,7 +116,18 @@
 				<span class="forgotPW">Olvido su contraseña? <a href="#">Restablecer</a></span>
 			</form>
 		</div>
-		
+		  
+		            <img class="image-container"  src="img/sr Bigote .logo.png" alt="" srcset="">
+				</div>
+
+
+
+
+
+
+
+
+
 		<!-- Footer 
 		<footer class="sticky-footer bg-white">
 			<div class="container my-auto">
