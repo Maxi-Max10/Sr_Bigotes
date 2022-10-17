@@ -7,11 +7,11 @@
 
 	if(isset($_POST['do']) && $_POST['do'] == "Cancel Appointment")
 	{
-		$appointment_id = $_POST['appointment_id'];
-		$cancellation_reason =  test_input($_POST['cancellation_reason']);
+		$id_citas = $_POST['id_citas'];
+		$razon_cancelacion =  test_input($_POST['razon_cancelacion']);
 
-        $stmt = $con->prepare("UPDATE appointments set canceled = 1, cancellation_reason = ? where appointment_id = ?");
-        $stmt->execute(array($cancellation_reason, $appointment_id));    
+        $stmt = $con->prepare("UPDATE citas set cancelado = 1, razon_cancelacion = ? where id_citas = ?");
+        $stmt->execute(array($razon_cancelacion, $id_citas));    
 	}
 	
 ?>

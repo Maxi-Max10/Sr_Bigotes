@@ -1,4 +1,5 @@
-<?php
+
+    <?php
     
     //PHP INCLUDES
 
@@ -135,10 +136,10 @@
                     foreach($desired_services as $service)
 		            {
 		                
-		                $stmtServices = $con->prepare("select service_duration from services where service_id = ?");
+		                $stmtServices = $con->prepare("select duracion_servicio from servicios where servicio_id = ?");
 		                $stmtServices->execute(array($service));
 		                $rowS =  $stmtServices->fetch();
-		                $sum_duration += $rowS['service_duration'];
+		                $sum_duration += $rowS['duracion_servicio'];
 		                
 		            }
             
@@ -175,12 +176,12 @@
                                 // Check If the employee is available
 
                                 $stmt_emp = $con->prepare("
-                                    Select employee_id
-                                    from employees_schedule
-                                    where employee_id = ?
-                                    and day_id = ?
-                                    and ? between from_hour and to_hour
-                                    and ? between from_hour and to_hour
+                                    Select empleado_id
+                                    from horario_empleados
+                                    where empleado_id = ?
+                                    and id_dia = ?
+                                    and ? between desde_hora and hasta_hora
+                                    and ? between desde_hora and hasta_hora
                                        
                                 ");
                                 $stmt_emp->execute(array($selected_employee,$day_id,$start, $result));
@@ -191,21 +192,21 @@
                                 if($stmt_emp->rowCount() != 0)
                                 {
 
-                                    //Check If there are no intersecting appointments with the current one
+                                    //Check If there are no intersecting citas with the current one
                                     $stmt = $con->prepare("
                                         Select * 
-                                        from appointments a
+                                        from citas a
                                         where
-                                            date(start_time) = ?
+                                            date(hora_comienzo) = ?
                                             and
-                                            a.employee_id = ?
+                                            a.empleado_id = ?
                                             and
-                                            canceled = 0
+                                            cancelado = 0
                                             and
                                             (   
-                                                time(start_time) between ? and ?
+                                                time(hora_comienzo) between ? and ?
                                                 or
-                                                time(end_time_expected) between ? and ?
+                                                time(hora_fin) between ? and ?
                                             )
                                     ");
                                     
@@ -249,4 +250,4 @@
         header('location: index.php');
         exit();
     }
-?>
+?>  

@@ -27,7 +27,7 @@
 
             <!-- Clients Table -->
             <?php
-                $stmt = $con->prepare("SELECT * FROM clients");
+                $stmt = $con->prepare("SELECT * FROM clientes");
                 $stmt->execute();
                 $rows_clients = $stmt->fetchAll(); 
             ?>
@@ -43,9 +43,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col">ID#</th>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
-                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Número Teléfono</th>
                                     <th scope="col">E-mail</th>
                                 </tr>
                             </thead>
@@ -55,16 +55,16 @@
                                     {
                                         echo "<tr>";
                                             echo "<td>";
-                                                echo $client['client_id'];
+                                                echo $client['cliente_id'];
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $client['first_name'];
+                                                echo $client['nombre'];
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $client['last_name'];
+                                                echo $client['apellido'];
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $client['phone_number'];
+                                                echo $client['celular'];
                                             echo "</td>";
                                             echo "<td>";
                                                 echo $client['client_email'];
@@ -88,6 +88,6 @@
     {
         header('Location: login.php');
         exit();
-    }
+    } 
 
 ?>

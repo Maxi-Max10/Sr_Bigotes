@@ -24,11 +24,11 @@
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide">
                         <div class="carousel-caption d-md-block">
-                            <h3>It's Not Just a Haircut, It's an Experience.</h3>
+                            <h3>Danos tu voto de confianza y la recompensa te encantará.</h3>
                             <p>
-                                Our barbershop is the territory created purely for males who appreciate
+                                Tu vida para siempre puede cambiar dentro de las paredes de esta peluquería donde el look que desees 
                                 <br>
-                                 premium quality, time and flawless look.
+                                puede convertirse en realidad.
                             </p>
                         </div>
                     </div>
@@ -36,11 +36,11 @@
                     <div class="carousel-item">
                         <img class="d-block w-100" src="Design/images/barbershop_image_2.jpg" alt="Second slide">
                         <div class="carousel-caption d-md-block">
-                            <h3>It's Not Just a Haircut, It's an Experience.</h3>
+                            <h3>Tu pelo necesita el mejor de los cuidados todos los días.</h3>
                             <p>
-                                Our barbershop is the territory created purely for males who appreciate
+                                Un mundo sin peluquerías sería un mundo muy aburrido donde la mayoría tendría que conformarse 
                                 <br>
-                                premium quality, time and flawless look.
+                                con un simple estilo.
                             </p>
                         </div>
                     </div>
@@ -48,24 +48,25 @@
                     <div class="carousel-item">
                         <img class="d-block w-100" src="Design/images/barbershop_image_3.jpg" alt="Third slide">
                         <div class="carousel-caption d-md-block">
-                            <h3>It's Not Just a Haircut, It's an Experience.</h3>
+                            <h3>No es solo un corte de pelo, es una experiencia.</h3>
                             <p>
-                                Our barbershop is the territory created purely for males who appreciate
+                                Nuestra barbería es el territorio creado puramente para hombres que aprecian
                                 <br>
-                                premium quality, time and flawless look.
+                                calidad premium, tiempo y aspecto impecable.
                             </p>
                         </div>
                     </div>
                 </div>
-                <!-- PREVIOUS & NEXT -->
+                <!-- PREVIOUS & Siguiente 
                 <a class="carousel-control-prev" href="#home-section-carousel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#home-section-carousel" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                    <span class="sr-only">Siguiente</span>
                 </a>
+                -->
             </div>
 		</div>
 	</section>
@@ -77,13 +78,13 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="about_content" style="text-align: center;">
-                        <h3>Introducing</h3>
-                        <h2>The Barber Shop <br>Science 1991</h2>
+                        <h3>Introducción</h3>
+                        <h2>Señor Bigotes <br>Desde 1991</h2>
                         <img src="Design/images/about-logo.png" alt="logo">
                         <p style="color: #777">
-                            Barber is a person whose occupation is mainly to cut dress groom style and shave men's and boys' hair. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops are also places of social interaction and public discourse. In some instances, barbershops are also public forums.
+                        El peluquero es una persona cuya ocupación es principalmente cortar el cabello al estilo de los novios y afeitar el cabello de hombres y niños. El lugar de trabajo de un barbero se conoce como "barbería". Las barberías también son lugares de interacción social y discurso público. En algunos casos, las peluquerías también son foros públicos.
                         </p>
-                        <a href="#" class="default_btn" style="opacity: 1;">More about us</a>
+                        <a href="#" class="default_btn" style="opacity: 1;">Acerca de nosotros</a>
                     </div>
                 </div>
                 <div class="col-md-6  d-none d-md-block">
@@ -102,37 +103,37 @@
     <section class="services_section" id="services">
         <div class="container">
             <div class="section_heading">
-                <h3>Trendy Salon & Spa</h3>
-                <h2>Our Services</h2>
-                <div class="heading-line"></div>
+                
+                <h2>Nuestros servicios</h2>
+                <div class=""></div>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 padd_col_res">
                     <div class="service_box">
                         <i class="bs bs-scissors-1"></i>
-                        <h3>Haircut Styles</h3>
-                        <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <h3>Estilos de corte de pelo</h3>
+                        <p>"Hoy es un buen día para cambiar tu corte de pelo."</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 padd_col_res">
                     <div class="service_box">
                         <i class="bs bs-razor-2"></i>
-                        <h3>Beard Triming</h3>
-                        <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <h3>Recorte de Barba</h3>
+                        <p>“Un filósofo que no podía caminar porque pisaba su barba, se cortó los pies.”</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 padd_col_res" >
                     <div class="service_box">
                         <i class="bs bs-brush"></i>
-                        <h3>Smooth Shave</h3>
-                        <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <h3>Afeitado</h3>
+                        <p>"Un buen afeitado promueve el autocuidado."</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 padd_col_res">
                     <div class="service_box">
                         <i class="bs bs-hairbrush-1"></i>
-                        <h3>Face Masking</h3>
-                        <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <h3>Mascarilla facial</h3>
+                        <p>“Tu piel es tu mejor carta de presentación.”</p>
                     </div>
                 </div>
             </div>
@@ -149,9 +150,9 @@
                 <div class="col-md-6 offset-md-6">
                     <form action="appointment.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
                         <div class="book_content">
-                            <h2 style="color: white;">Make an appointment</h2>
+                            <h2 style="color: white;">Solicita Turno</h2>
                             <p style="color: #999;">
-                                Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's and boys hair.
+                            Peluquero es una persona cuya ocupación es principalmente <br> cortar, peinar y afeitar el cabello de hombres y niños.
                             </p>
                         </div>
                         <div class="form-group row">
@@ -165,8 +166,8 @@
 
                         <!-- SUBMIT BUTTON -->
 
-                        <button id="app_submit" class="default_btn" type="submit">
-                            Make Appointment
+                        <button id="app_submit" class="default_btn" type="Enviar">
+                            Solicitar Turno
                         </button>
                     </form>
                 </div>
@@ -178,9 +179,9 @@
 
     <section class="gallery-section" id="gallery">
         <div class="section_heading">
-            <h3>Trendy Salon & Spa</h3>
-            <h2>Barbers Gallery</h2>
-            <div class="heading-line"></div>
+            
+            <h2>Galeria</h2>
+            <div class=""></div>
         </div>
         <div class="container">
             <div class="row">
@@ -228,14 +229,14 @@
         </div>
     </section>
 
-    <!-- TEAM SECTION -->
+    <!-- TEAM SECTION 
 
     <section id="team" class="team_section">
         <div class="container">
             <div class="section_heading ">
-                <h3>Trendy Salon & Spa</h3>
-                <h2>Our Barbers</h2>
-                <div class="heading-line"></div>
+                
+                <h2>Nuestros Peluqueros</h2>
+                <div class=""></div>
             </div>
             <ul class="team_members row"> 
                 <li class="col-lg-3 col-md-6 padd_col_res">
@@ -253,14 +254,15 @@
                         <img src="Design/images/team-3.jpg" alt="Team Member">
                     </div>
                 </li>
-                <li class="col-lg-3 col-md-6 padd_col_res">
+                 <li class="col-lg-3 col-md-6 padd_col_res">
                     <div class="team_member">
                         <img src="Design/images/team-4.jpg" alt="Team Member">
                     </div>
-                </li>
+                </li> 
             </ul>
         </div>
     </section>
+    -->
 
     <!-- REVIEWS SECTION -->
 
@@ -268,49 +270,54 @@
         <div class="container">
             <div id="reviews-carousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
+                    <!--
                     <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#reviews-carousel" data-slide-to="1"></li>
                     <li data-target="#reviews-carousel" data-slide-to="2"></li>
+                    -->
                 </ol>
                 <div class="carousel-inner">
                     <!-- REVIEW 1 -->
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide" style="visibility: hidden;">
                         <div class="carousel-caption d-md-block">
-                            <h3>Its Not Just a Haircut, Its an Experience.</h3>
+                            <h3>La mejor propina es un cliente satisfecho</h3>
                             <p>
-                                Our barbershop is the territory created purely for males who appreciate
+                               La vida se ve mejor después de un corte de cabello.
                                 <br>
-                                premium quality, time and flawless look.
+                                
                             </p>
                         </div>
                     </div>
-                    <!-- REVIEW 2 -->
+                    <!-- REVIEW 2 
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
+                        <div class="carousel-caption d-md-block">
+                            <h3>Hola</h3>
+                            <p>
+                                Our barbershop is the territory created purely for males who appreciate
+                                <br>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    -->
+                    <!-- REVIEW 3 
                     <div class="carousel-item">
                         <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
                         <div class="carousel-caption d-md-block">
                             <h3>Its Not Just a Haircut, Its an Experience.</h3>
                             <p>
-                                Our barbershop is the territory created purely for males who appreciate
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque libero quia fugit dicta repellat perferendis quas amet vero expedita explicabo ad nemo aut mollitia, nobis sit molestiae molestias. Ipsum, ipsa.
+
                                 <br>
                                 premium quality, time and flawless look.
                             </p>
                         </div>
                     </div>
-                    <!-- REVIEW 3 -->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Its Not Just a Haircut, Its an Experience.</h3>
-                            <p>
-                                Our barbershop is the territory created purely for males who appreciate
-                                <br>
-                                premium quality, time and flawless look.
-                            </p>
-                        </div>
-                    </div>
+                    -->
                 </div>
-                <!-- PREVIOUS & NEXT -->
+                <!-- PREVIOUS & NEXT 
                 <a class="carousel-control-prev" href="#reviews-carousel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
@@ -319,6 +326,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+                -->
             </div>
         </div>
     </section>
@@ -331,7 +339,7 @@
 
             <?php
 
-                $stmt = $con->prepare("Select * from service_categories");
+                $stmt = $con->prepare("Select * from categoria_servicios");
                 $stmt->execute();
                 $categories = $stmt->fetchAll();
 
@@ -341,19 +349,19 @@
 
         <div class="container">
             <div class="section_heading">
-                <h3>Save 20% On Beauty Spa</h3>
-                <h2>Our Barber Pricing</h2>
-                <div class="heading-line"></div>
+                <h3>Saca turno y ahorra un 20% en limpeza facial</h3>
+                <h2>Lista de precios</h2>
+                <div class=""></div>
             </div>
             <div class="row">
                 <?php
 
                     foreach($categories as $category)
                     {
-                        $stmt = $con->prepare("Select * from services where category_id = ?");
-                        $stmt->execute(array($category['category_id']));
+                        $stmt = $con->prepare("Select * from servicios where id_categoria = ?");
+                        $stmt->execute(array($category['id_categoria']));
                         $totalServices =  $stmt->rowCount();
-                        $services = $stmt->fetchAll();
+                        $servicios = $stmt->fetchAll();
 
                         if($totalServices > 0)
                         {
@@ -361,18 +369,18 @@
 
                             <div class="col-lg-4 col-md-6 sm-padding">
                                 <div class="price_wrap">
-                                    <h3><?php echo $category['category_name'] ?></h3>
+                                    <h3><?php echo $category['nombre_categoria'] ?></h3>
                                     <ul class="price_list">
                                         <?php
 
-                                            foreach($services as $service)
+                                            foreach($servicios as $service)
                                             {
                                                 ?>
 
                                                     <li>
-                                                        <h4><?php echo $service['service_name'] ?></h4>
-                                                        <p><?php echo $service['service_description'] ?></p>
-                                                        <span class="price">$<?php echo $service['service_price'] ?></span>
+                                                        <h4><?php echo $service['nombre_servicio'] ?></h4>
+                                                        <p><?php echo $service['descripcion_servicio'] ?></p>
+                                                        <span class="price">$<?php echo $service['precio_servicio'] ?></span>
                                                     </li>
 
                                                 <?php
@@ -394,7 +402,7 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION 
 
     <section class="contact-section" id="contact-us">
         <div class="container">
@@ -459,61 +467,57 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- WIDGET SECTION / FOOTER -->
-
-    <section class="widget_section">
+    <section class="widget_section" id="contact-us">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="footer_widget">
-                        <img src="Design/images/barbershop_logo.png" alt="Brand">
+                        <img src="Design/images/bigote.logo.png" alt="Brand" width= 150>
                         <p>
-                            Our barbershop is the created for men who appreciate premium quality, time and flawless look.
+                           Nuestra barbería está creada para hombres que aprecian la calidad superior, el tiempo la apariencia.
                         </p>
                         <ul class="widget_social">
                             <li><a href="#" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></li>
                             <li><a href="#" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a></li>
                             <li><a href="#" data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" title="Google+"><i class="fab fa-google-plus-g fa-2x"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                      <div class="footer_widget">
-                        <h3>Headquarters</h3>
+                        <h3>Dirección</h3>
                         <p>
-                            962 Fifth Avenue, 3rd Floor New York, NY10022
-                        </p>
+                           Ruta Provincial 50 S/N, Rodeo del Medio, Mendoza.                       
                         <p>
-                            contact@barbershop.com
+                            contact@señorbigote.com
                             <br>
-                            (+123) 456 789 101    
+                            (261) 4921026    
                         </p>
                      </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer_widget">
                         <h3>
-                            Opening Hours
+                            Horario de apertura                        
                         </h3>
                         <ul class="opening_time">
-                            <li>Monday - Friday 11:30am - 2:008pm</li>
-                            <li>Monday - Friday 11:30am - 2:008pm</li>
-                            <li>Monday - Friday 11:30am - 2:008pm</li>
-                            <li>Monday - Friday 11:30am - 2:008pm</li>
+                            <p>Martes - Sabado 9:00am - 20:30pm</p>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer_widget">
-                        <h3>Subscribe to our contents</h3>
+                        <h3>Ubicación</h3>
                         <div class="subscribe_form">
+                            
                             <form action="#" class="subscribe_form" novalidate="true">
-                                <input type="email" name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address...">
-                                <button type="submit" class="submit">SUBSCRIBE</button>
-                                <div class="clearfix"></div>
+                                
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.6266228619234!2d-68.6886332708046!3d-32.990419773939415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6d36f3d4d071%3A0x76b2cffee528bf69!2sEscuela%20Juan%20Isidro%20Maza!5e0!3m2!1ses-419!2sar!4v1662864940681!5m2!1ses-419!2sar" 
+                                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                
                             </form>
                         </div>
                     </div>
@@ -521,6 +525,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- FOOTER  -->
 

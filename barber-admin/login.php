@@ -8,7 +8,7 @@
 		exit();
 	}
 	// ELSE
-	$pageTitle = 'Señor Bigotes Admin Login';
+	$pageTitle = 'Barber Admin Login';
 	include 'connect.php';
 	include 'Includes/functions/functions.php';
 
@@ -21,7 +21,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Señor Bigotes Admin Login</title>
+		<title>Señor Bigotes</title>
 		<!-- FONTS FILE -->
 		<link href="Design/fonts/css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -31,12 +31,13 @@
 		<!-- CSS FILES -->
 		<link href="Design/css/sb-admin-2.min.css" rel="stylesheet">
 		<link href="Design/css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="Design/css/login-adm.css">
 	</head>
 	<body>
 		<div class="login">
 			<form class="login-container validate-form" name="login-form" method="POST" action="login.php" onsubmit="return validateLogInForm()">
 				<span class="login100-form-title p-b-32">
-					Señor Bigotes ADMIN
+					Bienvenido
 				</span>
 
 				<!-- PHP SCRIPT WHEN SUBMIT -->
@@ -45,23 +46,24 @@
 
 					if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signin-button']))
 					{
-						$username = test_input($_POST['username']);
+						$usuario = test_input($_POST['usuario']);
 						$password = test_input($_POST['password']);
-						$hashedPass = sha1($password);
+						$hashedPass = sha1($password); //cifro contraseña
+						
 
 						//Check if User Exist In database
 
-						$stmt = $con->prepare("Select admin_id, username,password from barber_admin where username = ? and password = ?");
-						$stmt->execute(array($username,$hashedPass));
+						$stmt = $con->prepare("Select admin_id, usuario,password FROM barber_admin WHERE usuario = ? and password = ?");
+						$stmt->execute(array($usuario,$hashedPass));
 						$row = $stmt->fetch();
 						$count = $stmt->rowCount();
 
-						// Check if count > 0 which mean that the database contain a record about this username
+						// Check if count > 0 which mean that the database contain a record about this usuario
 
 						if($count > 0)
 						{
 
-							$_SESSION['username_barbershop_Xw211qAAsq4'] = $username;
+							$_SESSION['username_barbershop_Xw211qAAsq4'] = $usuario;
 							$_SESSION['password_barbershop_Xw211qAAsq4'] = $password;
 							$_SESSION['admin_id_barbershop_Xw211qAAsq4'] = $row['admin_id'];
 							header('Location: index.php');
@@ -76,7 +78,7 @@
 									<span aria-hidden="true">×</span>
 								</button>
 								<div class="messages">
-									<div>Username and/or password are incorrect!</div>
+									<div>¡Usuario o contraseña incorrecto!</div>
 								</div>
 							</div>
 
@@ -89,39 +91,40 @@
 				<!-- USERNAME INPUT -->
 
 				<div class="form-input">
-					<span class="txt1">Username</span>
-					<input type="text" name="username" class = "form-control" oninput = "getElementById('required_username').style.display = 'none'" autocomplete="off">
-					<span class="invalid-feedback" id="required_username">Username is required!</span>
+					<span class="txt1">Usuario</span>
+					<input type="text" name="usuario" class = "form-control" oninput = "getElementById('required_username').style.display = 'none'" autocomplete="off">
+					<span class="invalid-feedback" id="required_username">Usuario Requerido!</span>
 				</div>
 				
 				<!-- PASSWORD INPUT -->
 
 				<div class="form-input">
-					<span class="txt1">Password</span>
+					<span class="txt1">Contraseña</span>
 					<input type="password" name="password" class="form-control" oninput = "getElementById('required_password').style.display = 'none'" autocomplete="new-password">
-					<span class="invalid-feedback" id="required_password">Password is required!</span>
+					<span class="invalid-feedback" id="required_password">Contraseña requerida!</span>
 				</div>
 				
 				<!-- SIGN IN BUTTON -->
 
 				<p>
-					<button type="submit" name="signin-button" >Sign In</button>
+					<button type="Enviar" name="signin-button" >Iniciar Sesion</button>
 				</p>
 
 				<!-- FORGOT YOUR PASSWORD LINK -->
 
-				<span class="forgotPW">Forgot your password ? <a href="#">Reset it here.</a></span>
+				<span class="forgotPW">Olvido su contraseña? <a href="#">Restablecer</a></span>
 			</form>
 		</div>
 		
-		<!-- Footer -->
+		<!-- Footer 
 		<footer class="sticky-footer bg-white">
 			<div class="container my-auto">
 		  		<div class="copyright text-center my-auto">
-					<span>Copyright &copy; Barbershop Website by JAIRI IDRISS 2020</span>
+					<span>Copyright &copy; Sr. Bigotes 2022</span>
 		  		</div>
 			</div>
 	  	</footer>
+        -->
 		<!-- End of Footer -->
 
 		<!-- INCLUDE JS SCRIPTS -->

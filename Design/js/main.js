@@ -130,11 +130,11 @@ function showTab(n)
 
     if (n == (x.length - 1)) 
     {
-        document.getElementById("nextBtn").innerHTML = "Submit";
+        document.getElementById("nextBtn").innerHTML = "Enviar";
     }
     else 
     {
-        document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").innerHTML = "Siguiente";
     }
 
     fixStepIndicator(n);

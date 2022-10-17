@@ -43,7 +43,7 @@
 
                 if($do == 'Manage')
                 {
-                    $stmt = $con->prepare("SELECT * FROM employees");
+                    $stmt = $con->prepare("SELECT * FROM empleados");
                     $stmt->execute();
                     $rows_employees = $stmt->fetchAll(); 
 
@@ -65,9 +65,9 @@
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th scope="col">First Name</th>
-                                                <th scope="col">Last Name</th>
-                                                <th scope="col">Phone Number</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Apellido</th>
+                                                <th scope="col">Número de Teléfono</th>
                                                 <th scope="col">E-mail</th>
                                                 <th scope="col">Manage</th>
                                             </tr>
@@ -78,19 +78,19 @@
                                                 {
                                                     echo "<tr>";
                                                         echo "<td>";
-                                                            echo $employee['first_name'];
+                                                            echo $employee['nombre'];
                                                         echo "</td>";
                                                         echo "<td>";
-                                                            echo $employee['last_name'];
+                                                            echo $employee['apellido'];
                                                         echo "</td>";
                                                         echo "<td>";
-                                                            echo $employee['phone_number'];
+                                                            echo $employee['celular'];
                                                         echo "</td>";
                                                         echo "<td>";
                                                             echo $employee['email'];
                                                         echo "</td>";
                                                         echo "<td>";
-                                                            $delete_data = "delete_employee_".$employee["employee_id"];
+                                                            $delete_data = "delete_employee_".$employee["empleado_id"];
                                                     ?>
                                                         <ul class="list-inline m-0">
 
@@ -98,7 +98,7 @@
 
                                                             <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                                                 <button class="btn btn-success btn-sm rounded-0">
-                                                                    <a href="employees.php?do=Edit&employee_id=<?php echo $employee['employee_id']; ?>" style="color: white;">
+                                                                    <a href="employees.php?do=Edit&empleado_id=<?php echo $employee['empleado_id']; ?>" style="color: white;">
                                                                         <i class="fa fa-edit"></i>
                                                                     </a>
                                                                 </button>
@@ -125,7 +125,7 @@
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                                                <button type="button" data-id = "<?php echo $employee['employee_id']; ?>" class="btn btn-danger delete_employee_bttn">Delete</button>
+                                                                                <button type="button" data-id = "<?php echo $employee['empleado_id']; ?>" class="btn btn-danger delete_employee_bttn">Delete</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -157,7 +157,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="employee_fname">First Name</label>
+                                            <label for="employee_fname">Nombre</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_fname']))?htmlspecialchars($_POST['employee_fname']):'' ?>" placeholder="First Name" name="employee_fname">
                                             <?php
                                                 $flag_add_employee_form = 0;
@@ -179,7 +179,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="employee_lname">Last Name</label>
+                                            <label for="employee_lname">Apellido</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_lname']))?htmlspecialchars($_POST['employee_lname']):'' ?>" placeholder="Last Name" name="employee_lname">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
@@ -203,7 +203,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="employee_phone">Phone Number</label>
+                                            <label for="employee_phone">Número de Teléfono</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_phone']))?htmlspecialchars($_POST['employee_phone']):'' ?>" placeholder="Phone number" name="employee_phone">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
@@ -247,7 +247,7 @@
 
                                 <!-- SUBMIT BUTTON -->
 
-                                <button type="submit" name="add_new_employee" class="btn btn-primary">Add employee</button>
+                                <button type="Enviar" name="add_new_employee" class="btn btn-primary">Add employee</button>
 
                             </form>
 
@@ -264,7 +264,7 @@
 
                                     try
                                     {
-                                        $stmt = $con->prepare("insert into employees(first_name,last_name,phone_number,email) values(?,?,?,?) ");
+                                        $stmt = $con->prepare("insert into empleados(nombre,apellido,celular,email) values(?,?,?,?) ");
                                         $stmt->execute(array($employee_fname,$employee_lname,$employee_phone,$employee_email));
                                         
                                         ?> 
@@ -295,12 +295,12 @@
                 }
                 elseif($do == 'Edit')
                 {
-                    $employee_id = (isset($_GET['employee_id']) && is_numeric($_GET['employee_id']))?intval($_GET['employee_id']):0;
+                    $empleado_id = (isset($_GET['empleado_id']) && is_numeric($_GET['empleado_id']))?intval($_GET['empleado_id']):0;
 
-                    if($employee_id)
+                    if($empleado_id)
                     {
-                        $stmt = $con->prepare("Select * from employees where employee_id = ?");
-                        $stmt->execute(array($employee_id));
+                        $stmt = $con->prepare("Select * from empleados where empleado_id = ?");
+                        $stmt->execute(array($empleado_id));
                         $employee = $stmt->fetch();
                         $count = $stmt->rowCount();
 
@@ -312,15 +312,15 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Edit Employee</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form method="POST" action="employees.php?do=Edit&employee_id=<?php echo $employee_id; ?>">
+                                    <form method="POST" action="employees.php?do=Edit&empleado_id=<?php echo $empleado_id; ?>">
                                         <!-- Employee ID -->
-                                        <input type="hidden" name="employee_id" value="<?php echo $employee['employee_id'];?>">
+                                        <input type="hidden" name="empleado_id" value="<?php echo $employee['empleado_id'];?>">
 
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="employee_fname">First Name</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['first_name'] ?>" placeholder="First Name" name="employee_fname">
+                                                    <label for="employee_fname">Nombre</label>
+                                                    <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="First Name" name="employee_fname">
                                                     <?php
                                                         $flag_edit_employee_form = 0;
                                                         if(isset($_POST['edit_employee_sbmt']))
@@ -341,8 +341,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="employee_lname">Last Name</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['last_name'] ?>" placeholder="Last Name" name="employee_lname">
+                                                    <label for="employee_lname">Nombre</label>
+                                                    <input type="text" class="form-control" value="<?php echo $employee['apellido'] ?>" placeholder="Last Name" name="employee_lname">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
                                                         {
@@ -365,8 +365,8 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="employee_phone">Phone Number</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['phone_number'] ?>"  placeholder="Phone number" name="employee_phone">
+                                                    <label for="employee_phone">Número de Teléfono</label>
+                                                    <input type="text" class="form-control" value="<?php echo $employee['celular'] ?>"  placeholder="Phone number" name="employee_phone">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
                                                         {
@@ -408,7 +408,7 @@
                                         </div>
 
                                         <!-- SUBMIT BUTTON -->
-                                        <button type="submit" name="edit_employee_sbmt" class="btn btn-primary">
+                                        <button type="Enviar" name="edit_employee_sbmt" class="btn btn-primary">
                                             Edit employee
                                         </button>
                                     </form>
@@ -420,12 +420,12 @@
                                             $employee_lname = $_POST['employee_lname'];
                                             $employee_phone = test_input($_POST['employee_phone']);
                                             $employee_email = test_input($_POST['employee_email']);
-                                            $employee_id = $_POST['employee_id'];
+                                            $empleado_id = $_POST['empleado_id'];
 
                                             try
                                             {
-                                                $stmt = $con->prepare("update employees set first_name = ?, last_name = ?, phone_number = ?, email = ? where employee_id = ? ");
-                                                $stmt->execute(array($employee_fname,$employee_lname,$employee_phone,$employee_email,$employee_id));
+                                                $stmt = $con->prepare("update empleados set nombre = ?, apellido = ?, celular = ?, email = ? where empleado_id = ? ");
+                                                $stmt->execute(array($employee_fname,$employee_lname,$employee_phone,$employee_email,$empleado_id));
                                                 
                                                 ?> 
                                                     <!-- SUCCESS MESSAGE -->

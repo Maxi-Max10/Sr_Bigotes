@@ -36,7 +36,7 @@
 					  			<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
 					  				Total Clients
 					  			</div>
-					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("client_id","clients")?></div>
+					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("cliente_id","clientes")?></div>
 							</div>
 							<div class="col-auto">
 					  			<i class="bs bs-boy fa-2x text-gray-300"></i>
@@ -54,7 +54,7 @@
 					  			<div class="text-xs font-weight-bold text-success text-uppercase mb-1">
 					  				Total Services
 					  			</div>
-					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("service_id","services")?></div>
+					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("servicio_id","servicios")?></div>
 							</div>
 							<div class="col-auto">
 					  			<i class="bs bs-scissors-1 fa-2x text-gray-300"></i>
@@ -74,7 +74,7 @@
 					  			</div>
 					  			<div class="row no-gutters align-items-center">
 									<div class="col-auto">
-						  				<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo countItems("employee_id","employees")?></div>
+						  				<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo countItems("empleado_id","empleados")?></div>
 									</div>
 					  			</div>
 							</div>
@@ -92,9 +92,9 @@
 				  		<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 					  			<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-					  				Appointments
+					  				citas
 					  			</div>
-					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("appointment_id","appointments")?></div>
+					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("id_citas","citas")?></div>
 							</div>
 							<div class="col-auto">
 					  			<i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -147,11 +147,11 @@
 
                                 <?php
                                     $stmt = $con->prepare("SELECT * 
-                                                    FROM appointments a , clients c
-                                                    where start_time >= ?
-                                                    and a.client_id = c.client_id
-                                                    and canceled = 0
-                                                    order by start_time;
+                                                    FROM citas a , clientes c
+                                                    where hora_comienzo >= ?
+                                                    and a.cliente_id = c.cliente_id
+                                                    and cancelado = 0
+                                                    order by hora_comienzo;
                                                     ");
                                     $stmt->execute(array(date('Y-m-d H:i:s')));
                                     $rows = $stmt->fetchAll();
@@ -175,46 +175,46 @@
                                         {
                                             echo "<tr>";
                                                 echo "<td>";
-                                                    echo $row['start_time'];
+                                                    echo $row['hora_comienzo'];
                                                 echo "</td>";
                                                 echo "<td>";
-                                                    $stmtServices = $con->prepare("SELECT service_name
-                                                            from services s, services_booked sb
-                                                            where s.service_id = sb.service_id
-                                                            and appointment_id = ?");
-                                                    $stmtServices->execute(array($row['appointment_id']));
+                                                    $stmtServices = $con->prepare("SELECT nombre_servicio
+                                                            from servicios s, servicio_reservado sb
+                                                            where s.servicio_id = sb.servicio_id
+                                                            and id_citas = ?");
+                                                    $stmtServices->execute(array($row['id_citas']));
                                                     $rowsServices = $stmtServices->fetchAll();
                                                     foreach($rowsServices as $rowsService)
                                                     {
-                                                        echo "- ".$rowsService['service_name'];
+                                                        echo "- ".$rowsService['nombre_servicio'];
                                                         if (next($rowsServices)==true)  echo " <br> ";
                                                     }
                                                 echo "</td>";
                                                 echo "<td>";
-                                                    echo $row['end_time_expected'];
+                                                    echo $row['hora_fin'];
                                             
                                                 echo "</td>";
                                                 echo "<td>";
                                                     echo "<a href = #>";
-                                                        echo $row['client_id'];
+                                                        echo $row['cliente_id'];
                                                     echo "</a>";
                                                 echo "</td>";
                                                 echo "<td>";
-                                                    $stmtEmployees = $con->prepare("SELECT first_name,last_name
-                                                            from employees e, appointments a
-                                                            where e.employee_id = a.employee_id
-                                                            and a.appointment_id = ?");
-                                                    $stmtEmployees->execute(array($row['appointment_id']));
+                                                    $stmtEmployees = $con->prepare("SELECT nombre,apellido
+                                                            from empleados e, citas a
+                                                            where e.empleado_id = a.empleado_id
+                                                            and a.id_citas = ?");
+                                                    $stmtEmployees->execute(array($row['id_citas']));
                                                     $rowsEmployees = $stmtEmployees->fetchAll();
                                                     foreach($rowsEmployees as $rowsEmployee)
                                                     {
-                                                        echo $rowsEmployee['first_name']." ".$rowsEmployee['last_name'];
+                                                        echo $rowsEmployee['nombre']." ".$rowsEmployee['apellido'];
                                                         
                                                     }
                                                 echo "</td>";
                                                 
                                                 echo "<td>";
-                                                	$cancel_data = "cancel_appointment_".$row["appointment_id"];
+                                                	$cancel_data = "cancel_appointment_".$row["id_citas"];
                                                		?>
                                                		<ul class="list-inline m-0">
 
@@ -239,12 +239,12 @@
                                                                             <p>Are you sure you want to cancel this appointment?</p>
                                                                             <div class="form-group">
                                                                                 <label>Tell Us Why?</label>
-                                                                                <textarea class="form-control" id=<?php echo "appointment_cancellation_reason_".$row['appointment_id'] ?>></textarea>
+                                                                                <textarea class="form-control" id=<?php echo "appointment_cancellation_reason_".$row['id_citas'] ?>></textarea>
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                                            <button type="button" data-id = "<?php echo $row['appointment_id']; ?>" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
+                                                                            <button type="button" data-id = "<?php echo $row['id_citas']; ?>" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -287,9 +287,9 @@
 
                             <?php
                                 $stmt = $con->prepare("SELECT * 
-                                                FROM appointments a , clients c
-                                                where a.client_id = c.client_id
-                                                order by start_time;
+                                                FROM citas a , clientes c
+                                                where a.cliente_id = c.cliente_id
+                                                order by hora_comienzo;
                                                 ");
                                 $stmt->execute(array());
                                 $rows = $stmt->fetchAll();
@@ -311,38 +311,38 @@
                                     {
                                         echo "<tr>";
                                             echo "<td>";
-                                                echo $row['start_time'];
+                                                echo $row['hora_comienzo'];
                                             echo "</td>";
                                             echo "<td>";
-                                                $stmtServices = $con->prepare("SELECT service_name
-                                                        from services s, services_booked sb
-                                                        where s.service_id = sb.service_id
-                                                        and appointment_id = ?");
-                                                $stmtServices->execute(array($row['appointment_id']));
+                                                $stmtServices = $con->prepare("SELECT nombre_servicio
+                                                        from servicios s, servicio_reservado sb
+                                                        where s.servicio_id = sb.servicio_id
+                                                        and id_citas = ?");
+                                                $stmtServices->execute(array($row['id_citas']));
                                                 $rowsServices = $stmtServices->fetchAll();
                                                 foreach($rowsServices as $rowsService)
                                                 {
-                                                    echo $rowsService['service_name'];
+                                                    echo $rowsService['nombre_servicio'];
                                                     if (next($rowsServices)==true)  echo " + ";
                                                 }
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $row['end_time_expected'];
+                                                echo $row['hora_fin'];
                                         
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $row['last_name'];
+                                                echo $row['apellido'];
                                             echo "</td>";
                                             echo "<td>";
-                                                $stmtEmployees = $con->prepare("SELECT first_name,last_name
-                                                        from employees e, appointments a
-                                                        where e.employee_id = a.employee_id
-                                                        and a.appointment_id = ?");
-                                                $stmtEmployees->execute(array($row['appointment_id']));
+                                                $stmtEmployees = $con->prepare("SELECT nombre,apellido
+                                                        from empleados e, citas a
+                                                        where e.empleado_id = a.empleado_id
+                                                        and a.id_citas = ?");
+                                                $stmtEmployees->execute(array($row['id_citas']));
                                                 $rowsEmployees = $stmtEmployees->fetchAll();
                                                 foreach($rowsEmployees as $rowsEmployee)
                                                 {
-                                                    echo $rowsEmployee['first_name']." ".$rowsEmployee['last_name'];
+                                                    echo $rowsEmployee['nombre']." ".$rowsEmployee['apellido'];
                                                     
                                                 }
                                             echo "</td>";
@@ -370,9 +370,9 @@
 
                             <?php
                                 $stmt = $con->prepare("SELECT * 
-                                                FROM appointments a , clients c
-                                                where canceled = 1
-                                                and a.client_id = c.client_id
+                                                FROM citas a , clientes c
+                                                where cancelado = 1
+                                                and a.cliente_id = c.cliente_id
                                                 ");
                                 $stmt->execute(array());
                                 $rows = $stmt->fetchAll();
@@ -383,7 +383,7 @@
 
                                     echo "<tr>";
                                         echo "<td colspan='5' style='text-align:center;'>";
-                                            echo "List of your canceled bookings will be presented here";
+                                            echo "List of your cancelado bookings will be presented here";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
@@ -394,14 +394,14 @@
                                     {
                                         echo "<tr>";
                                             echo "<td>";
-                                                echo $row['start_time'];
+                                                echo $row['hora_comienzo'];
                                             echo "</td>";
                                             echo "<td>";
-                                                echo $row['last_name'];
+                                                echo $row['apellido'];
                                             echo "</td>";
                                             echo "<td>";
                                                 
-                                                echo $row['cancellation_reason'];
+                                                echo $row['razon_cancelacion'];
                                                     
                                             echo "</td>";
                                         echo "</tr>";
