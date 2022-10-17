@@ -18,7 +18,7 @@
 
 		<?php
 
-            if(isset($_POST['submit_book_appointment_form']) && $_SERVER['REQUEST_METHOD'] === 'POST')
+            if(isset($_POST['_book_appointment_form']) && $_SERVER['REQUEST_METHOD'] === 'POST')
             {
             	// Selected SERVICES
 
