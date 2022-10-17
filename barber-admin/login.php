@@ -39,6 +39,7 @@
 			<form class="login-container validate-form" name="login-form" method="POST" action="login.php" onsubmit="return validateLogInForm()">
 				<span class="login100-form-title p-b-32">
 					Bienvenido
+					<img class="image-container" width="70" src="img/sr Bigote .logo.png" alt="" srcset="">
 				</span>
 
 				<!-- PHP SCRIPT WHEN SUBMIT -->
@@ -117,8 +118,8 @@
 			</form>
 		</div>
 		  
-		            <img class="image-container"  src="img/sr Bigote .logo.png" alt="" srcset="">
-				</div>
+		            
+		</div>
 
 
 
