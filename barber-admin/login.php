@@ -119,8 +119,9 @@
 
 
 
-		</div>
-		  
+	   </div>
+
+		 <img class="image-container" src="img/sr Bigote .logo.png" alt="">
 		            
 		
 
