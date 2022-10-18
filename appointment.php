@@ -283,7 +283,7 @@
 			<div style="overflow:auto;padding: 30px 0px;">
     			<div style="float:right;">
     				<input type="hidden" name="submit_book_appointment_form">
-      				<button type="button" id="prevBtn"  class="next_prev_buttons" style="background-color: #bbbbbb;"  onclick="nextPrev(-1)">Anterior</button>
+      				<button type="button" id="prevBtn"  class="next_prev_buttons" style="background-color: #blue;"  onclick="nextPrev(-1)">Anterior</button>
       				<button type="button" id="nextBtn" class="next_prev_buttons" onclick="nextPrev(1)">Siguiente</button>
     			</div>
   			</div>
