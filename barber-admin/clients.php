@@ -43,9 +43,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col">ID#</th>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
-                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Número Teléfono</th>
                                     <th scope="col">E-mail</th>
                                 </tr>
                             </thead>

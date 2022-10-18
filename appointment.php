@@ -115,12 +115,12 @@
 				<!-- ALERT MESSAGE -->
 
 				<div class="alert alert-danger" role="alert" style="display: none">
-					Please, select at least one service!
+					¡Por favor, seleccione al menos un servicio!
 				</div>
 
 				<div class="text_header">
 					<span>
-						1. Choice of servicios
+						1. Seleccionar Servicio
 					</span>
 				</div>
 
@@ -145,14 +145,16 @@
                                     	echo "</span>";
                                     	echo "<div class = 'service_price_field'>";
     										echo "<span style = 'font-weight: bold;'>";
-                                    			echo $row['precio_servicio']."$";
+                                    			echo "$".$row ['precio_servicio'];
                                     		echo "</span>";
                                     	echo "</div>";
                                     ?>
                                     	<div class="select_item_bttn">
                                     		<div class="btn-group-toggle" data-toggle="buttons">
 												<label class="service_label item_label btn btn-secondary">
-													<input type="checkbox"  name="selected_services[]" value="<?php echo $row['servicio_id'] ?>" autocomplete="off">Select
+													<input type="checkbox"  name="selected_services[]" value="<?php echo $row['servicio_id'] ?>" autocomplete="off">Seleccionar
+									
+													
 												</label>
 											</div>
                                     	</div>
@@ -172,12 +174,12 @@
 				<!-- ALERT MESSAGE -->
 
 				<div class="alert alert-danger" role="alert" style="display: none">
-					Please, select your employee!
+					¡Por favor, seleccione un empleado!
 				</div>
 
 				<div class="text_header">
 					<span>
-						2. Choice of employee
+						2. Seleccionar empleado
 					</span>
 				</div>
 
@@ -201,7 +203,7 @@
                                     ?>
                                     		<div class="select_item_bttn">
                                     			<label class="item_label btn btn-secondary active">
-													<input type="radio" class="radio_employee_select" name="selected_employee" value="<?php echo $row['empleado_id'] ?>">Select
+													<input type="radio" class="radio_employee_select" name="selected_employee" value="<?php echo $row['empleado_id'] ?>">Seleccionar
 												</label>	
                                     		</div>
                                     <?php
@@ -222,12 +224,12 @@
 				<!-- ALERT MESSAGE -->
 				
 		        <div class="alert alert-danger" role="alert" style="display: none">
-		          Please, select time!
+		          ¡Por favor, seleccione la hora!
 		        </div>
 
 				<div class="text_header">
 					<span>
-						3. Choice of Date and Time
+						3. Seleccione fecha y hora
 					</span>
 				</div>
 				
@@ -246,27 +248,27 @@
 
                 <div class="text_header">
                     <span>
-                        4. Client Details
+                        4. Detalles del cliente
                     </span>
                 </div>
 
                 <div>
                     <div class="form-group colum-row row">
                         <div class="col-sm-6">
-                            <input type="text" name="client_first_name" id="client_first_name" class="form-control" placeholder="First Name">
-							<span class = "invalid-feedback">This field is required</span>
+                            <input type="text" name="client_first_name" id="client_first_name" class="form-control" placeholder="Nombre">
+							<span class = "invalid-feedback">Este campo es obligatorio</span>
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" name="client_last_name" id="client_last_name" class="form-control" placeholder="Last Name">
-							<span class = "invalid-feedback">This field is required</span>
+                            <input type="text" name="client_last_name" id="client_last_name" class="form-control" placeholder="Apellido">
+							<span class = "invalid-feedback">Este campo es obligatorio</span>
                         </div>
                         <div class="col-sm-6">
                             <input type="email" name="client_email" id="client_email" class="form-control" placeholder="E-mail">
-							<span class = "invalid-feedback">Invalid E-mail</span>
+							<span class = "invalid-feedback">Email inválido</span>
                         </div>
                         <div class="col-sm-6">
-                            <input type="text"  name="client_phone_number" id="client_phone_number" class="form-control" placeholder="Phone number">
-							<span class = "invalid-feedback">Invalid phone number</span>
+                            <input type="text"  name="client_phone_number" id="client_phone_number" class="form-control" placeholder="Número de Teléfono">
+							<span class = "invalid-feedback">Número de teléfono inválido</span>
 						</div>
                     </div>
         
@@ -281,8 +283,8 @@
 			<div style="overflow:auto;padding: 30px 0px;">
     			<div style="float:right;">
     				<input type="hidden" name="submit_book_appointment_form">
-      				<button type="button" id="prevBtn"  class="next_prev_buttons" style="background-color: #bbbbbb;"  onclick="nextPrev(-1)">Previous</button>
-      				<button type="button" id="nextBtn" class="next_prev_buttons" onclick="nextPrev(1)">Next</button>
+      				<button type="button" id="prevBtn"  class="next_prev_buttons" style="background-color: #blue;"  onclick="nextPrev(-1)">Anterior</button>
+      				<button type="button" id="nextBtn" class="next_prev_buttons" onclick="nextPrev(1)">Siguiente</button>
     			</div>
   			</div>
 

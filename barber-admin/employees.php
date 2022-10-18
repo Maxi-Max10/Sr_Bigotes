@@ -65,9 +65,9 @@
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th scope="col">First Name</th>
-                                                <th scope="col">Last Name</th>
-                                                <th scope="col">Phone Number</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Apellido</th>
+                                                <th scope="col">Número de Teléfono</th>
                                                 <th scope="col">E-mail</th>
                                                 <th scope="col">Manage</th>
                                             </tr>
@@ -157,7 +157,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="employee_fname">First Name</label>
+                                            <label for="employee_fname">Nombre</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_fname']))?htmlspecialchars($_POST['employee_fname']):'' ?>" placeholder="First Name" name="employee_fname">
                                             <?php
                                                 $flag_add_employee_form = 0;
@@ -179,7 +179,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="employee_lname">Last Name</label>
+                                            <label for="employee_lname">Apellido</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_lname']))?htmlspecialchars($_POST['employee_lname']):'' ?>" placeholder="Last Name" name="employee_lname">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
@@ -203,7 +203,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="employee_phone">Phone Number</label>
+                                            <label for="employee_phone">Número de Teléfono</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_phone']))?htmlspecialchars($_POST['employee_phone']):'' ?>" placeholder="Phone number" name="employee_phone">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
@@ -247,7 +247,7 @@
 
                                 <!-- SUBMIT BUTTON -->
 
-                                <button type="submit" name="add_new_employee" class="btn btn-primary">Add employee</button>
+                                <button type="Submit" name="add_new_employee" class="btn btn-primary">Add employee</button>
 
                             </form>
 
@@ -319,7 +319,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="employee_fname">First Name</label>
+                                                    <label for="employee_fname">Nombre</label>
                                                     <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="First Name" name="employee_fname">
                                                     <?php
                                                         $flag_edit_employee_form = 0;
@@ -341,7 +341,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="employee_lname">Last Name</label>
+                                                    <label for="employee_lname">Nombre</label>
                                                     <input type="text" class="form-control" value="<?php echo $employee['apellido'] ?>" placeholder="Last Name" name="employee_lname">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
@@ -365,7 +365,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="employee_phone">Phone Number</label>
+                                                    <label for="employee_phone">Número de Teléfono</label>
                                                     <input type="text" class="form-control" value="<?php echo $employee['celular'] ?>"  placeholder="Phone number" name="employee_phone">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
@@ -408,7 +408,7 @@
                                         </div>
 
                                         <!-- SUBMIT BUTTON -->
-                                        <button type="submit" name="edit_employee_sbmt" class="btn btn-primary">
+                                        <button type="Submit" name="edit_employee_sbmt" class="btn btn-primary">
                                             Edit employee
                                         </button>
                                     </form>

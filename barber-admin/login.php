@@ -109,7 +109,7 @@
 				<!-- SIGN IN BUTTON -->
 
 				<p>
-					<button type="submit" name="signin-button" >Iniciar Sesion</button>
+					<button type="Submit" name="signin-button" >Iniciar Sesion</button>
 				</p>
 
 				<!-- FORGOT YOUR PASSWORD LINK -->

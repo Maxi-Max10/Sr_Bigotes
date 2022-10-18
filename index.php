@@ -57,14 +57,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- PREVIOUS & NEXT 
+                <!-- PREVIOUS & Siguiente 
                 <a class="carousel-control-prev" href="#home-section-carousel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#home-section-carousel" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                    <span class="sr-only">Siguiente</span>
                 </a>
                 -->
             </div>
@@ -166,7 +166,7 @@
 
                         <!-- SUBMIT BUTTON -->
 
-                        <button id="app_submit" class="default_btn" type="submit">
+                        <button id="app_submit" class="default_btn" type="Submit">
                             Solicitar Turno
                         </button>
                     </form>
@@ -229,40 +229,7 @@
         </div>
     </section>
 
-    <!-- TEAM SECTION 
-
-    <section id="team" class="team_section">
-        <div class="container">
-            <div class="section_heading ">
-                
-                <h2>Nuestros Peluqueros</h2>
-                <div class=""></div>
-            </div>
-            <ul class="team_members row"> 
-                <li class="col-lg-3 col-md-6 padd_col_res">
-                    <div class="team_member">
-                        <img src="Design/images/team-1.jpg" alt="Team Member">
-                    </div>
-                </li>
-                <li class="col-lg-3 col-md-6 padd_col_res">
-                    <div class="team_member">
-                        <img src="Design/images/team-2.jpg" alt="Team Member">
-                    </div>
-                </li>
-                <li class="col-lg-3 col-md-6 padd_col_res">
-                    <div class="team_member">
-                        <img src="Design/images/team-3.jpg" alt="Team Member">
-                    </div>
-                </li>
-                 <li class="col-lg-3 col-md-6 padd_col_res">
-                    <div class="team_member">
-                        <img src="Design/images/team-4.jpg" alt="Team Member">
-                    </div>
-                </li> 
-            </ul>
-        </div>
-    </section>
-    -->
+   
 
     <!-- REVIEWS SECTION -->
 
@@ -490,7 +457,7 @@
                      <div class="footer_widget">
                         <h3>Dirección</h3>
                         <p>
-                            Calle Pueyredón 250, Rodeo del Medio, Maipú, Mendoza.                       
+                           Ruta Provincial 50 S/N, Rodeo del Medio, Mendoza.                       
                         <p>
                             contact@señorbigote.com
                             <br>
