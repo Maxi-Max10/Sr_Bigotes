@@ -1,24 +1,15 @@
-/*
-    ======================================
-    
-    BARBERSHOP LOGIN PAGE STYLE
-
-    ======================================
-*/
-
 
 .login 
 {
-    max-width: 100px;
-    background: rgb(40, 81, 39);
+    height: 30em;
+    width: 50em;
+    margin: 6em auto;
+    
+    background: rgb(39, 80, 81);
     position: relative;
-    margin: 15px auto;
-    padding: 55px 85px 55px 85px;
-    -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
-    box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
-    border-radius: 3px;
+    
 }
-
+	
 @media (max-width: 560px) 
 {
     .login 
@@ -53,25 +44,19 @@
     margin-bottom: 10px;
 }
 
-.login input[type="text"]:focus,
-.login input[type="password"]:focus
-{
-    border-color: rgba(82, 168, 236, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
-    outline: 0 none;
-}
+
 
 .login button[type="submit"] 
 {
-  background: #28d;
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
-  line-height: 40px;
-  font-size: 16px;
-  width: 100%;
-  border: none;
-  border-radius: 3px;
+    width: 80%;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: #360033;  
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);  
+    background: linear-gradient(to right, #0b8793, #360033);
+    cursor: pointer;
 }
 
 
@@ -81,15 +66,7 @@ input:focus .border
     height: 100%;
 }
     
-.login button[type="submit"]:hover 
-{
-    background: #17c;
-}
 
-.login button[type="submit"]:focus 
-{
-  border-color: #05a;
-}
 
 .login .forgotPW
 {
@@ -103,10 +80,10 @@ input:focus .border
 .login100-form-title 
 {
     font-size: 30px;
-    color: #555555;
+    color: #0b8793;
     line-height: 1.2;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     width: 100%;
     display: block;
     padding-bottom: 32px;
@@ -115,10 +92,13 @@ input:focus .border
 .txt1
 {
     font-size: 13px;
-    color: #555555;
+    color: #000000;
     line-height: 1.4;
     text-transform: uppercase;
     padding-bottom: 11px;
     display: block;
     font-weight: bold;
 }
+
+
+
