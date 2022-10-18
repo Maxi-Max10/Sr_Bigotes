@@ -166,7 +166,7 @@
 
                         <!-- SUBMIT BUTTON -->
 
-                        <button id="app_submit" class="default_btn" type="Enviar">
+                        <button id="app_submit" class="default_btn" type="Submit">
                             Solicitar Turno
                         </button>
                     </form>

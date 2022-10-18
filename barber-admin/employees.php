@@ -247,7 +247,7 @@
 
                                 <!-- SUBMIT BUTTON -->
 
-                                <button type="Enviar" name="add_new_employee" class="btn btn-primary">Add employee</button>
+                                <button type="Submit" name="add_new_employee" class="btn btn-primary">Add employee</button>
 
                             </form>
 
@@ -408,7 +408,7 @@
                                         </div>
 
                                         <!-- SUBMIT BUTTON -->
-                                        <button type="Enviar" name="edit_employee_sbmt" class="btn btn-primary">
+                                        <button type="Submit" name="edit_employee_sbmt" class="btn btn-primary">
                                             Edit employee
                                         </button>
                                     </form>

@@ -304,7 +304,7 @@
 
                                 <!-- SUBMIT BUTTON -->
 
-                                <button type="Enviar" name="add_new_service" class="btn btn-primary">Add service</button>
+                                <button type="Submit" name="add_new_service" class="btn btn-primary">Add service</button>
 
                             </form>
 
@@ -532,7 +532,7 @@
                                         </div>
                                         
                                         <!-- SUBMIT BUTTON -->
-                                        <button type="Enviar" name="edit_service_sbmt" class="btn btn-primary">Save Edits</button>
+                                        <button type="Submit" name="edit_service_sbmt" class="btn btn-primary">Save Edits</button>
                                     </form>
                                     
                                     <?php

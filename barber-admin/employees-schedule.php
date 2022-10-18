@@ -54,7 +54,7 @@
                                         echo "</select>";                                    
                                     ?>
                                 </div>
-                                <button type="Enviar" name="show_schedule_sbmt" class="btn btn-primary">Show schedule</button>
+                                <button type="Submit" name="show_schedule_sbmt" class="btn btn-primary">Show schedule</button>
                             </div>
                         </form>
                     </div>
@@ -156,7 +156,7 @@
                                     <!-- SAVE SCHEDULE BUTTON -->
 
                                     <div class="form-group">
-                                        <button type="Enviar" name="save_schedule_sbmt" class="btn btn-info">Save schedule</button>
+                                        <button type="Submit" name="save_schedule_sbmt" class="btn btn-info">Save schedule</button>
                                     </div>
                                 </form>
                         <?php
