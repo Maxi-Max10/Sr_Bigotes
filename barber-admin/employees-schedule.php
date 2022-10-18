@@ -170,13 +170,13 @@
 
                         if(isset($_POST['save_schedule_sbmt']))
                         {
-                            $days = array("1"=>"Lunes",
-                               "2"=>"Martes",
-                               "3"=>"Miercoles",
-                               "4"=>"Jueves",
-                               "5"=>"Viernes",
-                               "6"=>"Sabado",
-                               "7"=>"Domingo") ;
+                            $days = array("1"=>"Monday",
+                                "2"=>"Tuesday",
+                                "3"=>"Wednsday",
+                                "4"=>"Thursday",
+                                "5"=>"Friday",
+                                "6"=>"Saturday",
+                                "7"=>"Sunday") ;
                             $stmt = $con->prepare("delete from horario_empleados where empleado_id = ?");
                             $stmt->execute(array($_POST['empleado_id']));
                             

@@ -111,13 +111,18 @@
                     {
                         $appointment_date = date('Y-m-d', strtotime($appointment_date . ' +1 day'));
                         echo "<div class = 'appointment_day'>";
-                            echo date('D', strtotime($appointment_date));
+                            
+                            /* echo date('D', strtotime($appointment_date));
+                            echo "<br>"; */
+                            setlocale(LC_ALL,"spanish.utf-8");
+                            echo strftime("%a", strtotime($appointment_date));
                             echo "<br>";
                             echo date('d', strtotime($appointment_date))." ".date('M', strtotime($appointment_date));
                         echo "</div>";
                     } 
                 ?>
             </div>
+            
 
             <!-- DAY HOURS -->
 
