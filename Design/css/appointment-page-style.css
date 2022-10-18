@@ -84,7 +84,7 @@ body
 }
 
 .item_select_part
-{git
+{
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
