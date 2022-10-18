@@ -22,7 +22,7 @@
                 <div class="carousel-inner">
                     <!-- FIRST SLIDE -->
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide">
+                        <img class="d-block w-100" src="Design/images/barbershop_image_2.jpg" alt="First slide">
                         <div class="carousel-caption d-md-block">
                             <h3>Danos tu voto de confianza y la recompensa te encantará.</h3>
                             <p>
@@ -34,7 +34,7 @@
                     </div>
                     <!-- SECOND SLIDE -->
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_2.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="Design/images/barbershop_image_3.jpg" alt="Second slide">
                         <div class="carousel-caption d-md-block">
                             <h3>Tu pelo necesita el mejor de los cuidados todos los días.</h3>
                             <p>
@@ -46,7 +46,7 @@
                     </div>
                     <!-- THIRD SLIDE -->
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_3.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="Design/images/barbershop_image_33.jpg" alt="Third slide">
                         <div class="carousel-caption d-md-block">
                             <h3>No es solo un corte de pelo, es una experiencia.</h3>
                             <p>
@@ -98,6 +98,73 @@
         </div>
     </section>
 
+     <!-- REVIEWS SECTION 
+
+     <section id="reviews" class="testimonial_section">
+        <div class="container">
+            <div id="reviews-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    
+                    <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#reviews-carousel" data-slide-to="1"></li>
+                    <li data-target="#reviews-carousel" data-slide-to="2"></li>
+                    
+                </ol>
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide" style="visibility: hidden;">
+                        <div class="carousel-caption d-md-block">
+                            <h3>La mejor propina es un cliente satisfecho</h3>
+                            <p>
+                               La vida se ve mejor después de un corte de cabello.
+                                <br>
+                                
+                            </p>
+                        </div>
+                    </div>
+                     REVIEW 2 
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
+                        <div class="carousel-caption d-md-block">
+                            <h3>Hola</h3>
+                            <p>
+                                Our barbershop is the territory created purely for males who appreciate
+                                <br>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    
+                     REVIEW 3 
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
+                        <div class="carousel-caption d-md-block">
+                            <h3>Its Not Just a Haircut, Its an Experience.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque libero quia fugit dicta repellat perferendis quas amet vero expedita explicabo ad nemo aut mollitia, nobis sit molestiae molestias. Ipsum, ipsa.
+
+                                <br>
+                                premium quality, time and flawless look.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                 PREVIOUS & NEXT 
+                <a class="carousel-control-prev" href="#reviews-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#reviews-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    -->
     <!-- SERVICES SECTION -->
 
     <section class="services_section" id="services">
@@ -231,72 +298,7 @@
 
    
 
-    <!-- REVIEWS SECTION -->
-
-    <section id="reviews" class="testimonial_section">
-        <div class="container">
-            <div id="reviews-carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <!--
-                    <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#reviews-carousel" data-slide-to="1"></li>
-                    <li data-target="#reviews-carousel" data-slide-to="2"></li>
-                    -->
-                </ol>
-                <div class="carousel-inner">
-                    <!-- REVIEW 1 -->
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide" style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>La mejor propina es un cliente satisfecho</h3>
-                            <p>
-                               La vida se ve mejor después de un corte de cabello.
-                                <br>
-                                
-                            </p>
-                        </div>
-                    </div>
-                    <!-- REVIEW 2 
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Hola</h3>
-                            <p>
-                                Our barbershop is the territory created purely for males who appreciate
-                                <br>
-                                
-                            </p>
-                        </div>
-                    </div>
-                    -->
-                    <!-- REVIEW 3 
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Its Not Just a Haircut, Its an Experience.</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque libero quia fugit dicta repellat perferendis quas amet vero expedita explicabo ad nemo aut mollitia, nobis sit molestiae molestias. Ipsum, ipsa.
-
-                                <br>
-                                premium quality, time and flawless look.
-                            </p>
-                        </div>
-                    </div>
-                    -->
-                </div>
-                <!-- PREVIOUS & NEXT 
-                <a class="carousel-control-prev" href="#reviews-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#reviews-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-                -->
-            </div>
-        </div>
-    </section>
+   
 
     <!-- PRICING SECTION  -->
 
