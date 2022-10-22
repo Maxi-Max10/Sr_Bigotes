@@ -40,7 +40,7 @@
 					<div class="sidebar-brand-icon rotate-n-15">
 			  			<i class="bs bs-scissors-1"></i>
 					</div>
-					<div class="sidebar-brand-text mx-3">Sr.Bigotes</div>g
+					<div class="sidebar-brand-text mx-3">Sr.Bigotes</div>
 		  		</a>
 
 		  		<!-- Divider -->
