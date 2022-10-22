@@ -109,13 +109,13 @@
         <div class="card shadow mb-4">
             <div class="card-header tab" style="padding: 0px !important;background: #36b9cc!important">
             	<button class="tablinks active" onclick="openTab(event, 'Upcoming')">
-            		Upcoming Bookings
+                Próximas reservas
             	</button>
                 <button class="tablinks" onclick="openTab(event, 'All')">
-                	All Bookings
+                Todas las reservas
                 </button>
                 <button class="tablinks" onclick="openTab(event, 'Canceled')">
-                	Canceled Bookings
+                Reservas canceladas
                 </button>
             </div>
             <div class="card-body">
@@ -124,22 +124,22 @@
                   		<thead>
                                 <tr>
                                     <th>
-                                        Start Time
+                                    Hora de inicio
                                     </th>
                                     <th>
-                                        Booked Services
+                                    Servicios reservados
                                     </th>
                                     <th>
-                                        End Time Expected
+                                    Hora de finalización prevista
                                     </th>
                                     <th>
-                                        Client
+                                        Cliente
                                     </th>
                                     <th>
-                                        Employee
+                                        Empleado
                                     </th>
                                     <th>
-                                        Manage
+                                        Opción
                                     </th>
                                 </tr>
                             </thead>
@@ -267,19 +267,19 @@
                   		<thead>
                             <tr>
                                 <th>
-                                    Start Time
+                                Hora de inicio
                                 </th>
                                 <th>
-                                    Booked Services
+                                Servicios reservados
                                 </th>
                                 <th>
-                                    End Time Expected
+                                Hora de finalización prevista
                                 </th>
                                 <th>
-                                    Client
+                                    Cliente
                                 </th>
                                 <th>
-                                    Employee
+                                    Empleado
                                 </th>
                             </tr>
                         </thead>
@@ -356,13 +356,13 @@
                   		<thead>
                             <tr>
                                 <th>
-                                    Start Time
+                                hora de inicio
                                 </th>
                                 <th>
-                                    Client
+                                    Cliente
                                 </th>
                                 <th>
-                                    Cancellation Reason
+                                Motivo de anulación
                                 </th>
                             </tr>
                         </thead>
