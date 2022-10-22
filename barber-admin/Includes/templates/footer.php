@@ -6,7 +6,7 @@
 	  	<footer class="sticky-footer bg-white">
 			<div class="container my-auto">
 		  		<div class="copyright text-center my-auto">
-					<span>Copyright &copy; Barbershop Website by JAIRI IDRISS 2020</span>
+					<span>Copyright &copy; Sr. Bigotes 2020</span>
 		  		</div>
 			</div>
 	  	</footer>
