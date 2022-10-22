@@ -109,13 +109,13 @@
         <div class="card shadow mb-4">
             <div class="card-header tab" style="padding: 0px !important;background: #36b9cc!important">
             	<button class="tablinks active" onclick="openTab(event, 'Upcoming')">
-                Próximas reservas
+            		Upcoming Bookings
             	</button>
                 <button class="tablinks" onclick="openTab(event, 'All')">
-                Todas las reservas
+                	All Bookings
                 </button>
                 <button class="tablinks" onclick="openTab(event, 'Canceled')">
-                Reservas canceladas
+                	Canceled Bookings
                 </button>
             </div>
             <div class="card-body">
@@ -124,22 +124,22 @@
                   		<thead>
                                 <tr>
                                     <th>
-                                    Hora de inicio
+                                        Start Time
                                     </th>
                                     <th>
-                                    Servicios reservados
+                                        Booked Services
                                     </th>
                                     <th>
-                                    Hora de finalización prevista
+                                        End Time Expected
                                     </th>
                                     <th>
-                                        Cliente
+                                        Client
                                     </th>
                                     <th>
-                                        Empleado
+                                        Employee
                                     </th>
                                     <th>
-                                        opción
+                                        Manage
                                     </th>
                                 </tr>
                             </thead>
