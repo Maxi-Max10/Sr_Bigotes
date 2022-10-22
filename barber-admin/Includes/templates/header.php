@@ -40,7 +40,7 @@
 					<div class="sidebar-brand-icon rotate-n-15">
 			  			<i class="bs bs-scissors-1"></i>
 					</div>
-					<div class="sidebar-brand-text mx-3">Barbershop</div>
+					<div class="sidebar-brand-text mx-3">Sr.Bigotes</div>
 		  		</a>
 
 		  		<!-- Divider -->
@@ -50,7 +50,7 @@
 			  	<li class="nav-item active">
 					<a class="nav-link" href="index.php">
 				  		<i class="fas fa-fw fa-tachometer-alt"></i>
-				  		<span>Dashboard</span>
+				  		<span>Administrador</span>
 				  	</a>
 			  	</li>
 
@@ -59,28 +59,23 @@
 
 	  			<!-- Heading -->
 	  			<div class="sidebar-heading">
-					SERVICES & SAMPLES
+					SERVICIOS
 	  			</div>
 
 	  			<!-- Nav Item - Pages Collapse Menu -->
 	  			<li class="nav-item">
 					<a class="nav-link" href="service-categories.php">
 		  				<i class="fas fa-list"></i>
-		  				<span>Service Categories</span>
+		  				<span>Categorías de Servicios</span>
 		  			</a>
 	  			</li>
 	  			<li class="nav-item">
 					<a class="nav-link" href="services.php">
 		  				<i class="bs bs-scissors-1"></i>
-		  				<span>Services</span>
+		  				<span>Servicios</span>
 		  			</a>
 	  			</li>
-	  			<li class="nav-item">
-					<a class="nav-link" href="#">
-		  				<i class="far fa-image"></i>
-		  				<span>Samples</span>
-		  			</a>
-	  			</li>
+	  			
 			  	
 
 	  			<!-- Divider -->
@@ -88,26 +83,26 @@
 
 	  			<!-- Heading -->
 	  			<div class="sidebar-heading">
-					CLIENTS & STAFF
+					CLIENTES & PERSONAL
 	  			</div>
 
 	  			<!-- Nav Item - Charts -->
 	  			<li class="nav-item">
 					<a class="nav-link" href="clients.php">
 		  				<i class="far fa-address-card"></i>
-		  				<span>Clients</span>
+		  				<span>Clientes</span>
 		  			</a>
 	  			</li>
 	  			<li class="nav-item">
 					<a class="nav-link" href="employees.php">
 		  				<i class="far fa-user"></i>
-		  				<span>Employees</span>
+		  				<span>Empleados</span>
 		  			</a>
 	  			</li>
 	  			<li class="nav-item">
 					<a class="nav-link" href="employees-schedule.php">
 		  				<i class="fas fa-calendar-week icon-ver"></i>
-		  				<span>Employees Schedule</span>
+		  				<span>Horarios de Empleados</span>
 		  			</a>
 	  			</li>
 	  
