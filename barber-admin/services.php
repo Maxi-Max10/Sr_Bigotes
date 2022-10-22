@@ -22,10 +22,10 @@
     
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Services</h1>
+                <h1 class="h3 mb-0 text-gray-800">Servicios</h1>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                     <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generate Report
+                    Generar Informe
                 </a>
             </div>
             
@@ -49,7 +49,7 @@
                 ?>
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Services</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Servicios</h6>
                         </div>
                         <div class="card-body">
 
@@ -57,7 +57,7 @@
                             
                             <a href="services.php?do=Add" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
                                 <i class="fa fa-plus"></i> 
-                                Add Service
+                                Agregar Servicio
                             </a>
 
                             <!-- SERVICES TABLE -->
@@ -65,12 +65,12 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Service Name</th>
-                                        <th scope="col">Service Category</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Duration</th>
-                                        <th scope="col">Manage</th>
+                                        <th scope="col">Servicio Nombre</th>
+                                        <th scope="col">Servicio Categoria</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Duración</th>
+                                        <th scope="col">Opción</th>
                                     </tr>
                                 </thead>
                                 <tbody>

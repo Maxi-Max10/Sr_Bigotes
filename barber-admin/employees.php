@@ -22,10 +22,10 @@
     
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Employees</h1>
+                <h1 class="h3 mb-0 text-gray-800">Empleados</h1>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                     <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generate Report
+                    Generar Informe
                 </a>
             </div>
 
@@ -50,14 +50,14 @@
                     ?>
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Employees</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Empleados</h6>
                             </div>
                             <div class="card-body">
                                 
                                 <!-- ADD NEW Employee BUTTON -->
                                 <a href="employees.php?do=Add" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
                                     <i class="fa fa-plus"></i> 
-                                    Add Employee
+                                    Agregar Empleado
                                 </a>
 
                                 <!-- Employees Table -->

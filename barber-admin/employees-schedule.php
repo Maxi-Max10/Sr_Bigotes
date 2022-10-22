@@ -21,24 +21,24 @@
     
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Employees Schedule</h1>
+                <h1 class="h3 mb-0 text-gray-800">Horario de empleados</h1>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                     <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generate Report
+                    Generar Informe
                 </a>
             </div>
 
             
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Employees Schedule</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Horario de empleados</h6>
                 </div>
                 <div class="card-body">
                     <div class="sb-entity-selector" style="max-width:300px;">
                         <form action="employees-schedule.php" method="POST">
                             <div class="form-group">
                                 <label class="control-label" for="emloyee_schedule_select">
-                                    Select employee to set up the schedule:
+                                    Seleción de empleado y Configuración de horario:
                                 </label>
                                 <div style="display:inline-block;margin-bottom: 10px;">
                                     <?php 
@@ -54,13 +54,13 @@
                                         echo "</select>";                                    
                                     ?>
                                 </div>
-                                <button type="Submit" name="show_schedule_sbmt" class="btn btn-primary">Show schedule</button>
+                                <button type="Submit" name="show_schedule_sbmt" class="btn btn-primary">ver horario</button>
                             </div>
                         </form>
                     </div>
                     
                     <div class="alert alert-info">
-                        Configure your week settings here. Just select start time and end time to set up employees working hours.
+                    Configure aquí los ajustes de su semana. Sólo tiene que seleccionar la hora de inicio y la hora de finalización para configurar las horas de trabajo de los empleados
                     </div>
                     
                     
