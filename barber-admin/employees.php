@@ -125,7 +125,7 @@
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                                <button type="button" data-id = "<?php echo $employee['empleado_id']; ?>" class="btn btn-danger delete_employee_bttn">Delete</button>
+                                                                                <button type="button" data-id = "<?php echo $employee['empleado_id']; ?>" class="btn btn-danger delete_employee_bttn">Eliminar</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -158,7 +158,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="employee_fname">Nombre</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_fname']))?htmlspecialchars($_POST['employee_fname']):'' ?>" placeholder="First Name" name="employee_fname">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_fname']))?htmlspecialchars($_POST['employee_fname']):'' ?>" placeholder="Nombre " name="employee_fname">
                                             <?php
                                                 $flag_add_employee_form = 0;
                                                 if(isset($_POST['add_new_employee']))
@@ -180,7 +180,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="employee_lname">Apellido</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_lname']))?htmlspecialchars($_POST['employee_lname']):'' ?>" placeholder="Last Name" name="employee_lname">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_lname']))?htmlspecialchars($_POST['employee_lname']):'' ?>" placeholder="Apellido" name="employee_lname">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
                                                 {
@@ -204,7 +204,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="employee_phone">Número de Teléfono</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_phone']))?htmlspecialchars($_POST['employee_phone']):'' ?>" placeholder="Phone number" name="employee_phone">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_phone']))?htmlspecialchars($_POST['employee_phone']):'' ?>" placeholder="Teléfono" name="employee_phone">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
                                                 {
@@ -320,7 +320,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="employee_fname">Nombre</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="First Name" name="employee_fname">
+                                                    <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="Nombre" name="employee_fname">
                                                     <?php
                                                         $flag_edit_employee_form = 0;
                                                         if(isset($_POST['edit_employee_sbmt']))
@@ -342,7 +342,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="employee_lname">Apellido</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['apellido'] ?>" placeholder="Last Name" name="employee_lname">
+                                                    <input type="text" class="form-control" value="<?php echo $employee['apellido'] ?>" placeholder="Apellido" name="employee_lname">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
                                                         {
@@ -366,7 +366,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="employee_phone">Número de Teléfono</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['celular'] ?>"  placeholder="Phone number" name="employee_phone">
+                                                    <input type="text" class="form-control" value="<?php echo $employee['celular'] ?>"  placeholder="Teléfono" name="employee_phone">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
                                                         {
