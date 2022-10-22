@@ -153,7 +153,7 @@
                     
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Add New Service</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Agregar nuevo servicio</h6>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="services.php?do=Add">
@@ -304,7 +304,7 @@
 
                                 <!-- SUBMIT BUTTON -->
 
-                                <button type="Submit" name="add_new_service" class="btn btn-primary">Add service</button>
+                                <button type="Submit" name="add_new_service" class="btn btn-primary">Agregar Servicio</button>
 
                             </form>
 

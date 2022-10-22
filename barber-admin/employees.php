@@ -233,7 +233,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Email is required.
+                                                                Email es requerido.
                                                             </div>
                                                         <?php
 
@@ -247,7 +247,7 @@
 
                                 <!-- SUBMIT BUTTON -->
 
-                                <button type="Submit" name="add_new_employee" class="btn btn-primary">Add employee</button>
+                                <button type="Submit" name="add_new_employee" class="btn btn-primary">Agregar empleado</button>
 
                             </form>
 
