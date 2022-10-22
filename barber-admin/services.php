@@ -3,7 +3,7 @@
     session_start();
 
     //Page Title
-    $pageTitle = 'Services';
+    $pageTitle = 'Servicios';
 
     //Includes
     include 'connect.php';

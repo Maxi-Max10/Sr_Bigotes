@@ -2,7 +2,7 @@
     session_start();
 
     //Page Title
-    $pageTitle = 'Employees Schedule';
+    $pageTitle = 'Horario Empleado';
 
     //Includes
     include 'connect.php';
