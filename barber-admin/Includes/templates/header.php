@@ -136,7 +136,7 @@
 							<li class="nav-item">
 		              			<a class="nav-link" href="../" target="_blank">
 		              				<i class="far fa-eye"></i>
-		                			<span style="margin-left: 5px;">View website</span>
+		                			<span style="margin-left: 5px;">Ver sitio web</span>
 		              			</a>
 		          			</li>
 							<div class="topbar-divider d-none d-sm-block"></div>
