@@ -164,7 +164,7 @@
 
                                         echo "<tr>";
                                             echo "<td colspan='5' style='text-align:center;'>";
-                                                echo "List of your upcoming bookings will be presented here";
+                                                echo "La lista de sus próximas reservas se presentará aquí";
                                             echo "</td>";
                                         echo "</tr>";
                                     }
