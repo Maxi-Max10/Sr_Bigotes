@@ -2,7 +2,7 @@
     session_start();
 
     //Page Title
-    $pageTitle = 'Service Categories';
+    $pageTitle = 'Categoria Servicios';
 
     //Includes
     include 'connect.php';

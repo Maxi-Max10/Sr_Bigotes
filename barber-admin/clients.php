@@ -2,7 +2,7 @@
     session_start();
 
      //Page Title
-    $pageTitle = 'Clients';
+    $pageTitle = 'Cliente';
 
     //Includes
     include 'connect.php';

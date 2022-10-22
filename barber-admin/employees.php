@@ -3,7 +3,7 @@
     session_start();
 
     //Page Title
-    $pageTitle = 'Employees';
+    $pageTitle = 'Empleado';
 
     //Includes
     include 'connect.php';
