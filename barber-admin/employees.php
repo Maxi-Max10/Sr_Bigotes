@@ -320,7 +320,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="employee_fname">Nombre</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="First Name" name="employee_fname">
+                                                    <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="Nombre" name="employee_fname">
                                                     <?php
                                                         $flag_edit_employee_form = 0;
                                                         if(isset($_POST['edit_employee_sbmt']))
