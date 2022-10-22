@@ -90,7 +90,7 @@
                                                             echo $employee['email'];
                                                         echo "</td>";
                                                         echo "<td>";
-                                                            $delete_data = "delete_employee_".$employee["empleado_id"];
+                                                            $delete_data = "_employee_".$employee["empleado_id"];
                                                     ?>
                                                         <ul class="list-inline m-0">
 
@@ -106,7 +106,7 @@
 
                                                             <!-- DELETE BUTTON -->
 
-                                                            <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                                                            <li class="list-inline-item" data-toggle="tooltip" title="Borrar">
                                                                 <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
                                                                 <!-- Delete Modal -->
