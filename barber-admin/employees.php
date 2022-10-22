@@ -69,7 +69,7 @@
                                                 <th scope="col">Apellido</th>
                                                 <th scope="col">Número de Teléfono</th>
                                                 <th scope="col">E-mail</th>
-                                                <th scope="col">Manage</th>
+                                                <th scope="col">Opción</th>
                                             </tr>
                                         </thead>
                                         <tbody>
