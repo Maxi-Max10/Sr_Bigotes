@@ -115,17 +115,17 @@
                                                                     <div class="modal-dialog" role="document">
                                                                         <div class="modal-content">
                                                                             <div class="modal-header">
-                                                                                <h5 class="modal-title" id="exampleModalLabel">Delete Employee</h5>
+                                                                                <h5 class="modal-title" id="exampleModalLabel">Eliminar empleado</h5>
                                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                     <span aria-hidden="true">&times;</span>
                                                                                 </button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                Are you sure you want to delete this employee?
+                                                                                Esta seguro que desea eliminar al empleado?
                                                                             </div>
                                                                             <div class="modal-footer">
-                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                                                <button type="button" data-id = "<?php echo $employee['empleado_id']; ?>" class="btn btn-danger delete_employee_bttn">Delete</button>
+                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                                <button type="button" data-id = "<?php echo $employee['empleado_id']; ?>" class="btn btn-danger delete_employee_bttn">Eliminar</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -150,7 +150,7 @@
                     
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Add New Employee</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Agregar nuevo empleado</h6>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="employees.php?do=Add">
@@ -158,7 +158,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="employee_fname">Nombre</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_fname']))?htmlspecialchars($_POST['employee_fname']):'' ?>" placeholder="First Name" name="employee_fname">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_fname']))?htmlspecialchars($_POST['employee_fname']):'' ?>" placeholder="Nombre " name="employee_fname">
                                             <?php
                                                 $flag_add_employee_form = 0;
                                                 if(isset($_POST['add_new_employee']))
@@ -167,7 +167,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                First name is required.
+                                                                Nombre es requerido.
                                                             </div>
                                                         <?php
 
@@ -180,7 +180,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="employee_lname">Apellido</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_lname']))?htmlspecialchars($_POST['employee_lname']):'' ?>" placeholder="Last Name" name="employee_lname">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_lname']))?htmlspecialchars($_POST['employee_lname']):'' ?>" placeholder="Apellido" name="employee_lname">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
                                                 {
@@ -188,7 +188,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Last name is required.
+                                                            Apellido es requerido.
                                                             </div>
                                                         <?php
 
@@ -204,7 +204,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="employee_phone">Número de Teléfono</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_phone']))?htmlspecialchars($_POST['employee_phone']):'' ?>" placeholder="Phone number" name="employee_phone">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['employee_phone']))?htmlspecialchars($_POST['employee_phone']):'' ?>" placeholder="Teléfono" name="employee_phone">
                                             <?php
                                                 if(isset($_POST['add_new_employee']))
                                                 {
@@ -212,7 +212,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Phone number is required.
+                                                                Número de Teléfono requerido.
                                                             </div>
                                                         <?php
 
@@ -309,7 +309,7 @@
                             ?>
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Edit Employee</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Editar Empleado</h6>
                                 </div>
                                 <div class="card-body">
                                     <form method="POST" action="employees.php?do=Edit&empleado_id=<?php echo $empleado_id; ?>">
@@ -320,7 +320,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="employee_fname">Nombre</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="First Name" name="employee_fname">
+                                                    <input type="text" class="form-control" value="<?php echo $employee['nombre'] ?>" placeholder="Nombre" name="employee_fname">
                                                     <?php
                                                         $flag_edit_employee_form = 0;
                                                         if(isset($_POST['edit_employee_sbmt']))
@@ -329,7 +329,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        First name is required.
+                                                                        Nombre es requerido.
                                                                     </div>
                                                                 <?php
 
@@ -341,8 +341,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="employee_lname">Nombre</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['apellido'] ?>" placeholder="Last Name" name="employee_lname">
+                                                    <label for="employee_lname">Apellido</label>
+                                                    <input type="text" class="form-control" value="<?php echo $employee['apellido'] ?>" placeholder="Apellido" name="employee_lname">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
                                                         {
@@ -350,7 +350,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Last name is required.
+                                                                    Apellido es requerido.
                                                                     </div>
                                                                 <?php
 
@@ -366,7 +366,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="employee_phone">Número de Teléfono</label>
-                                                    <input type="text" class="form-control" value="<?php echo $employee['celular'] ?>"  placeholder="Phone number" name="employee_phone">
+                                                    <input type="text" class="form-control" value="<?php echo $employee['celular'] ?>"  placeholder="Teléfono" name="employee_phone">
                                                     <?php
                                                         if(isset($_POST['edit_employee_sbmt']))
                                                         {
@@ -374,7 +374,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Phone number is required.
+                                                                    Número de Teléfono es requerido.
                                                                     </div>
                                                                 <?php
 
@@ -395,7 +395,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Email is required.
+                                                                        Email es requerido.
                                                                     </div>
                                                                 <?php
 
@@ -409,7 +409,7 @@
 
                                         <!-- SUBMIT BUTTON -->
                                         <button type="Submit" name="edit_employee_sbmt" class="btn btn-primary">
-                                            Edit employee
+                                            Editar empleado
                                         </button>
                                     </form>
                                     <?php

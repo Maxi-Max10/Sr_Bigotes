@@ -48,23 +48,23 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Add New Category</h5>
+                                    <h5 class="modal-title">Añadir nueva categoría</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label for="nombre_categoria">Category name</label>
-                                        <input type="text" id="category_name_input" class="form-control" placeholder="Category Name" name="nombre_categoria">
+                                        <label for="nombre_categoria">Categoria Nombre</label>
+                                        <input type="text" id="category_name_input" class="form-control" placeholder="Categoria nombre" name="nombre_categoria">
                                         <div class="invalid-feedback" id="required_category_name" style="display: none;">
-                                            Category name is required!
+                                            Categoria nombre es requerido!
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn btn-info" id="add_category_bttn">Add Category</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-info" id="add_category_bttn">Agregar Categoria</button>
                                 </div>
                             </div>
                         </div>
@@ -140,16 +140,16 @@
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Delete Category</h5>
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Categoria</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    Are you sure you want to delete this Category "<?php echo $category['nombre_categoria']; ?>"?
+                                                                    Seguro desea eliminar categoria?"<?php echo $category['nombre_categoria']; ?>"?
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                                                                     <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Delete</button>
                                                                 </div>
                                                             </div>
