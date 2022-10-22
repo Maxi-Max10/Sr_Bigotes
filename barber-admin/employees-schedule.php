@@ -83,13 +83,13 @@
                                             $stmt->execute(array($empleado_id));
                                             $empleados = $stmt->fetchAll();
             
-                                            $days = array("1"=>"Monday",
-                                                "2"=>"Tuesday",
-                                                "3"=>"Wednsday",
-                                                "4"=>"Thursday",
-                                                "5"=>"Friday",
-                                                "6"=>"Saturday",
-                                                "7"=>"Sunday") ;
+                                            $days = array("1"=>"Lunes",
+                                                "2"=>"Martes",
+                                                "3"=>"Miércoles",
+                                                "4"=>"Jueves",
+                                                "5"=>"Viernes",
+                                                "6"=>"Sábado",
+                                                "7"=>"Domingo") ;
                                         
                                             //Available days
                                             $av_days = array();
@@ -156,7 +156,7 @@
                                     <!-- SAVE SCHEDULE BUTTON -->
 
                                     <div class="form-group">
-                                        <button type="Submit" name="save_schedule_sbmt" class="btn btn-info">Save schedule</button>
+                                        <button type="Submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
                                     </div>
                                 </form>
                         <?php
