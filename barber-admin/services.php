@@ -119,17 +119,17 @@
                                                                     <div class="modal-dialog" role="document">
                                                                         <div class="modal-content">
                                                                             <div class="modal-header">
-                                                                                <h5 class="modal-title" id="exampleModalLabel">Delete Service</h5>
+                                                                                <h5 class="modal-title" id="exampleModalLabel">Borrar servicio</h5>
                                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                     <span aria-hidden="true">&times;</span>
                                                                                 </button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                                Are you sure you want to delete this Service "<?php echo $service['nombre_servicio']; ?>"?
+                                                                            ¿Está seguro de que quiere eliminar este Servicio? "<?php echo $service['nombre_servicio']; ?>"?
                                                                             </div>
                                                                             <div class="modal-footer">
-                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                                                <button type="button" data-id = "<?php echo $service['servicio_id']; ?>" class="btn btn-danger delete_service_bttn">Delete</button>
+                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                                <button type="button" data-id = "<?php echo $service['servicio_id']; ?>" class="btn btn-danger delete_service_bttn">Eliminar</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -160,7 +160,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="nombre_servicio">Service Name</label>
+                                            <label for="nombre_servicio">Servicio Nombre</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['nombre_servicio']))?htmlspecialchars($_POST['nombre_servicio']):'' ?>" placeholder="Service Name" name="nombre_servicio">
                                             <?php
                                                 $flag_add_service_form = 0;
@@ -170,7 +170,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Service name is required.
+                                                                Servicio nombre es requerido.
                                                             </div>
                                                         <?php
 
@@ -204,7 +204,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="duracion_servicio">Service Duration(min)</label>
+                                            <label for="duracion_servicio">Duración del servicio(min)</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['duracion_servicio']))?htmlspecialchars($_POST['duracion_servicio']):'' ?>" placeholder="Service Duration" name="duracion_servicio">
                                             <?php
 
@@ -214,7 +214,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Service duration is required.
+                                                            Duración del servicio es requerido.
                                                             </div>
                                                         <?php
 
@@ -224,7 +224,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Invalid duration.
+                                                            Duración no válida.
                                                             </div>
                                                         <?php
 
@@ -236,7 +236,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="precio_servicio">Service Price($)</label>
+                                            <label for="precio_servicio">Precio del servicio($)</label>
                                             <input type="text" class="form-control" value="<?php echo (isset($_POST['precio_servicio']))?htmlspecialchars($_POST['precio_servicio']):'' ?>" placeholder="Service Price" name="precio_servicio">
                                             <?php
 
@@ -246,7 +246,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Service price is required.
+                                                            Precio del servicio es requerido.
                                                             </div>
                                                         <?php
 
@@ -256,7 +256,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Invalid price.
+                                                            Precio inválido.
                                                             </div>
                                                         <?php
 
@@ -270,7 +270,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="descripcion_servicio">Service Description</label>
+                                            <label for="descripcion_servicio">Descripción del servicio</label>
                                             <textarea class="form-control" name="descripcion_servicio" style="resize: none;"><?php echo (isset($_POST['descripcion_servicio']))?htmlspecialchars($_POST['descripcion_servicio']):''; ?></textarea>
                                             <?php
 
@@ -280,7 +280,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                Service description is required.
+                                                            Descripción del servicio es requerido.
                                                             </div>
                                                         <?php
 
@@ -290,7 +290,7 @@
                                                     {
                                                         ?>
                                                             <div class="invalid-feedback" style="display: block;">
-                                                                The length of the description should be less than 250 letters.
+                                                            La longitud de la descripción debe ser inferior a 250 letras.
                                                             </div>
                                                         <?php
 
@@ -368,7 +368,7 @@
                             ?>
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Edit Service</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Editar servicio</h6>
                                 </div>
                                 <div class="card-body">
                                     <form method="POST" action="services.php?do=Edit&servicio_id=<?php echo $servicio_id; ?>">
@@ -378,7 +378,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="nombre_servicio">Service Name</label>
+                                                    <label for="nombre_servicio">Servicio Nombre</label>
                                                     <input type="text" class="form-control" value="<?php echo $service['nombre_servicio'] ?>" placeholder="Service Name" name="nombre_servicio">
                                                     <?php
                                                         $flag_edit_service_form = 0;
@@ -389,7 +389,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Service name is required.
+                                                                        Servicio nombre es requerido.
                                                                     </div>
                                                                 <?php
 
