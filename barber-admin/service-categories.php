@@ -18,10 +18,10 @@
     
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Service Categories</h1>
+                <h1 class="h3 mb-0 text-gray-800">Categorías de servicios</h1>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                     <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generate Report
+                    Generar Informe
                 </a>
             </div>
 
@@ -33,14 +33,14 @@
             ?>
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Service Categories</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Categorías de servicios</h6>
                 </div>
                 <div class="card-body">
 
                     <!-- ADD NEW CATEGORY BUTTON -->
                     <button class="btn btn-success btn-sm" style="margin-bottom: 10px;" type="button" data-toggle="modal" data-target="#add_new_category" data-placement="top">
                         <i class="fa fa-plus"></i> 
-                        Add Category
+                       Agregar categoria
                     </button>
 
                     <!-- Add New Category Modal -->
@@ -75,9 +75,9 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Category ID</th>
-                                    <th>Category NAME</th>
-                                    <th>Manage</th>
+                                    <th>Categoria ID</th>
+                                    <th>Nombre de categoria</th>
+                                    <th>Opción</th>
                                 </tr>
                             </thead> 
                             <tbody>
