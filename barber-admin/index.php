@@ -230,15 +230,15 @@
                                                                 <div class="modal-dialog" role="document">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title">Cancel Appointment</h5>
+                                                                            <h5 class="modal-title">Cancelar Turno</h5>
                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                 <span aria-hidden="true">&times;</span>
                                                                             </button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <p>Are you sure you want to cancel this appointment?</p>
+                                                                            <p>Esta seguro que desea cancelar turno?</p>
                                                                             <div class="form-group">
-                                                                                <label>Tell Us Why?</label>
+                                                                                <label>Motivo?</label>
                                                                                 <textarea class="form-control" id=<?php echo "appointment_cancellation_reason_".$row['id_citas'] ?>></textarea>
                                                                             </div>
                                                                         </div>
