@@ -96,7 +96,7 @@ $('.cancel_appointment_button').click(function()
             $('#cancel_appointment_'+id_citas).modal('hide');
             
             //Show Success Message
-            swal("Turno Cancelado","El turno a sido cancelado exitosamente!", "success").then((value) => 
+            swal("Cancel Appointment","The Appointment has been canceled successfully!", "success").then((value) => 
             {
                 window.location.replace("index.php");
             });

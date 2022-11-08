@@ -57,16 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- PREVIOUS & Siguiente 
-                <a class="carousel-control-prev" href="#home-section-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#home-section-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
-                -->
+              
             </div>
 		</div>
 	</section>
@@ -98,73 +89,6 @@
         </div>
     </section>
 
-     <!-- REVIEWS SECTION 
-
-     <section id="reviews" class="testimonial_section">
-        <div class="container">
-            <div id="reviews-carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    
-                    <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#reviews-carousel" data-slide-to="1"></li>
-                    <li data-target="#reviews-carousel" data-slide-to="2"></li>
-                    
-                </ol>
-                <div class="carousel-inner">
-                    
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide" style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>La mejor propina es un cliente satisfecho</h3>
-                            <p>
-                               La vida se ve mejor después de un corte de cabello.
-                                <br>
-                                
-                            </p>
-                        </div>
-                    </div>
-                     REVIEW 2 
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Hola</h3>
-                            <p>
-                                Our barbershop is the territory created purely for males who appreciate
-                                <br>
-                                
-                            </p>
-                        </div>
-                    </div>
-                    
-                     REVIEW 3 
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Its Not Just a Haircut, Its an Experience.</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque libero quia fugit dicta repellat perferendis quas amet vero expedita explicabo ad nemo aut mollitia, nobis sit molestiae molestias. Ipsum, ipsa.
-
-                                <br>
-                                premium quality, time and flawless look.
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-                 PREVIOUS & NEXT 
-                <a class="carousel-control-prev" href="#reviews-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#reviews-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-                
-            </div>
-        </div>
-    </section>
-    -->
     <!-- SERVICES SECTION -->
 
     <section class="services_section" id="services">
@@ -371,72 +295,6 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION 
-
-    <section class="contact-section" id="contact-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 sm-padding">
-                    <div class="contact-info">
-                        <h2>
-                            Get in touch with us & 
-                            <br>send us message today!
-                        </h2>
-                        <p>
-                            Saasbiz is a different kind of architecture practice. Founded by LoganCee in 1991, we’re an employee-owned firm pursuing a democratic design process that values everyone’s input.
-                        </p>
-                        <h3>
-                            198 West 21th Street, Suite 721 
-                            <br>
-                            New York, NY 10010
-                        </h3>
-                        <h4>
-                            <span style = "font-weight: bold">Email:</span> 
-                            Dynamiclayers.Net 
-                            <br> 
-                            <span style = "font-weight: bold">Phone:</span> 
-                            +88 (0) 101 0000 000
-                            <br> 
-                            <span style = "font-weight: bold">Fax:</span> 
-                            +88 (0) 202 0000 001
-                        </h4>
-                    </div>
-                </div>
-                <div class="col-lg-6 sm-padding">
-                    <div class="contact-form">
-                        <div id="contact_ajax_form" class="contactForm">
-                            <div class="form-group colum-row row">
-                                <div class="col-sm-6">
-                                    <input type="text" id="contact_name" name="name" class="form-control" placeholder="Name">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="email" id="contact_email" name="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <input type="text" id="contact_subject" name="subject" class="form-control" placeholder="Subject">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <textarea id="contact_message" name="message" cols="30" rows="5" class="form-control message" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <button id="contact_send" class="default_btn">Send Message</button>
-                                </div>
-                            </div>
-                            <img src="Design/images/ajax_loader_gif.gif" id = "contact_ajax_loader" style="display: none">
-                            <div id="contact_status_message"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
 
     <!-- WIDGET SECTION / FOOTER -->
     <section class="widget_section" id="contact-us">

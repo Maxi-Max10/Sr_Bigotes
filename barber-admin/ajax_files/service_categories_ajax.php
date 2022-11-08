@@ -75,6 +75,7 @@
             $data['message'] =  $exp->getMessage() ;
             echo json_encode($data);
             exit();
+            
         }
 
     }
