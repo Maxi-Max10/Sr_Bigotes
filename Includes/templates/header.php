@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- HEAD -->
+
 
 <head>
     <meta charset="utf-8">
@@ -28,7 +28,7 @@
 
     <link rel="stylesheet" type="text/css" href="Design/css/styles.css">
 
-    <!-- favicon -->
+    <!-- iconos -->
     <link rel="apple-touch-icon" sizes="57x57" href="Design/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="Design/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="Design/favicon/apple-icon-72x72.png">
@@ -47,7 +47,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- GOOGLE FONTS -->
+    <!-- fUENTES DE GOOGLE -->
 
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -59,4 +59,3 @@
 
 </head>
 
-<!-- BODY -->

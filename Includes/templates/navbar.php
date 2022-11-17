@@ -1,6 +1,6 @@
 
     
-    <!-- START NAVBAR SECTION -->
+    <!--  NAVBAR  -->
 
     <header id="header" class="header-section">
         <div class="container">
@@ -32,9 +32,9 @@
 
 	<div class="header-height" style="height: 80px;"></div>
 
-    <!-- END NAVBAR SECTION -->
+    
 
-    <!-- START MOBILE NAVBAR -->
+    <!-- CELULAR NAVBAR -->
     
     <div id="menu_mobile" class="menu-mobile-menu-container">
         <ul class="mob-menu-top">
@@ -89,4 +89,4 @@
         </div>
     </div>
 
-    <!-- END NAVBAR MOBILE -->
+   

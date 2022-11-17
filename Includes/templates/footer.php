@@ -16,7 +16,7 @@
     </footer>
 
 	
-		<!-- INCLUDE JS SCRIPTS -->
+		<!-- JS SCRIPTS -->
 
 		<script src="Design/js/jquery.min.js"></script>
 		<script src="Design/js/bootstrap.min.js"></script>
@@ -25,8 +25,7 @@
 
 	</body>
 
-	<!-- END BODY TAG -->
+	
 
 </html>
 
-<!-- END HTML TAG -->
