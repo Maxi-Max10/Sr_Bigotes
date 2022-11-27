@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 
-	//Check If user is already logged in
+	//SI EXISTE UNA SESION CON USERNAME Y PASSWORD INGRESA AL INDEX
 	if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
 	{
         //Page Title
@@ -19,10 +19,7 @@
 		<!-- Page Heading -->
 		<div class="d-sm-flex align-items-center justify-content-between mb-4">
 			<h1 class="h3 mb-0 text-gray-800">Tablero</h1>
-			<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-				<i class="fas fa-download fa-sm text-white-50"></i>
-				Generar Informe
-			</a>
+			
 		</div>
 
 		<!-- Content Row -->
@@ -423,6 +420,7 @@
 		//Include Footer
 		include 'Includes/templates/footer.php';
 	}
+    // si no existe me redirige al login
 	else
     {
     	header('Location: login.php');

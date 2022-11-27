@@ -1,4 +1,4 @@
-<!-- PHP INCLUDES -->
+
 
 <?php
 
@@ -8,7 +8,7 @@
     include "Includes/templates/navbar.php";
 
 ?>
-<!-- HOJA DE ESTILO DE PÁGINA DE CITAS -->
+
 <link rel="stylesheet" href="Design/css/appointment-page-style.css">
 
 <!--SECCION RESERVA -->
@@ -154,7 +154,7 @@
                                     	<div class="select_item_bttn">
                                     		<div class="btn-group-toggle" data-toggle="buttons">
 												<label class="service_label item_label btn btn-secondary">
-													<input type="checkbox"  name="selected_services[]" value="<?php echo $row['servicio_id'] ?>" autocomplete="off">Seleccionar
+													<input type="checkbox"  name="selected_services[]" value="<?php echo $row['servicio_id'] ?>" autocomplete="off">Selec.
 									
 													
 												</label>
@@ -185,7 +185,7 @@
 					</span>
 				</div>
 
-				<!-- FICHA EMPLEADORES -->
+				<!-- LISTAR EMPLEADOS -->
 				
 				<div class="btn-group-toggle" data-toggle="buttons">
 					<div class="items_tab">
@@ -205,7 +205,7 @@
                                     ?>
                                     		<div class="select_item_bttn">
                                     			<label class="item_label btn btn-secondary active">
-													<input type="radio" class="radio_employee_select" name="selected_employee" value="<?php echo $row['empleado_id'] ?>">Seleccionar
+													<input type="radio" class="radio_employee_select" name="selected_employee" value="<?php echo $row['empleado_id'] ?>">Select.
 												</label>	
                                     		</div>
                                     <?php

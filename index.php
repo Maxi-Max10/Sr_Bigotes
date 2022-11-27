@@ -9,59 +9,7 @@
 
 ?>
 
-    <!-- SECCIÓN DE INICIO -->
-
-    <section class="home-section" id="home-section">
-	    <div class="home-section-content">
-		    <div id="home-section-carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#home-section-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#home-section-carousel" data-slide-to="1"></li>
-                    <li data-target="#home-section-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <!-- PRIMERA DISPOSITIVA -->
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_2.jpg" alt="First slide">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Danos tu voto de confianza y la recompensa te encantará.</h3>
-                            <p>
-                                Tu vida para siempre puede cambiar dentro de las paredes de esta peluquería donde el look que desees 
-                                <br>
-                                puede convertirse en realidad.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- SEGUNDA DISPOSITIVA -->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_3.jpg" alt="Second slide">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Tu pelo necesita el mejor de los cuidados todos los días.</h3>
-                            <p>
-                                Un mundo sin peluquerías sería un mundo muy aburrido donde la mayoría tendría que conformarse 
-                                <br>
-                                con un simple estilo.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- TERCERA DISPOSITIVA -->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_33.jpg" alt="Third slide">
-                        <div class="carousel-caption d-md-block">
-                            <h3>No es solo un corte de pelo, es una experiencia.</h3>
-                            <p>
-                                Nuestra barbería es el territorio creado puramente para hombres que aprecian
-                                <br>
-                                calidad premium, tiempo y aspecto impecable.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-              
-            </div>
-		</div>
-	</section>
-
+    
     <!-- ACERCA DE LA SECCIÓN -->
 
     <section id="about" class="about_section">
@@ -89,73 +37,7 @@
         </div>
     </section>
 
-     <!-- REVIEWS SECTION 
-
-     <section id="reviews" class="testimonial_section">
-        <div class="container">
-            <div id="reviews-carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    
-                    <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#reviews-carousel" data-slide-to="1"></li>
-                    <li data-target="#reviews-carousel" data-slide-to="2"></li>
-                    
-                </ol>
-                <div class="carousel-inner">
-                    
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="Design/images/git.jpg" alt="First slide" style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>La mejor propina es un cliente satisfecho</h3>
-                            <p>
-                               La vida se ve mejor después de un corte de cabello.
-                                <br>
-                                
-                            </p>
-                        </div>
-                    </div>
-                     REVIEW 2 
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Hola</h3>
-                            <p>
-                                Our barbershop is the territory created purely for males who appreciate
-                                <br>
-                                
-                            </p>
-                        </div>
-                    </div>
-                    
-                     REVIEW 3 
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide"  style="visibility: hidden;">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Its Not Just a Haircut, Its an Experience.</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque libero quia fugit dicta repellat perferendis quas amet vero expedita explicabo ad nemo aut mollitia, nobis sit molestiae molestias. Ipsum, ipsa.
-
-                                <br>
-                                premium quality, time and flawless look.
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-                 PREVIOUS & NEXT 
-                <a class="carousel-control-prev" href="#reviews-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#reviews-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-                
-            </div>
-        </div>
-    </section>
-    -->
+     
     <!-- SECCIÓN DE SERVICIOS -->
 
     <section class="services_section" id="services">

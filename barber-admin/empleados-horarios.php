@@ -152,10 +152,10 @@
                                     </div>
 
                                     
-<!-- BOTÓN GUARDAR PROGRAMA -->
+                                    <!-- BOTÓN GUARDAR HORARIO -->
 
                                     <div class="form-group">
-                                        <button type="Submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
+                                        <button type="submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
                                     </div>
                                 </form>
                         <?php
@@ -176,8 +176,8 @@
                                 "5"=>"Friday",
                                 "6"=>"Saturday",
                                 "7"=>"Sunday") ;
-                            $stmt = $con->prepare("delete from horario_empleados where empleado_id = ?");
-                            $stmt->execute(array($_POST['empleado_id']));
+                            //$stmt = $con->prepare("delete from horario_empleados where empleado_id = ?");
+                            //$stmt->execute(array($_POST['empleado_id']));
                             
                             foreach($days as $key=>$value)
                             {
@@ -186,7 +186,7 @@
                                     $stmt = $con->prepare("insert into horario_empleados(empleado_id,id_dia,desde_hora,hasta_hora) values(?, ?, ?,?)");
                                     $stmt->execute(array($_POST['empleado_id'],$key,$_POST[$value.'-from'],$_POST[$value.'-to']));
                                     
-                                    $message = "Se a actializado con exito el horario de los empleados!";
+                                    $message = "Se a actualizado con exito el horario de los empleados!";
                                     
                                     ?>
 
