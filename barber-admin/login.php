@@ -116,7 +116,7 @@
 
 				?>
 
-                <!-- USERNAME INPUT --> validar input de formularios
+                <!-- USERNAME INPUT  validar input de formularios--> 
 
                 <div class="form-input">
                     <span class="txt1">Usuario</span>
