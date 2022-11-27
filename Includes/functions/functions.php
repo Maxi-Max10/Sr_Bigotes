@@ -1,7 +1,8 @@
 <?php
-    /*
-		Title Function That Echo The Page Title In Case The Page Has The Variable $pageTitle And Echo Default Title For Other Pages
-	*/
+    
+/*
+Función de título que repite el título de la página en caso de que la página tenga la variable $pageTitle y repite el título predeterminado para otras páginas
+*/
 	function getTitle()
 	{
 		global $pageTitle;
@@ -12,8 +13,8 @@
 	}
 
 	/*
-		This function returns the number of items in a given table
-	*/
+Esta función devuelve el número de elementos en una tabla dada
+*/
 
     function countItems($item,$table)
 	{
@@ -43,14 +44,15 @@
 		return $count;
 	}
 
+/*
+    ==============================================
+    FUNCIÓN DE ENTRADA DE PRUEBA, SE UTILIZA PARA LA DESINFECCIÓN DE LAS ENTRADAS DEL USUARIO
+    Y ELIMINAR CARACTERES SOSPECHOSOS y eliminar espacios adicionales
+    ==============================================
 
-  	/*
-    	==============================================
-    	TEST INPUT FUNCTION, IS USED FOR SANITIZING USER INPUTS
-    	AND REMOVE SUSPICIOUS CHARS and Remove Extra Spaces
-    	==============================================
+*/
 	
-	*/
+  	
 
   	function test_input($data) 
   	{
