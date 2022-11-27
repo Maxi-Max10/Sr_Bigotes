@@ -20,7 +20,7 @@
                         </ul>
                     </div>
                     <div class="header-btn" style="margin-left:10px">
-                        <a href="appointment.php" class="menu-btn">SOLICITAR TURNO</a>
+                        <a href="cita.php" class="menu-btn">SOLICITAR TURNO</a>
                     </div>
                 </div>
                 <a class="mob-menu-toggle">
@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="appointment.php" class="a-mob-menu">
+                    <a href="cita.php" class="a-mob-menu">
                         RESERVA
                     </a>
                 </li>

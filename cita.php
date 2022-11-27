@@ -99,7 +99,7 @@
                 {
                     $con->rollBack();
                     echo "<div class = 'alert alert-danger'>"; 
-                        echo $e->getMessage();
+                        echo "Usted ya tiene un turno asignado!";
                     echo "</div>";
                 }
             }
@@ -108,7 +108,7 @@
 
 		<!-- RESERVATION FORM -->
 
-		<form method="post" id="appointment_form" action="appointment.php">
+		<form method="post" id="appointment_form" action="cita.php">
 		
 			<!-- SELECT SERVICE -->
 

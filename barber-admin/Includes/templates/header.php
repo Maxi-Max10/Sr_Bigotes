@@ -87,7 +87,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="service-categories.php">
+                <a class="nav-link" href="servic-categoria.php">
                     <i class="fas fa-list"></i>
                     <span>Categorías de Servicios</span>
                 </a>
@@ -117,13 +117,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="employees.php">
+                <a class="nav-link" href="empleados.php">
                     <i class="far fa-user"></i>
                     <span>Empleados</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="employees-schedule.php">
+                <a class="nav-link" href="empleados-horarios.php">
                     <i class="fas fa-calendar-week icon-ver"></i>
                     <span>Horarios de Empleados</span>
                 </a>

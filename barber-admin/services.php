@@ -328,7 +328,7 @@
                                             <!-- SUCCESS MESSAGE -->
 
                                             <script type="text/javascript">
-                                                swal("New Service","The new service has been created successfully", "success").then((value) => 
+                                                swal("Nuevo servicio","Se a creado correctamente", "success").then((value) => 
                                                 {
                                                     window.location.replace("services.php");
                                                 });
@@ -453,7 +453,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Invalid duration.
+                                                                        Duración inválida.
                                                                     </div>
                                                                 <?php
 
@@ -555,7 +555,7 @@
                                                     <!-- SUCCESS MESSAGE -->
 
                                                     <script type="text/javascript">
-                                                        swal("Service Updated","The service has been updated successfully", "success").then((value) => 
+                                                        swal("Servicio actualizado","Se a actualizado correctamente", "success").then((value) => 
                                                         {
                                                             window.location.replace("services.php");
                                                         });

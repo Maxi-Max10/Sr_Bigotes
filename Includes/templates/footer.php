@@ -1,9 +1,9 @@
 		
 	<footer class="footer_section">
-        <div class="container">
+        <div class="container center">
             <div class="row">
                 <div class="col-md-6 xs-padding">
-                    <div class="copyright">
+                    <div class="copyright ">
                         © 
                         <script type="text/javascript"> 
                             document.write(new Date().getFullYear())

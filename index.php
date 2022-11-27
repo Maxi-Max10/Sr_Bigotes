@@ -139,7 +139,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-6">
-                    <form action="appointment.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
+                    <form action="cita.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
                         <div class="book_content">
                             <h2 style="color: white;">Solicita Turno</h2>
                             <p style="color: #999;">
@@ -343,7 +343,7 @@
                             <form action="#" class="subscribe_form" novalidate="true">
                                 
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.6266228619234!2d-68.6886332708046!3d-32.990419773939415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6d36f3d4d071%3A0x76b2cffee528bf69!2sEscuela%20Juan%20Isidro%20Maza!5e0!3m2!1ses-419!2sar!4v1662864940681!5m2!1ses-419!2sar" 
-                                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                width="auto" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 
                             </form>
                         </div>

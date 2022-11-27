@@ -22,10 +22,7 @@
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Horario de empleados</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generar Informe
-                </a>
+                
             </div>
 
             
@@ -35,7 +32,7 @@
                 </div>
                 <div class="card-body">
                     <div class="sb-entity-selector" style="max-width:300px;">
-                        <form action="employees-schedule.php" method="POST">
+                        <form action="empleados-horarios.php" method="POST">
                             <div class="form-group">
                                 <label class="control-label" for="emloyee_schedule_select">
                                     Seleción de empleado y Configuración de horario:
@@ -74,7 +71,7 @@
                             if(isset($_POST['show_schedule_sbmt']))
                             {
                         ?>
-                                <form method="POST" action="employees-schedule.php">
+                                <form method="POST" action="empleados-horarios.php">
                                     <input type="hidden" name="empleado_id" value="<?php echo $_POST['employee_selected'];?>" hidden>     
                                     <div class="worktime-days">
                                         <?php
@@ -91,7 +88,7 @@
                                                 "6"=>"Sábado",
                                                 "7"=>"Domingo") ;
                                         
-                                            //Available days
+                                            //Dias áviles
                                             $av_days = array();
                                             foreach($empleados as $employee)
                                             {
@@ -187,12 +184,12 @@
                                     $stmt = $con->prepare("insert into horario_empleados(empleado_id,id_dia,desde_hora,hasta_hora) values(?, ?, ?,?)");
                                     $stmt->execute(array($_POST['empleado_id'],$key,$_POST[$value.'-from'],$_POST[$value.'-to']));
                                     
-                                    $message = "You have successfully updated employee schedule!";
+                                    $message = "Se a actializado con exito el horario de los empleados!";
                                     
                                     ?>
 
                                         <script type="text/javascript">
-                                            swal("Set Employee Schedule","You have successfully set the employee schedule!", "success").then((value) => {}); 
+                                            swal("Establecer horario de empleados","Ha establecido con éxito el horario!", "success").then((value) => {}); 
                                         </script>
 
                                     <?php

@@ -55,7 +55,7 @@
                             <div class="card-body">
                                 
                                 <!-- ADD NEW Employee BUTTON -->
-                                <a href="employees.php?do=Add" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
+                                <a href="empleados.php?do=Add" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
                                     <i class="fa fa-plus"></i> 
                                     Agregar Empleado
                                 </a>
@@ -98,7 +98,7 @@
 
                                                             <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                                                 <button class="btn btn-success btn-sm rounded-0">
-                                                                    <a href="employees.php?do=Edit&empleado_id=<?php echo $employee['empleado_id']; ?>" style="color: white;">
+                                                                    <a href="empleados.php?do=Edit&empleado_id=<?php echo $employee['empleado_id']; ?>" style="color: white;">
                                                                         <i class="fa fa-edit"></i>
                                                                     </a>
                                                                 </button>
@@ -153,7 +153,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">Agregar nuevo empleado</h6>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="employees.php?do=Add">
+                            <form method="POST" action="empleados.php?do=Add">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -271,9 +271,9 @@
                                             <!-- SUCCESS MESSAGE -->
 
                                             <script type="text/javascript">
-                                                swal("New Employee","The new employee has been inserted successfully", "success").then((value) => 
+                                                swal("Nuevo empleado","Nuevo empleado insertado correctamente", "success").then((value) => 
                                                 {
-                                                    window.location.replace("employees.php");
+                                                    window.location.replace("empleados.php");
                                                 });
                                             </script>
 
@@ -312,7 +312,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Editar Empleado</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form method="POST" action="employees.php?do=Edit&empleado_id=<?php echo $empleado_id; ?>">
+                                    <form method="POST" action="empleados.php?do=Edit&empleado_id=<?php echo $empleado_id; ?>">
                                         <!-- Employee ID -->
                                         <input type="hidden" name="empleado_id" value="<?php echo $employee['empleado_id'];?>">
 
@@ -431,9 +431,9 @@
                                                     <!-- SUCCESS MESSAGE -->
 
                                                     <script type="text/javascript">
-                                                        swal("Employee Updated","The employee has been updated successfully", "success").then((value) => 
+                                                        swal("Empleado actualizado","Se a actualizado correctamente", "success").then((value) => 
                                                         {
-                                                            window.location.replace("employees.php");
+                                                            window.location.replace("empleados.php");
                                                         });
                                                     </script>
 
@@ -455,13 +455,13 @@
                         }
                         else
                         {
-                            header('Location: employees.php');
+                            header('Location: empleados.php');
                             exit();
                         }
                     }
                     else
                     {
-                        header('Location: employees.php');
+                        header('Location: empleados.php');
                         exit();
                     }
                 }
