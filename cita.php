@@ -8,10 +8,10 @@
     include "Includes/templates/navbar.php";
 
 ?>
-<!-- Appointment Page Stylesheet -->
+<!-- HOJA DE ESTILO DE PÁGINA DE CITAS -->
 <link rel="stylesheet" href="Design/css/appointment-page-style.css">
 
-<!-- BOOKING APPOINTMENT SECTION -->
+<!--SECCION RESERVA -->
 
 <section class="booking_section">
 	<div class="container">
@@ -20,15 +20,15 @@
 
             if(isset($_POST['submit_book_appointment_form']) && $_SERVER['REQUEST_METHOD'] === 'POST')
             {
-            	// Selected SERVICES
+            	// SERVICIOS seleccionados
 
                 $selected_services = $_POST['selected_services'];
 
-                // Selected EMPLOYEE
+                // EMPLEADO selecccionado
 
                 $selected_employee = $_POST['selected_employee'];
 
-                // Selected DATE+TIME
+                // FECHA + HORA seleccionada
 
                 $selected_date_time = explode(' ', $_POST['desired_date_time']);
 
@@ -37,7 +37,7 @@
                 $end_time = $date_selected." ".$selected_date_time[2];
 
 
-                //Client Details
+                //Detalle del cliente
 
                 $client_first_name = test_input($_POST['client_first_name']);
                 $client_last_name = test_input($_POST['client_last_name']);
@@ -48,7 +48,7 @@
 
                 try
                 {
-					// Check If the client's email already exist in our database
+					// Compruebe si el correo del cliente ya existe en la base de datos
 					$stmtCheckClient = $con->prepare("SELECT * FROM clientes WHERE client_email = ?");
                     $stmtCheckClient->execute(array($client_email));
 					$client_result = $stmtCheckClient->fetch();
@@ -106,15 +106,15 @@
 
         ?>
 
-		<!-- RESERVATION FORM -->
+		<!-- FORMULARIO DE RESERVA -->
 
 		<form method="post" id="appointment_form" action="cita.php">
 		
-			<!-- SELECT SERVICE -->
+			<!-- SELECCIONE SERVICIO -->
 
 			<div class="select_services_div tab_reservation" id="services_tab">
 
-				<!-- ALERT MESSAGE -->
+				<!-- MENSAJE DE ALERTA -->
 
 				<div class="alert alert-danger" role="alert" style="display: none">
 					¡Por favor, seleccione al menos un servicio!
@@ -126,7 +126,7 @@
 					</span>
 				</div>
 
-				<!-- SERVICES TAB -->
+				<!-- PESTAÑA DE SERVICIOS -->
 				
 				<div class="items_tab">
         			<?php
@@ -169,11 +169,11 @@
     			</div>
 			</div>
 
-			<!-- SELECT EMPLOYEE -->
+			<!-- SELECCIONE EMPLEADO -->
 
 			<div class="select_employee_div tab_reservation" id="employees_tab">
 
-				<!-- ALERT MESSAGE -->
+				<!-- MENSAJE DE ALERTA -->
 
 				<div class="alert alert-danger" role="alert" style="display: none">
 					¡Por favor, seleccione un empleado!
@@ -185,7 +185,7 @@
 					</span>
 				</div>
 
-				<!-- EMPLOYEES TAB -->
+				<!-- FICHA EMPLEADORES -->
 				
 				<div class="btn-group-toggle" data-toggle="buttons">
 					<div class="items_tab">
@@ -219,11 +219,11 @@
 			</div>
 
 
-			<!-- SELECT DATE TIME -->
+			<!-- SELECCIONE FECHA HORA -->
 
 			<div class="select_date_time_div tab_reservation" id="calendar_tab">
 
-				<!-- ALERT MESSAGE -->
+				<!-- MENSAJE DE ALERTA -->
 				
 		        <div class="alert alert-danger" role="alert" style="display: none">
 		          ¡Por favor, seleccione la hora!
@@ -244,7 +244,7 @@
 			</div>
 
 
-			<!-- CLIENT DETAILS -->
+			<!-- DATOS DEL CLIENTE -->
 
 			<div class="client_details_div tab_reservation" id="client_tab">
 
@@ -280,7 +280,7 @@
 
 			
 
-			<!-- NEXT AND PREVIOUS BUTTONS -->
+			<!--BOTONES SIGUIETE Y ANTERIOR -->
 
 			<div style="overflow:auto;padding: 30px 0px;">
     			<div style="float:right;">
@@ -290,7 +290,7 @@
     			</div>
   			</div>
 
-  			<!-- Circles which indicates the steps of the form: -->
+  			<!-- Círculos que indican los pasos del formulario: -->
 
   			<div style="text-align:center;margin-top:40px;">
     			<span class="step"></span>
@@ -305,6 +305,6 @@
 
 
 
-<!-- FOOTER BOTTOM -->
+<!-- BOTON DE FOOTER  -->
 
 <?php include "Includes/templates/footer.php"; ?>
