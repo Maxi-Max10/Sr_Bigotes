@@ -14,13 +14,13 @@
         {
             mail("your email",$contact_subject,$contact_message);
             echo "<div class='alert alert-success'>";
-                echo " The message has been sent successfully";
+                echo " El mensaje se a enviado correctamente";
             echo "</div>";
         }
         catch(Exception $ex)
         {
             echo "<div class='alert alert-warning'>";
-                echo " A problem occurred while trying to send the message, please try again!";
+                echo " Ocurrió un problema. Inténtalo de nuevo!";
             echo "</div>";
         }
 

@@ -91,13 +91,15 @@
                         echo "Genia! Su turno ha sido creado con exito!";
                     echo "</div>";
 
+					mail($client_email,"Solicitud de cita","Cita","Muchas gracias por elegirnos ".$client_first_name.", su cita a sido agendada correctamente.");
+
                     $con->commit();
                 }
                 catch(Exception $e)
                 {
                     $con->rollBack();
                     echo "<div class = 'alert alert-danger'>"; 
-                        echo $e->getMessage();
+                        echo "Usted ya tiene un turno asignado!";
                     echo "</div>";
                 }
             }
@@ -106,7 +108,7 @@
 
 		<!-- RESERVATION FORM -->
 
-		<form method="post" id="appointment_form" action="appointment.php">
+		<form method="post" id="appointment_form" action="cita.php">
 		
 			<!-- SELECT SERVICE -->
 
@@ -283,7 +285,7 @@
 			<div style="overflow:auto;padding: 30px 0px;">
     			<div style="float:right;">
     				<input type="hidden" name="submit_book_appointment_form">
-      				<button type="button" id="prevBtn"  class="next_prev_buttons" style="background-color: #blue;"  onclick="nextPrev(-1)">Anterior</button>
+      				<button type="button" id="prevBtn"  class="next_prev_buttons" style="background-color: blue;"  onclick="nextPrev(-1)">Anterior</button>
       				<button type="button" id="nextBtn" class="next_prev_buttons" onclick="nextPrev(1)">Siguiente</button>
     			</div>
   			</div>

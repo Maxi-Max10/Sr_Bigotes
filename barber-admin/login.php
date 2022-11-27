@@ -68,6 +68,7 @@
                 </span>
 
                 <!-- PHP SCRIPT WHEN SUBMIT -->
+                <!-- GUIÓN PHP AL ENVIAR -->
 
                 <?php
 
@@ -78,14 +79,14 @@
 						$hashedPass = sha1($password); //cifro contraseña
 						
 
-						//Check if User Exist In database
+						//Comprobar si el usuario existe en la base de datos
 
 						$stmt = $con->prepare("Select admin_id, usuario,password FROM barber_admin WHERE usuario = ? and password = ?");
 						$stmt->execute(array($usuario,$hashedPass));
 						$row = $stmt->fetch();
 						$count = $stmt->rowCount();
 
-						// Check if count > 0 which mean that the database contain a record about this usuario
+						// Comprueba si cuenta > 0, lo que significa que la base de datos contiene un registro sobre este usuario
 
 						if($count > 0)
 						{
@@ -99,15 +100,15 @@
 						else
 						{
 							?>
-
-                <div class="alert alert-danger">
-                    <button data-dismiss="alert" class="close close-sm" type="button">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <div class="messages">
-                        <div>¡Usuario o contraseña incorrecto!</div>
-                    </div>
-                </div>
+                              // si se ingresan mal los campos , largar un mensaje
+                                <div class="alert alert-danger">
+                                    <button data-dismiss="alert" class="close close-sm" type="button">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <div class="messages">
+                                        <div>¡Usuario o contraseña incorrecto!</div>
+                                    </div>
+                                </div>
 
                 <?php
 						}
@@ -115,7 +116,7 @@
 
 				?>
 
-                <!-- USERNAME INPUT -->
+                <!-- USERNAME INPUT  validar input de formularios--> 
 
                 <div class="form-input">
                     <span class="txt1">Usuario</span>

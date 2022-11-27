@@ -2,7 +2,7 @@
     session_start();
 
     //Page Title
-    $pageTitle = 'Categoria Servicios';
+    $pageTitle = 'Categoria';
 
     //Includes
     include 'connect.php';
@@ -19,10 +19,7 @@
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Categorías de servicios</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generar Informe
-                </a>
+               
             </div>
 
             <!-- Service Categories Table -->
@@ -99,7 +96,7 @@
                                             ?>
                                             <!-- DELETE & EDIT BUTTONS -->
                                             <ul>
-                                                <li class="list-inline-item" data-toggle="tooltip" title="Editar">
+                                                <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                                     <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $edit_data; ?>" data-placement="top"><i class="fa fa-edit"></i></button>
 
                                                     <!-- EDIT Modal -->
@@ -108,14 +105,14 @@
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Editar Categoría</h5>
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <div class="form-group">
-                                                                        <label for="nombre_categoria">Nombre de categoria</label>
+                                                                        <label for="nombre_categoria">Category Name</label>
                                                                         <input type="text" class="form-control" id="<?php echo "input_category_name_".$category["id_categoria"]; ?>" value="<?php echo $category["nombre_categoria"]; ?>">
                                                                         <div class="invalid-feedback" id = "<?php echo "invalid_input_".$category["id_categoria"]; ?>">
                                                                             Category name is required.
@@ -123,15 +120,19 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-success edit_category_bttn">Guardar</button>
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-success edit_category_bttn">Save</button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <!---->
+<<<<<<< HEAD:barber-admin/service-categories.php
                                                 <li class="list-inline-item" data-toggle="tooltip" title="Eliminar">
+=======
+                                                <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+>>>>>>> 0ffd2948e29abc01c1c81e0b225b011d955bc05a:barber-admin/servic-categoria.php
                                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
                                                     <!-- Delete Modal -->
@@ -150,7 +151,11 @@
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+<<<<<<< HEAD:barber-admin/service-categories.php
                                                                     <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Eliminar</button>
+=======
+                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Delete</button>
+>>>>>>> 0ffd2948e29abc01c1c81e0b225b011d955bc05a:barber-admin/servic-categoria.php
                                                                 </div>
                                                             </div>
                                                         </div>

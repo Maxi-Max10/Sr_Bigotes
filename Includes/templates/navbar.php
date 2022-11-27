@@ -1,6 +1,6 @@
 
     
-    <!-- START NAVBAR SECTION -->
+    <!--  NAVBAR  -->
 
     <header id="header" class="header-section">
         <div class="container">
@@ -20,7 +20,7 @@
                         </ul>
                     </div>
                     <div class="header-btn" style="margin-left:10px">
-                        <a href="appointment.php" class="menu-btn">SOLICITAR TURNO</a>
+                        <a href="cita.php" class="menu-btn">SOLICITAR TURNO</a>
                     </div>
                 </div>
                 <a class="mob-menu-toggle">
@@ -32,9 +32,9 @@
 
 	<div class="header-height" style="height: 80px;"></div>
 
-    <!-- END NAVBAR SECTION -->
+    
 
-    <!-- START MOBILE NAVBAR -->
+    <!-- CELULAR NAVBAR -->
     
     <div id="menu_mobile" class="menu-mobile-menu-container">
         <ul class="mob-menu-top">
@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="appointment.php" class="a-mob-menu">
+                    <a href="cita.php" class="a-mob-menu">
                         RESERVA
                     </a>
                 </li>
@@ -89,4 +89,4 @@
         </div>
     </div>
 
-    <!-- END NAVBAR MOBILE -->
+   

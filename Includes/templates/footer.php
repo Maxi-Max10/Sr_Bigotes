@@ -1,9 +1,9 @@
 		
 	<footer class="footer_section">
-        <div class="container">
+        <div class="container center">
             <div class="row">
                 <div class="col-md-6 xs-padding">
-                    <div class="copyright">
+                    <div class="copyright ">
                         © 
                         <script type="text/javascript"> 
                             document.write(new Date().getFullYear())
@@ -16,7 +16,7 @@
     </footer>
 
 	
-		<!-- INCLUDE JS SCRIPTS -->
+		<!-- JS SCRIPTS -->
 
 		<script src="Design/js/jquery.min.js"></script>
 		<script src="Design/js/bootstrap.min.js"></script>
@@ -25,8 +25,7 @@
 
 	</body>
 
-	<!-- END BODY TAG -->
+	
 
 </html>
 
-<!-- END HTML TAG -->

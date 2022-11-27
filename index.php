@@ -57,16 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- PREVIOUS & Siguiente 
-                <a class="carousel-control-prev" href="#home-section-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#home-section-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
-                -->
+              
             </div>
 		</div>
 	</section>
@@ -215,7 +206,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-6">
-                    <form action="appointment.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
+                    <form action="cita.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
                         <div class="book_content">
                             <h2 style="color: white;">Solicita Turno</h2>
                             <p style="color: #999;">
@@ -371,72 +362,6 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION 
-
-    <section class="contact-section" id="contact-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 sm-padding">
-                    <div class="contact-info">
-                        <h2>
-                            Get in touch with us & 
-                            <br>send us message today!
-                        </h2>
-                        <p>
-                            Saasbiz is a different kind of architecture practice. Founded by LoganCee in 1991, we’re an employee-owned firm pursuing a democratic design process that values everyone’s input.
-                        </p>
-                        <h3>
-                            198 West 21th Street, Suite 721 
-                            <br>
-                            New York, NY 10010
-                        </h3>
-                        <h4>
-                            <span style = "font-weight: bold">Email:</span> 
-                            Dynamiclayers.Net 
-                            <br> 
-                            <span style = "font-weight: bold">Phone:</span> 
-                            +88 (0) 101 0000 000
-                            <br> 
-                            <span style = "font-weight: bold">Fax:</span> 
-                            +88 (0) 202 0000 001
-                        </h4>
-                    </div>
-                </div>
-                <div class="col-lg-6 sm-padding">
-                    <div class="contact-form">
-                        <div id="contact_ajax_form" class="contactForm">
-                            <div class="form-group colum-row row">
-                                <div class="col-sm-6">
-                                    <input type="text" id="contact_name" name="name" class="form-control" placeholder="Name">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="email" id="contact_email" name="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <input type="text" id="contact_subject" name="subject" class="form-control" placeholder="Subject">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <textarea id="contact_message" name="message" cols="30" rows="5" class="form-control message" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <button id="contact_send" class="default_btn">Send Message</button>
-                                </div>
-                            </div>
-                            <img src="Design/images/ajax_loader_gif.gif" id = "contact_ajax_loader" style="display: none">
-                            <div id="contact_status_message"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
 
     <!-- WIDGET SECTION / FOOTER -->
     <section class="widget_section" id="contact-us">
@@ -485,7 +410,7 @@
                             <form action="#" class="subscribe_form" novalidate="true">
                                 
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.6266228619234!2d-68.6886332708046!3d-32.990419773939415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6d36f3d4d071%3A0x76b2cffee528bf69!2sEscuela%20Juan%20Isidro%20Maza!5e0!3m2!1ses-419!2sar!4v1662864940681!5m2!1ses-419!2sar" 
-                                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                width="auto" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 
                             </form>
                         </div>

@@ -100,7 +100,7 @@
 
                                                             <!-- EDIT BUTTON -->
 
-                                                            <li class="list-inline-item" data-toggle="tooltip" title="Edit">
+                                                            <li class="list-inline-item" data-toggle="tooltip" title="Editar">
                                                                 <button class="btn btn-success btn-sm rounded-0">
                                                                     <a href="services.php?do=Edit&servicio_id=<?php echo $service['servicio_id']; ?>" style="color: white;">
                                                                         <i class="fa fa-edit"></i>
@@ -110,7 +110,7 @@
 
                                                             <!-- DELETE BUTTON -->
 
-                                                            <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                                                            <li class="list-inline-item" data-toggle="tooltip" title="Eliminar">
                                                                 <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
                                                                 <!-- Delete Modal -->
@@ -161,7 +161,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="nombre_servicio">Servicio Nombre</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['nombre_servicio']))?htmlspecialchars($_POST['nombre_servicio']):'' ?>" placeholder="Service Name" name="nombre_servicio">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['nombre_servicio']))?htmlspecialchars($_POST['nombre_servicio']):'' ?>" placeholder="Servicio nombre" name="nombre_servicio">
                                             <?php
                                                 $flag_add_service_form = 0;
                                                 if(isset($_POST['add_new_service']))
@@ -187,7 +187,7 @@
                                             $rows_categories = $stmt->fetchAll();
                                         ?>
                                         <div class="form-group">
-                                            <label for="service_category">Service Category</label>
+                                            <label for="service_category">Categoria del Servicio</label>
                                             <select class="custom-select" name="service_category">
                                                 <?php
                                                     foreach($rows_categories as $category)
@@ -205,7 +205,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="duracion_servicio">Duración del servicio(min)</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['duracion_servicio']))?htmlspecialchars($_POST['duracion_servicio']):'' ?>" placeholder="Service Duration" name="duracion_servicio">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['duracion_servicio']))?htmlspecialchars($_POST['duracion_servicio']):'' ?>" placeholder="Duración del servicio" name="duracion_servicio">
                                             <?php
 
                                                 if(isset($_POST['add_new_service']))
@@ -237,7 +237,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="precio_servicio">Precio del servicio($)</label>
-                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['precio_servicio']))?htmlspecialchars($_POST['precio_servicio']):'' ?>" placeholder="Service Price" name="precio_servicio">
+                                            <input type="text" class="form-control" value="<?php echo (isset($_POST['precio_servicio']))?htmlspecialchars($_POST['precio_servicio']):'' ?>" placeholder="Precio del servicio" name="precio_servicio">
                                             <?php
 
                                                 if(isset($_POST['add_new_service']))
@@ -328,7 +328,7 @@
                                             <!-- SUCCESS MESSAGE -->
 
                                             <script type="text/javascript">
-                                                swal("New Service","The new service has been created successfully", "success").then((value) => 
+                                                swal("Nuevo servicio","Se a creado correctamente", "success").then((value) => 
                                                 {
                                                     window.location.replace("services.php");
                                                 });
@@ -379,7 +379,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="nombre_servicio">Servicio Nombre</label>
-                                                    <input type="text" class="form-control" value="<?php echo $service['nombre_servicio'] ?>" placeholder="Service Name" name="nombre_servicio">
+                                                    <input type="text" class="form-control" value="<?php echo $service['nombre_servicio'] ?>" placeholder="Servicio Nombre" name="nombre_servicio">
                                                     <?php
                                                         $flag_edit_service_form = 0;
 
@@ -407,7 +407,7 @@
                                                     $rows_categories = $stmt->fetchAll();
                                                 ?>
                                                 <div class="form-group">
-                                                    <label for="service_category">Service Category</label>
+                                                    <label for="service_category">Categoría de servicio</label>
                                                     <select class="custom-select" name="service_category">
                                                         <?php
                                                             foreach($rows_categories as $category)
@@ -433,8 +433,8 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="duracion_servicio">Service Duration(min)</label>
-                                                    <input type="text" class="form-control" value="<?php echo $service['duracion_servicio'] ?>" placeholder="Service Duration" name="duracion_servicio">
+                                                    <label for="duracion_servicio">Duración del servicio(min)</label>
+                                                    <input type="text" class="form-control" value="<?php echo $service['duracion_servicio'] ?>" placeholder="Duración del servicio" name="duracion_servicio">
                                                     <?php
 
                                                         if(isset($_POST['edit_service_sbmt']))
@@ -443,7 +443,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Service duration is required.
+                                                                    Duración del servicio es requerido.
                                                                     </div>
                                                                 <?php
 
@@ -453,7 +453,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Invalid duration.
+                                                                        Duración inválida.
                                                                     </div>
                                                                 <?php
 
@@ -465,8 +465,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="precio_servicio">Service Price($)</label>
-                                                    <input type="text" class="form-control" value="<?php echo $service['precio_servicio'] ?>" placeholder="Service Price" name="precio_servicio">
+                                                    <label for="precio_servicio">Precio del servicio($)</label>
+                                                    <input type="text" class="form-control" value="<?php echo $service['precio_servicio'] ?>" placeholder="Precio del servicio" name="precio_servicio">
                                                     <?php
 
                                                         if(isset($_POST['edit_service_sbmt']))
@@ -475,7 +475,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Service price is required.
+                                                                    Precio del servicio es requerido.
                                                                     </div>
                                                                 <?php
 
@@ -485,7 +485,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Invalid price.
+                                                                    Precio inválido.
                                                                     </div>
                                                                 <?php
 
@@ -499,7 +499,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="descripcion_servicio">Service Description</label>
+                                                    <label for="descripcion_servicio">Descripción del servicio</label>
                                                     <textarea class="form-control" name="descripcion_servicio" style="resize: none;"><?php echo $service['descripcion_servicio']; ?></textarea>
                                                     <?php
 
@@ -509,7 +509,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        Service description is required.
+                                                                    Descripción del servicio es requerido.
                                                                     </div>
                                                                 <?php
 
@@ -519,7 +519,7 @@
                                                             {
                                                                 ?>
                                                                     <div class="invalid-feedback" style="display: block;">
-                                                                        The length of the description should be less than 250 letters.
+                                                                    La longitud de la descripción debe ser inferior a 250 letras.
                                                                     </div>
                                                                 <?php
 
@@ -532,7 +532,7 @@
                                         </div>
                                         
                                         <!-- SUBMIT BUTTON -->
-                                        <button type="Submit" name="edit_service_sbmt" class="btn btn-primary">Save Edits</button>
+                                        <button type="Submit" name="edit_service_sbmt" class="btn btn-primary">Guardar ediciones</button>
                                     </form>
                                     
                                     <?php
@@ -555,7 +555,7 @@
                                                     <!-- SUCCESS MESSAGE -->
 
                                                     <script type="text/javascript">
-                                                        swal("Service Updated","The service has been updated successfully", "success").then((value) => 
+                                                        swal("Servicio actualizado","Se a actualizado correctamente", "success").then((value) => 
                                                         {
                                                             window.location.replace("services.php");
                                                         });
