@@ -13,7 +13,7 @@
 	}
 	catch(PDOException $ex)
 	{
-		echo "Failed to connect with database ! ".$ex->getMessage();
+		echo "Fallo de conexión ! ".$ex->getMessage();
 		die();
 	}
 ?>

@@ -1,28 +1,28 @@
 <?php
     session_start();
 
-    //Page Title
+  
     $pageTitle = 'Categoria';
 
-    //Includes
+ 
     include 'connect.php';
     include 'Includes/functions/functions.php'; 
     include 'Includes/templates/header.php';
 
-    //Check If user is already logged in
+    //Comprueba si el usuario ya ha iniciado sesión
     if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
     {
 ?>
-        <!-- Begin Page Content -->
+        
         <div class="container-fluid">
     
-            <!-- Page Heading -->
+            
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Categorías de servicios</h1>
                
             </div>
 
-            <!-- Service Categories Table -->
+            <!-- Servicio Categorias Tabla -->
             <?php
                 $stmt = $con->prepare("SELECT * FROM categoria_servicios");
                 $stmt->execute();
@@ -34,13 +34,13 @@
                 </div>
                 <div class="card-body">
 
-                    <!-- ADD NEW CATEGORY BUTTON -->
+                    <!-- Agregar nueva catedoria modal -->
                     <button class="btn btn-success btn-sm" style="margin-bottom: 10px;" type="button" data-toggle="modal" data-target="#add_new_category" data-placement="top">
                         <i class="fa fa-plus"></i> 
                        Agregar categoria
                     </button>
 
-                    <!-- Add New Category Modal -->
+                    <!-- Agregar nueva categoria -->
                     <div class="modal fade" id="add_new_category" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
 
-                    <!-- Categories Table -->
+                    <!-- Categorias-->
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
@@ -94,12 +94,12 @@
                                                 $delete_data = "delete_".$category["id_categoria"];
                                                 $edit_data = "edit_".$category["id_categoria"];
                                             ?>
-                                            <!-- DELETE & EDIT BUTTONS -->
+                                            <!-- eLIMINAR Y EDITAR -->
                                             <ul>
                                                 <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                                     <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $edit_data; ?>" data-placement="top"><i class="fa fa-edit"></i></button>
 
-                                                    <!-- EDIT Modal -->
+                                                    <!-- EDITAR Modal -->
 
                                                     <div class="modal fade" id="<?php echo $edit_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $edit_data; ?>" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
@@ -128,14 +128,10 @@
                                                     </div>
                                                 </li>
                                                 <!---->
-<<<<<<< HEAD:barber-admin/service-categories.php
                                                 <li class="list-inline-item" data-toggle="tooltip" title="Eliminar">
-=======
-                                                <li class="list-inline-item" data-toggle="tooltip" title="Delete">
->>>>>>> 0ffd2948e29abc01c1c81e0b225b011d955bc05a:barber-admin/servic-categoria.php
                                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
-                                                    <!-- Delete Modal -->
+                                                    <!-- Eliminar Modal -->
 
                                                     <div class="modal fade" id="<?php echo $delete_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $delete_data; ?>" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
@@ -151,11 +147,7 @@
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-<<<<<<< HEAD:barber-admin/service-categories.php
                                                                     <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Eliminar</button>
-=======
-                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Delete</button>
->>>>>>> 0ffd2948e29abc01c1c81e0b225b011d955bc05a:barber-admin/servic-categoria.php
                                                                 </div>
                                                             </div>
                                                         </div>

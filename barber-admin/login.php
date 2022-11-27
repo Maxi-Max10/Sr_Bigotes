@@ -1,13 +1,13 @@
 <?php
 	session_start();
 
-	// IF THE USER HAS ALREADY LOGGED IN
+	
 	if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
 	{
 		header('Location: index.php');
 		exit();
 	}
-	// ELSE
+	
 	$pageTitle = 'Barber Admin Login';
 	include 'connect.php';
 	include 'Includes/functions/functions.php';
@@ -23,15 +23,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Señor Bigotes</title>
-    <!-- FONTS FILE -->
+    
     <link href="Design/fonts/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Nunito FONT FAMILY FILE -->
+    
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- CSS FILES -->
+   
     <link href="Design/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="Design/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="Design/css/login-adm.css">
@@ -67,7 +67,7 @@
 
                 </span>
 
-                <!-- PHP SCRIPT WHEN SUBMIT -->
+                
                 <!-- GUIÓN PHP AL ENVIAR -->
 
                 <?php
@@ -125,7 +125,7 @@
                     <span class="invalid-feedback" id="required_username">Usuario Requerido!</span>
                 </div>
 
-                <!-- PASSWORD INPUT -->
+                <!-- PASSWORD -->
 
                 <div class="form-input">
                     <span class="txt1">Contraseña</span>
@@ -135,13 +135,13 @@
                     <span class="invalid-feedback" id="required_password">Contraseña requerida!</span>
                 </div>
 
-                <!-- SIGN IN BUTTON -->
+               
 
                 <p>
                     <button type="Submit" name="signin-button">Iniciar Sesion</button>
                 </p>
 
-                <!-- FORGOT YOUR PASSWORD LINK -->
+            
 
                 <span class="forgotPW">Olvido su contraseña? <a href="#">Restablecer</a></span>
             </form>
