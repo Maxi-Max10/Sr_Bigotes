@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-     //Page Title
+     //Page Title //Título de la página
     $pageTitle = 'Cliente';
 
     //Includes
@@ -9,14 +9,14 @@
     include 'Includes/functions/functions.php'; 
     include 'Includes/templates/header.php';
 
-    //Check If user is already logged in
+    //Comprobar si el usuario ya ha iniciado sesión
     if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
     {
 ?>
-        <!-- Begin Page Content -->
+    <!-- Contenido de la página inicial -->
         <div class="container-fluid">
     
-            <!-- Page Heading -->
+            <!-- Encabezado de página -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Cliente</h1>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
@@ -25,7 +25,7 @@
                 </a>
             </div>
 
-            <!-- Clients Table -->
+            <!-- Tabla de Clientes -->
             <?php
                 $stmt = $con->prepare("SELECT * FROM clientes");
                 $stmt->execute();
@@ -37,7 +37,7 @@
                 </div>
                 <div class="card-body">
                     
-                    <!-- Clients Table -->
+                    <!-- Tabla de Clientes -->
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>

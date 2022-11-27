@@ -4,22 +4,23 @@
     //Page Title
     $pageTitle = 'Horario Empleado';
 
-    //Includes
+    //Título de la página
     include 'connect.php';
     include 'Includes/functions/functions.php'; 
     include 'Includes/templates/header.php';
 
-    //Extra JS FILES
+    //ARCHIVOS JS adicionales
     echo "<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>";
 
-    //Check If user is already logged in
+    //Comprobar si el usuario ya ha iniciado sesión
     if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
     {
 ?>
-        <!-- Begin Page Content -->
+        <!-- Contenido de la página inicial -->
         <div class="container-fluid">
     
-            <!-- Page Heading -->
+            
+<!-- Encabezado de página -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Horario de empleados</h1>
                 
@@ -61,12 +62,12 @@
                     </div>
                     
                     
-                    <!-- SECHEDULE PART -->
+                  <!-- PROGRAMAR PARTE -->
                     
                     <div class="sb-content" style="min-height: 500px;">
                         <?php
 
-                            /** WHEN SHOW SCHEDULE BUTTON CLICKED **/
+                            /** AL HACER CLIC EN EL BOTÓN MOSTRAR PROGRAMA **/
 
                             if(isset($_POST['show_schedule_sbmt']))
                             {
@@ -88,7 +89,7 @@
                                                 "6"=>"Sábado",
                                                 "7"=>"Domingo") ;
                                         
-                                            //Dias áviles
+                                            //Dias habiles 
                                             $av_days = array();
                                             foreach($empleados as $employee)
                                             {
@@ -150,7 +151,8 @@
                                         ?>
                                     </div>
 
-                                    <!-- SAVE SCHEDULE BUTTON -->
+                                    
+<!-- BOTÓN GUARDAR PROGRAMA -->
 
                                     <div class="form-group">
                                         <button type="Submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
