@@ -1,7 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
 
-  // Toggle the side navigation
+  // Alternar la navegación lateral
   $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     $("body").toggleClass("sidebar-toggled");
     $(".sidebar").toggleClass("toggled");
@@ -10,13 +10,13 @@
     };
   });
 
-  // Close any open menu accordions when window is resized below 768px
+  //Cierre cualquier acordeón de menú abierto cuando la ventana se redimensione por debajo de 768px
   $(window).resize(function() {
     if ($(window).width() < 768) {
       $('.sidebar .collapse').collapse('hide');
     };
     
-    // Toggle the side navigation when window is resized below 480px
+ // Alternar la navegación lateral cuando la ventana se redimensiona por debajo de 480px
     if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
       $("body").addClass("sidebar-toggled");
       $(".sidebar").addClass("toggled");
@@ -24,7 +24,7 @@
     };
   });
 
-  // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
+ // Evite que el contenedor de contenido se desplace cuando la navegación del lado fijo se desplace sobre
   $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
     if ($(window).width() > 768) {
       var e0 = e.originalEvent,
@@ -34,7 +34,7 @@
     }
   });
 
-  // Scroll to top button appear
+  // Desplácese hasta el botón superior que aparece
   $(document).on('scroll', function() {
     var scrollDistance = $(this).scrollTop();
     if (scrollDistance > 100) {
@@ -44,7 +44,7 @@
     }
   });
 
-  // Smooth scrolling using jQuery easing
+  // Desplazamiento suave usando la aceleración de jQuery
   $(document).on('click', 'a.scroll-to-top', function(e) {
     var $anchor = $(this);
     $('html, body').stop().animate({
@@ -53,4 +53,4 @@
     e.preventDefault();
   });
 
-})(jQuery); // End of use strict
+})(jQuery); 

@@ -2,25 +2,25 @@
     ob_start();
     session_start();
 
-    //Page Title
+   
     $pageTitle = 'Servicios';
 
-    //Includes
+   
     include 'connect.php';
     include 'Includes/functions/functions.php'; 
     include 'Includes/templates/header.php';
 
-    //Extra JS FILES
+    
     echo "<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>";
 
-    //Check If user is already logged in
+    //Comprobar si el usuario ya ha iniciado sesión
     if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
     {
 ?>
-        <!-- Begin Page Content -->
+     
         <div class="container-fluid">
     
-            <!-- Page Heading -->
+           
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Servicios</h1>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
@@ -53,14 +53,14 @@
                         </div>
                         <div class="card-body">
 
-                            <!-- ADD NEW SERVICE BUTTON -->
+                            <!-- AGREGAR NUEVO SERVICIO -->
                             
                             <a href="services.php?do=Add" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
                                 <i class="fa fa-plus"></i> 
                                 Agregar Servicio
                             </a>
 
-                            <!-- SERVICES TABLE -->
+                            <!-- SERVICIOS TABLA -->
 
                             <table class="table table-bordered">
                                 <thead>
@@ -98,7 +98,7 @@
                                                     ?>
                                                         <ul class="list-inline m-0">
 
-                                                            <!-- EDIT BUTTON -->
+                                                            <!-- EDIT BOTON -->
 
                                                             <li class="list-inline-item" data-toggle="tooltip" title="Editar">
                                                                 <button class="btn btn-success btn-sm rounded-0">
@@ -108,12 +108,12 @@
                                                                 </button>
                                                             </li>
 
-                                                            <!-- DELETE BUTTON -->
+                                                            <!-- ELIMINAR-->
 
                                                             <li class="list-inline-item" data-toggle="tooltip" title="Eliminar">
                                                                 <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
-                                                                <!-- Delete Modal -->
+                                                              
 
                                                                 <div class="modal fade" id="<?php echo $delete_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $delete_data; ?>" aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">
@@ -302,7 +302,7 @@
                                     </div>
                                 </div>
 
-                                <!-- SUBMIT BUTTON -->
+                               
 
                                 <button type="Submit" name="add_new_service" class="btn btn-primary">Agregar Servicio</button>
 
@@ -310,7 +310,7 @@
 
                             <?php
 
-                                /*** ADD NEW SERVICE ***/
+                                /*** agregar nuevo servicio ***/
                                 if(isset($_POST['add_new_service']) && $_SERVER['REQUEST_METHOD'] == 'POST' && $flag_add_service_form == 0)
                                 {
                                     $nombre_servicio = test_input($_POST['nombre_servicio']);
@@ -325,7 +325,7 @@
                                         $stmt->execute(array($nombre_servicio,$descripcion_servicio,$precio_servicio,$duracion_servicio,$service_category));
                                         
                                         ?> 
-                                            <!-- SUCCESS MESSAGE -->
+                                           
 
                                             <script type="text/javascript">
                                                 swal("Nuevo servicio","Se a creado correctamente", "success").then((value) => 
@@ -372,7 +372,7 @@
                                 </div>
                                 <div class="card-body">
                                     <form method="POST" action="services.php?do=Edit&servicio_id=<?php echo $servicio_id; ?>">
-                                        <!-- SERVICE ID -->
+                                        <!-- SERVICIO ID -->
                                         <input type="hidden" name="servicio_id" value="<?php echo $service['servicio_id'];?>">
 
                                         <div class="row">
@@ -531,12 +531,12 @@
                                             </div>
                                         </div>
                                         
-                                        <!-- SUBMIT BUTTON -->
+                                       
                                         <button type="Submit" name="edit_service_sbmt" class="btn btn-primary">Guardar ediciones</button>
                                     </form>
                                     
                                     <?php
-                                        /*** EDIT SERVICE ***/
+                                        /*** EDITAR SERVICIO ***/
                                         if(isset($_POST['edit_service_sbmt']) && $_SERVER['REQUEST_METHOD'] == 'POST' && $flag_edit_service_form == 0)
                                         {
                                             $servicio_id = $_POST['servicio_id'];
@@ -552,7 +552,7 @@
                                                 $stmt->execute(array($nombre_servicio,$descripcion_servicio,$precio_servicio,$duracion_servicio,$service_category,$servicio_id));
                                                 
                                                 ?> 
-                                                    <!-- SUCCESS MESSAGE -->
+                                                   
 
                                                     <script type="text/javascript">
                                                         swal("Servicio actualizado","Se a actualizado correctamente", "success").then((value) => 
@@ -594,7 +594,7 @@
   
 <?php 
         
-        //Include Footer
+       
         include 'Includes/templates/footer.php';
     }
     else

@@ -1,6 +1,5 @@
 
 
-/* ============ TITLE TOOLTIP TOOGLE ============== */
 	
 $(function () 
 {
@@ -11,7 +10,7 @@ $(function ()
 /*
 	============================
 
-	VALIDATE LOGIN FORM
+	VALIDAR LOGIN 
 	
 	============================
 */
@@ -44,7 +43,7 @@ function validateLogInForm()
 /*
     ======================================
     
-    DASHBOARD PAGE ==== > TOGGLE BOOKINGS TABS IN DASHBOARD PAGE
+    DASHBOARD PAGINA ==== > CAMBIAR PESTAÑAS DE RESERVAS EN LA PÁGINA DEL TABLERO
 
     ========================================
 */
@@ -73,7 +72,7 @@ function openTab(evt, tabName)
 /*
     ======================================
     
-    DASHBOARD PAGE ==== > CANCEL APPOINTMENT WHEN CANCEL BUTTON IS CLICKED
+    DASHBOARD PAGE ==== > CANCELAR CITA CUANDO SE HAGA CLIC EN EL BOTÓN CANCELAR
 
     ========================================
 */
@@ -92,10 +91,10 @@ $('.cancel_appointment_button').click(function()
         data:{do:do_,id_citas:id_citas,razon_cancelacion:razon_cancelacion},
         success: function (data) 
         {
-            //Hide Modal
+            
             $('#cancel_appointment_'+id_citas).modal('hide');
             
-            //Show Success Message
+            
             swal("Cancelar cita","La cita a sido cancelada!", "success").then((value) => 
             {
                 window.location.replace("index.php");
@@ -113,7 +112,7 @@ $('.cancel_appointment_button').click(function()
 /*
     ======================================
     
-    SERVICE CATEGORIES PAGE ==== > ADD SERVICE CATEGORY BUTTON IS CLICKED
+    SERVICE CATEGORIES PAGE ==== > SE HACE CLIC EN EL BOTÓN AÑADIR CATEGORÍA DE SERVICIO
 
     ========================================
 */
@@ -164,7 +163,7 @@ $('#add_category_bttn').click(function()
 /*
     ======================================
     
-    SERVICE CATEGORIES PAGE ==== > ADD SERVICE CATEGORY BUTTON IS CLICKED
+    SERVICIO CATEGORIAS PAGINA ==== > SE HACE CLIC EN EL BOTÓN AÑADIR CATEGORÍA DE SERVICIO
 
     ========================================
 */
@@ -251,7 +250,7 @@ $('.edit_category_bttn').click(function()
 /*
     ======================================
     
-    SERVICEs PAGE ==== > DELETE SERVICE BUTTON IS CLICKED
+    SERVICIOS PAGINA ==== > SE HACE CLIC EN EL BOTÓN ELIMINAR CATEGORÍA DE SERVICIO
 
     ========================================
 */
@@ -284,7 +283,7 @@ $('.delete_service_bttn').click(function()
 /*
     ======================================
     
-    EMPLOYEES SCHEDULE PAGE ==== >  SHOW DAY FROM TO HOURS BUTTON IS CLICKED
+    HORARIO DE EMPLEADOS ==== >  SE HACE CLIC EN EL BOTÓN MOSTRAR DÍA DESDE HASTA HORAS
 
     ========================================
 */
@@ -304,7 +303,7 @@ $(".sb-worktime-day-switch").click(function()
 /*
     ======================================
     
-    EMPLOYEES PAGE ==== > DELETE EMPLOYEE BUTTON IS CLICKED
+    EMPLADOS PAGINA ==== > ELIMINA EMPLEADO
 
     ========================================
 */
