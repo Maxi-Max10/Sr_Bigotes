@@ -131,7 +131,7 @@
                                                     </div>
                                                 </li>
                                                 <!---->
-                                                <li class="list-inline-item" data-toggle="tooltip" title="Borrar">
+                                                <li class="list-inline-item" data-toggle="tooltip" title="Eliminar">
                                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
                                                     <!-- Delete Modal -->
@@ -150,7 +150,7 @@
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Borrar</button>
+                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Eliminar</button>
                                                                 </div>
                                                             </div>
                                                         </div>

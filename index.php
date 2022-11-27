@@ -1,5 +1,5 @@
 
-<!-- PHP INCLUDES -->
+<!-- INCLUYE PHP -->
 
 <?php
 
@@ -9,7 +9,7 @@
 
 ?>
 
-    <!-- HOME SECTION -->
+    <!-- SECCIÓN DE INICIO -->
 
     <section class="home-section" id="home-section">
 	    <div class="home-section-content">
@@ -20,7 +20,7 @@
                     <li data-target="#home-section-carousel" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <!-- FIRST SLIDE -->
+                    <!-- PRIMERA DISPOSITIVA -->
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="Design/images/barbershop_image_2.jpg" alt="First slide">
                         <div class="carousel-caption d-md-block">
@@ -32,7 +32,7 @@
                             </p>
                         </div>
                     </div>
-                    <!-- SECOND SLIDE -->
+                    <!-- SEGUNDA DISPOSITIVA -->
                     <div class="carousel-item">
                         <img class="d-block w-100" src="Design/images/barbershop_image_3.jpg" alt="Second slide">
                         <div class="carousel-caption d-md-block">
@@ -44,7 +44,7 @@
                             </p>
                         </div>
                     </div>
-                    <!-- THIRD SLIDE -->
+                    <!-- TERCERA DISPOSITIVA -->
                     <div class="carousel-item">
                         <img class="d-block w-100" src="Design/images/barbershop_image_33.jpg" alt="Third slide">
                         <div class="carousel-caption d-md-block">
@@ -71,7 +71,7 @@
 		</div>
 	</section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ACERCA DE LA SECCIÓN -->
 
     <section id="about" class="about_section">
         <div class="container">
@@ -113,7 +113,7 @@
                 <div class="carousel-inner">
                     
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_1.jpg" alt="First slide" style="visibility: hidden;">
+                        <img class="d-block w-100" src="Design/images/git.jpg" alt="First slide" style="visibility: hidden;">
                         <div class="carousel-caption d-md-block">
                             <h3>La mejor propina es un cliente satisfecho</h3>
                             <p>
@@ -165,7 +165,7 @@
         </div>
     </section>
     -->
-    <!-- SERVICES SECTION -->
+    <!-- SECCIÓN DE SERVICIOS -->
 
     <section class="services_section" id="services">
         <div class="container">
@@ -207,7 +207,7 @@
         </div>
     </section>
 
-    <!-- BOOKING SECTION -->
+    <!-- SECCIÓN DE RESERVA -->
 
     <section class="book_section" id="booking">
         <div class="book_bg"></div>
@@ -231,7 +231,7 @@
                             </div>
                         </div>
 
-                        <!-- SUBMIT BUTTON -->
+                        <!-- BOTÓN ENVIAR -->
 
                         <button id="app_submit" class="default_btn" type="Submit">
                             Solicitar Turno
@@ -242,7 +242,7 @@
         </div>
     </section>
 
-    <!-- GALLERY SECTION -->
+    <!-- SECCIÓN GALERÍA -->
 
     <section class="gallery-section" id="gallery">
         <div class="section_heading">
@@ -300,11 +300,11 @@
 
    
 
-    <!-- PRICING SECTION  -->
+    <!-- SECCIÓN DE PRECIOS  -->
 
     <section class="pricing_section" id="pricing">
 
-        <!-- START GET CATEGORIES  PRICES FROM DATABASE -->
+        <!-- OBTENER CATEGORÍA DE PRECIO DESDE LA BASE DE DATOS -->
 
             <?php
 
@@ -314,7 +314,7 @@
 
             ?>
 
-        <!-- END -->
+        <!-- FIN -->
 
         <div class="container">
             <div class="section_heading">
