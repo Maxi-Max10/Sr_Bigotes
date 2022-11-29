@@ -10,7 +10,8 @@
 
 		?>
 
-        <!-- ESTILO EN EL CALENDARIO -->
+        <!-- ESTILO  CALENDARIO -->
+        <!-- ESTILO CALENDARIO -->
         
         <style type="text/css">
             
@@ -101,6 +102,13 @@
         <div class="calendar_slots" style="min-width: 600px;">
 
             <!-- PROXIMO 10 DIAS-->
+        <!-- FINALIZAR EL ESTILO DEL CALENDARIO -->
+
+        <!-- INICIAR RANURA DEL CALENDARIO -->
+
+        <div class="calendar_slots" style="min-width: 600px;">
+
+            <!-- PRÓXIMOS 10 DÍAS-->
 
             <div class="appointments_days">
                 <?php
@@ -125,6 +133,7 @@
             
 
             <!-- HORARIOS DE DIAS-->
+            <!-- DÍA HORAS -->
 
             <div class = 'available_booking_hours'>
                 <?php
@@ -136,6 +145,10 @@
 		            $selected_employee = $_POST['selected_employee'];
 
             		//DURACCION DE LOS SERVICIOS:HORA DE FINALIZACION PREVISTAS
+                    //EMPLEADO SELECCIONADO
+		            $selected_employee = $_POST['selected_employee'];
+
+            		//Duración de los servicios - Hora de finalización
 		            $sum_duration = 0;
 		            
                     foreach($desired_services as $service)
@@ -179,6 +192,7 @@
                             while($start >= $open_time && $result <= $close_time)
                             {
                                 // COMPROBACION SI EL EMPLEADO ESTA DISPONIBLE
+                                // Comprobar si el empleado está disponible
 
                                 $stmt_emp = $con->prepare("
                                     Select empleado_id
@@ -193,11 +207,13 @@
                                 $emp = $stmt_emp->fetchAll();
 
                                 //SI EL EMPLEADO ESTA DISPONIBLE
+                                //Si el empleado esta disponible
 
                                 if($stmt_emp->rowCount() != 0)
                                 {
 
                                     //Comprobar si no hay citas que crucen con la actual
+                                    //Comprobar si no hay citas que se crucen con la actual
                                     $stmt = $con->prepare("
                                         Select * 
                                         from citas a
@@ -221,6 +237,7 @@
                                     if($stmt->rowCount() != 0)
                                     {
                                         //MOSTRAR CELDA EN BLANCO
+                                        //Mostrar celda en blanco
                                     }
                                     else
                                     {
@@ -233,6 +250,7 @@
                                 else
                                 {
                                     //MOSTRAR CELDAS EN BLANCO
+                                    //Mostrar celda en blanco
                                 }
                                 
 

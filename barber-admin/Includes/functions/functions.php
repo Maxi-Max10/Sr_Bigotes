@@ -11,9 +11,9 @@
 	{
 		global $pageTitle;
 		if(isset($pageTitle))
-			echo $pageTitle.' | Barbershop Salon';
+			echo $pageTitle.'Sr. Bigotes';
 		else
-			echo "Barbershop | Barbershop Salon";
+			echo "Sr. Bigotes";
 	}
 
 	/*

@@ -4,28 +4,26 @@
     //Page Title
     $pageTitle = 'Horario Empleado';
 
-    //Includes
+    //Título de la página
     include 'connect.php';
     include 'Includes/functions/functions.php'; 
     include 'Includes/templates/header.php';
 
-    //Extra JS FILES
+    //ARCHIVOS JS adicionales
     echo "<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>";
 
-    //Check If user is already logged in
+    //Comprobar si el usuario ya ha iniciado sesión
     if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
     {
 ?>
-        <!-- Begin Page Content -->
+        <!-- Contenido de la página inicial -->
         <div class="container-fluid">
     
-            <!-- Page Heading -->
+            
+<!-- Encabezado de página -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Horario de empleados</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generar Informe
-                </a>
+                
             </div>
 
             
@@ -35,7 +33,7 @@
                 </div>
                 <div class="card-body">
                     <div class="sb-entity-selector" style="max-width:300px;">
-                        <form action="employees-schedule.php" method="POST">
+                        <form action="empleados-horarios.php" method="POST">
                             <div class="form-group">
                                 <label class="control-label" for="emloyee_schedule_select">
                                     Seleción de empleado y Configuración de horario:
@@ -64,17 +62,17 @@
                     </div>
                     
                     
-                    <!-- SECHEDULE PART -->
+                  <!-- PROGRAMAR PARTE -->
                     
                     <div class="sb-content" style="min-height: 500px;">
                         <?php
 
-                            /** WHEN SHOW SCHEDULE BUTTON CLICKED **/
+                            /** AL HACER CLIC EN EL BOTÓN MOSTRAR PROGRAMA **/
 
                             if(isset($_POST['show_schedule_sbmt']))
                             {
                         ?>
-                                <form method="POST" action="employees-schedule.php">
+                                <form method="POST" action="empleados-horarios.php">
                                     <input type="hidden" name="empleado_id" value="<?php echo $_POST['employee_selected'];?>" hidden>     
                                     <div class="worktime-days">
                                         <?php
@@ -91,7 +89,7 @@
                                                 "6"=>"Sábado",
                                                 "7"=>"Domingo") ;
                                         
-                                            //Available days
+                                            //Dias habiles 
                                             $av_days = array();
                                             foreach($empleados as $employee)
                                             {
@@ -153,10 +151,11 @@
                                         ?>
                                     </div>
 
-                                    <!-- SAVE SCHEDULE BUTTON -->
+                                    
+                                    <!-- BOTÓN GUARDAR HORARIO -->
 
                                     <div class="form-group">
-                                        <button type="Submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
+                                        <button type="submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
                                     </div>
                                 </form>
                         <?php
@@ -170,13 +169,13 @@
 
                         if(isset($_POST['save_schedule_sbmt']))
                         {
-                            $days = array("1"=>"Monday",
-                                "2"=>"Tuesday",
-                                "3"=>"Wednsday",
-                                "4"=>"Thursday",
-                                "5"=>"Friday",
-                                "6"=>"Saturday",
-                                "7"=>"Sunday") ;
+                            $days = array("1"=>"Lunes",
+                            "2"=>"Martes",
+                            "3"=>"Miércoles",
+                            "4"=>"Jueves",
+                            "5"=>"Viernes",
+                            "6"=>"Sábado",
+                            "7"=>"Domingo") ;
                             $stmt = $con->prepare("delete from horario_empleados where empleado_id = ?");
                             $stmt->execute(array($_POST['empleado_id']));
                             
@@ -187,12 +186,12 @@
                                     $stmt = $con->prepare("insert into horario_empleados(empleado_id,id_dia,desde_hora,hasta_hora) values(?, ?, ?,?)");
                                     $stmt->execute(array($_POST['empleado_id'],$key,$_POST[$value.'-from'],$_POST[$value.'-to']));
                                     
-                                    $message = "You have successfully updated employee schedule!";
+                                    $message = "Se a actualizado con exito el horario de los empleados!";
                                     
                                     ?>
 
                                         <script type="text/javascript">
-                                            swal("Set Employee Schedule","You have successfully set the employee schedule!", "success").then((value) => {}); 
+                                            swal("Horario de empleados","Ha establecido con éxito el horario!", "success").then((value) => {}); 
                                         </script>
 
                                     <?php

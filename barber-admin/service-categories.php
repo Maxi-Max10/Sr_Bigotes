@@ -1,31 +1,28 @@
 <?php
     session_start();
 
-    //Page Title
-    $pageTitle = 'Categoria';
+  
+    $pageTitle = 'Categoría';
 
-    //Includes
+ 
     include 'connect.php';
     include 'Includes/functions/functions.php'; 
     include 'Includes/templates/header.php';
 
-    //Check If user is already logged in
+    //Comprueba si el usuario ya ha iniciado sesión
     if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
     {
 ?>
-        <!-- Begin Page Content -->
+        
         <div class="container-fluid">
     
-            <!-- Page Heading -->
+            
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Categorías de servicios</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generar Informe
-                </a>
+               
             </div>
 
-            <!-- Service Categories Table -->
+            <!-- Servicio Categorias Tabla -->
             <?php
                 $stmt = $con->prepare("SELECT * FROM categoria_servicios");
                 $stmt->execute();
@@ -37,46 +34,46 @@
                 </div>
                 <div class="card-body">
 
-                    <!-- ADD NEW CATEGORY BUTTON -->
+                    <!-- Agregar nueva catedoria modal -->
                     <button class="btn btn-success btn-sm" style="margin-bottom: 10px;" type="button" data-toggle="modal" data-target="#add_new_category" data-placement="top">
                         <i class="fa fa-plus"></i> 
-                       Agregar categoria
+                       Agregar categoría
                     </button>
 
-                    <!-- Add New Category Modal -->
+                    <!-- Agregar nueva categoria -->
                     <div class="modal fade" id="add_new_category" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Añadir nueva categoría</h5>
+                                    <h5 class="modal-title">Añadir Nueva Categoría</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label for="nombre_categoria">Categoria Nombre</label>
-                                        <input type="text" id="category_name_input" class="form-control" placeholder="Categoria nombre" name="nombre_categoria">
+                                        <label for="nombre_categoria">Categoría Nombre</label>
+                                        <input type="text" id="category_name_input" class="form-control" placeholder="Categoría nombre" name="nombre_categoria">
                                         <div class="invalid-feedback" id="required_category_name" style="display: none;">
-                                            Categoria nombre es requerido!
+                                            Categoría nombre es requerido!
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-info" id="add_category_bttn">Agregar Categoria</button>
+                                    <button type="button" class="btn btn-info" id="add_category_bttn">Agregar Categoría</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Categories Table -->
+                    <!-- Categorias-->
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Categoria ID</th>
-                                    <th>Nombre de categoria</th>
+                                    <th>Categoría ID</th>
+                                    <th>Nombre de categoría</th>
                                     <th>Opción</th>
                                 </tr>
                             </thead> 
@@ -97,28 +94,28 @@
                                                 $delete_data = "delete_".$category["id_categoria"];
                                                 $edit_data = "edit_".$category["id_categoria"];
                                             ?>
-                                            <!-- DELETE & EDIT BUTTONS -->
+                                            <!-- eLIMINAR Y EDITAR -->
                                             <ul>
                                                 <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                                     <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $edit_data; ?>" data-placement="top"><i class="fa fa-edit"></i></button>
 
-                                                    <!-- EDIT Modal -->
+                                                    <!-- EDITAR Modal -->
 
                                                     <div class="modal fade" id="<?php echo $edit_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $edit_data; ?>" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Editar Categoría</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <div class="form-group">
-                                                                        <label for="nombre_categoria">Category Name</label>
+                                                                        <label for="nombre_categoria">Nombre de categoría</label>
                                                                         <input type="text" class="form-control" id="<?php echo "input_category_name_".$category["id_categoria"]; ?>" value="<?php echo $category["nombre_categoria"]; ?>">
                                                                         <div class="invalid-feedback" id = "<?php echo "invalid_input_".$category["id_categoria"]; ?>">
-                                                                            Category name is required.
+                                                                            Nombre de categoría requerido.
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -131,26 +128,26 @@
                                                     </div>
                                                 </li>
                                                 <!---->
-                                                <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                                                <li class="list-inline-item" data-toggle="tooltip" title="Eliminar">
                                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
-                                                    <!-- Delete Modal -->
+                                                    <!-- Eliminar Modal -->
 
                                                     <div class="modal fade" id="<?php echo $delete_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $delete_data; ?>" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Categoria</h5>
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Categoría</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    Seguro desea eliminar categoria?"<?php echo $category['nombre_categoria']; ?>"?
+                                                                    Seguro desea eliminar categoría "<?php echo $category['nombre_categoria']; ?>"?
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Delete</button>
+                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-danger delete_category_bttn">Eliminar</button>
                                                                 </div>
                                                             </div>
                                                         </div>

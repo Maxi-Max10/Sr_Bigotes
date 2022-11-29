@@ -1,5 +1,5 @@
 
-<!-- PHP INCLUDES -->
+<!-- INCLUYE PHP -->
 
 <?php
 
@@ -9,60 +9,8 @@
 
 ?>
 
-    <!-- HOME SECTION -->
-
-    <section class="home-section" id="home-section">
-	    <div class="home-section-content">
-		    <div id="home-section-carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#home-section-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#home-section-carousel" data-slide-to="1"></li>
-                    <li data-target="#home-section-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <!-- FIRST SLIDE -->
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_2.jpg" alt="First slide">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Danos tu voto de confianza y la recompensa te encantará.</h3>
-                            <p>
-                                Tu vida para siempre puede cambiar dentro de las paredes de esta peluquería donde el look que desees 
-                                <br>
-                                puede convertirse en realidad.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- SECOND SLIDE -->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_3.jpg" alt="Second slide">
-                        <div class="carousel-caption d-md-block">
-                            <h3>Tu pelo necesita el mejor de los cuidados todos los días.</h3>
-                            <p>
-                                Un mundo sin peluquerías sería un mundo muy aburrido donde la mayoría tendría que conformarse 
-                                <br>
-                                con un simple estilo.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- THIRD SLIDE -->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="Design/images/barbershop_image_33.jpg" alt="Third slide">
-                        <div class="carousel-caption d-md-block">
-                            <h3>No es solo un corte de pelo, es una experiencia.</h3>
-                            <p>
-                                Nuestra barbería es el territorio creado puramente para hombres que aprecian
-                                <br>
-                                calidad premium, tiempo y aspecto impecable.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-              
-            </div>
-		</div>
-	</section>
-
-    <!-- ABOUT SECTION -->
+    
+    <!-- ACERCA DE LA SECCIÓN -->
 
     <section id="about" class="about_section">
         <div class="container">
@@ -89,7 +37,8 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+     
+    <!-- SECCIÓN DE SERVICIOS -->
 
     <section class="services_section" id="services">
         <div class="container">
@@ -131,7 +80,7 @@
         </div>
     </section>
 
-    <!-- BOOKING SECTION -->
+    <!-- SECCIÓN DE RESERVA -->
 
     <section class="book_section" id="booking">
         <div class="book_bg"></div>
@@ -139,7 +88,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-6">
-                    <form action="appointment.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
+                    <form action="cita.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
                         <div class="book_content">
                             <h2 style="color: white;">Solicita Turno</h2>
                             <p style="color: #999;">
@@ -155,7 +104,7 @@
                             </div>
                         </div>
 
-                        <!-- SUBMIT BUTTON -->
+                        <!-- BOTÓN ENVIAR -->
 
                         <button id="app_submit" class="default_btn" type="Submit">
                             Solicitar Turno
@@ -166,7 +115,7 @@
         </div>
     </section>
 
-    <!-- GALLERY SECTION -->
+    <!-- SECCIÓN GALERÍA -->
 
     <section class="gallery-section" id="gallery">
         <div class="section_heading">
@@ -224,11 +173,11 @@
 
    
 
-    <!-- PRICING SECTION  -->
+    <!-- SECCIÓN DE PRECIOS  -->
 
     <section class="pricing_section" id="pricing">
 
-        <!-- START GET CATEGORIES  PRICES FROM DATABASE -->
+        <!-- OBTENER CATEGORÍA DE PRECIO DESDE LA BASE DE DATOS -->
 
             <?php
 
@@ -238,7 +187,7 @@
 
             ?>
 
-        <!-- END -->
+        <!-- FIN -->
 
         <div class="container">
             <div class="section_heading">
@@ -343,7 +292,7 @@
                             <form action="#" class="subscribe_form" novalidate="true">
                                 
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.6266228619234!2d-68.6886332708046!3d-32.990419773939415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e6d36f3d4d071%3A0x76b2cffee528bf69!2sEscuela%20Juan%20Isidro%20Maza!5e0!3m2!1ses-419!2sar!4v1662864940681!5m2!1ses-419!2sar" 
-                                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                width="auto" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 
                             </form>
                         </div>

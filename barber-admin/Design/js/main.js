@@ -1,6 +1,5 @@
 
 
-/* ============ TITLE TOOLTIP TOOGLE ============== */
 	
 $(function () 
 {
@@ -11,7 +10,7 @@ $(function ()
 /*
 	============================
 
-	VALIDATE LOGIN FORM
+	VALIDAR LOGIN 
 	
 	============================
 */
@@ -44,7 +43,7 @@ function validateLogInForm()
 /*
     ======================================
     
-    DASHBOARD PAGE ==== > TOGGLE BOOKINGS TABS IN DASHBOARD PAGE
+    DASHBOARD PAGINA ==== > CAMBIAR PESTAÑAS DE RESERVAS EN LA PÁGINA DEL TABLERO
 
     ========================================
 */
@@ -73,7 +72,7 @@ function openTab(evt, tabName)
 /*
     ======================================
     
-    DASHBOARD PAGE ==== > CANCEL APPOINTMENT WHEN CANCEL BUTTON IS CLICKED
+    DASHBOARD PAGE ==== > CANCELAR CITA CUANDO SE HAGA CLIC EN EL BOTÓN CANCELAR
 
     ========================================
 */
@@ -92,11 +91,11 @@ $('.cancel_appointment_button').click(function()
         data:{do:do_,id_citas:id_citas,razon_cancelacion:razon_cancelacion},
         success: function (data) 
         {
-            //Hide Modal
+            
             $('#cancel_appointment_'+id_citas).modal('hide');
             
-            //Show Success Message
-            swal("Cancel Appointment","The Appointment has been canceled successfully!", "success").then((value) => 
+            
+            swal("Cancelar cita","La cita a sido cancelada!", "success").then((value) => 
             {
                 window.location.replace("index.php");
             });
@@ -104,7 +103,7 @@ $('.cancel_appointment_button').click(function()
         },
         error: function(xhr, status, error) 
         {
-            alert('ERROR HAS BEEN OCCURRED WHILE TRYING TO PROCESS YOUR REQUEST!');
+            alert('A OCURRIDO UN ERROR AL TRATAR DE PROCESAR LA SOLICITUD!');
         }
       });
 });
@@ -113,7 +112,7 @@ $('.cancel_appointment_button').click(function()
 /*
     ======================================
     
-    SERVICE CATEGORIES PAGE ==== > ADD SERVICE CATEGORY BUTTON IS CLICKED
+    SERVICE CATEGORIES PAGE ==== > SE HACE CLIC EN EL BOTÓN AÑADIR CATEGORÍA DE SERVICIO
 
     ========================================
 */
@@ -140,21 +139,21 @@ $('#add_category_bttn').click(function()
             {
                 if(data['alert'] == "Warning")
                 {
-                    swal("Warning",data['message'], "warning").then((value) => {});
+                    swal("Advertencia","Cuidado", "warning").then((value) => {});
                 }
                 if(data['alert'] == "Success")
                 {
                     $('#add_new_category').modal('hide');
-                    swal("New Category",data['message'], "success").then((value) => 
+                    swal("Nueva Categoría","Categoría creada correctamente", "success").then((value) => 
                     {
-                        window.location.replace("service-categories.php");
+                        window.location("service-categories.php");
                     });
                 }
                 
             },
             error: function(xhr, status, error) 
             {
-                alert('AN ERROR HAS BEEN ENCOUNTERED WHILE TRYING TO EXECUTE YOUR REQUEST');
+                alert('A OCURRIDO UN ERROR AL TRATAR DE PROCESAR SU SOLICITUD.');
             }
         });
     }
@@ -164,7 +163,7 @@ $('#add_category_bttn').click(function()
 /*
     ======================================
     
-    SERVICE CATEGORIES PAGE ==== > ADD SERVICE CATEGORY BUTTON IS CLICKED
+    SERVICIO CATEGORIAS PAGINA ==== > SE HACE CLIC EN EL BOTÓN ELIMINAR CATEGORÍA DE SERVICIO
 
     ========================================
 */
@@ -186,11 +185,11 @@ $('.delete_category_bttn').click(function()
         {
             if(data['alert'] == "Warning")
                 {
-                    swal("Warning",data['message'], "warning").then((value) => {});
+                    swal("Advertencia",data['message'], "warning").then((value) => {});
                 }
                 if(data['alert'] == "Success")
                 {
-                    swal("New Category",data['message'], "success").then((value) => 
+                    swal("Nueva Categoría",data['message'], "success").then((value) => 
                     {
                         window.location.replace("service-categories.php");
                     });
@@ -198,11 +197,19 @@ $('.delete_category_bttn').click(function()
         },
         error: function(xhr, status, error) 
         {
-            alert('AN ERROR HAS BEEN ENCOUNTERED WHILE TRYING TO EXECUTE YOUR REQUEST');
+            alert('A OCURRIDO UN ERROR AL PROCESAR LA SOLICITUD.');
             alert(error);
         }
       });
 });
+
+/*
+    ======================================
+    
+    SERVICIO CATEGORIAS PAGINA ==== > SE HACE CLIC EN EL BOTÓN EDITAR CATEGORÍA DE SERVICIO
+
+    ========================================
+*/
 
 
 $('.edit_category_bttn').click(function()
@@ -228,11 +235,11 @@ $('.edit_category_bttn').click(function()
             {
                 if(data['alert'] == "Warning")
                 {
-                    swal("Warning",data['message'], "warning").then((value) => {});
+                    swal("Advertencia","Esta seguro que desea editar categoría?", "warning").then((value) => {});
                 }
                 if(data['alert'] == "Success")
                 {
-                    swal("New Category",data['message'], "success").then((value) => 
+                    swal("Nueva Categoría","Editada correctamente", "success").then((value) => 
                     {
                         window.location.replace("service-categories.php");
                     });
@@ -240,7 +247,7 @@ $('.edit_category_bttn').click(function()
             },
             error: function(xhr, status, error) 
             {
-                alert('AN ERROR HAS BEEN ENCOUNTERED WHILE TRYING TO EXECUTE YOUR REQUEST');
+                alert('A OCURRIDO UN ERROR AL PROCESAR LA SOLICITUD');
                 alert(error);
             }
         });
@@ -251,7 +258,7 @@ $('.edit_category_bttn').click(function()
 /*
     ======================================
     
-    SERVICEs PAGE ==== > DELETE SERVICE BUTTON IS CLICKED
+    SERVICIOS PAGINA ==== > SE HACE CLIC EN EL BOTÓN ELIMINAR CATEGORÍA DE SERVICIO
 
     ========================================
 */
@@ -269,13 +276,13 @@ $('.delete_service_bttn').click(function()
         data:{servicio_id:servicio_id,do:do_},
         success: function (data) 
         {
-            swal("Delete Service","The service has been deleted successfully!", "success").then((value) => {
+            swal("Eliminar Servicio","El servicio a sido eliminado!", "success").then((value) => {
                 window.location.replace("services.php");
             });     
         },
         error: function(xhr, status, error) 
         {
-            alert('AN ERROR HAS BEEN ENCOUNTERED WHILE TRYING TO EXECUTE YOUR REQUEST');
+            alert('A OCURRIDO UN ERROR AL PROCESAR LA SOLICITUD');
         }
       });
 });
@@ -284,7 +291,7 @@ $('.delete_service_bttn').click(function()
 /*
     ======================================
     
-    EMPLOYEES SCHEDULE PAGE ==== >  SHOW DAY FROM TO HOURS BUTTON IS CLICKED
+    HORARIO DE EMPLEADOS ==== >  SE HACE CLIC EN EL BOTÓN MOSTRAR DÍA DESDE HASTA HORAS
 
     ========================================
 */
@@ -304,7 +311,7 @@ $(".sb-worktime-day-switch").click(function()
 /*
     ======================================
     
-    EMPLOYEES PAGE ==== > DELETE EMPLOYEE BUTTON IS CLICKED
+    EMPLADOS PAGINA ==== > ELIMINA EMPLEADO
 
     ========================================
 */
@@ -322,13 +329,13 @@ $(".sb-worktime-day-switch").click(function()
         data:{empleado_id:empleado_id,do:do_},
         success: function (data) 
         {
-            swal("Delete Employee","The employee has been deleted successfully!", "success").then((value) => {
-                window.location.replace("employees.php");
+            swal("Eliminar empleado","El empleado a sido elimiando!", "success").then((value) => {
+                window.location.replace("empleados.php");
             });     
         },
         error: function(xhr, status, error) 
         {
-            alert('AN ERROR HAS BEEN ENCOUNTERED WHILE TRYING TO EXECUTE YOUR REQUEST');
+            alert('A OCURRIDO UN ERROR AL PROCESAR LA SOLICITUD');
         }
     });
 });

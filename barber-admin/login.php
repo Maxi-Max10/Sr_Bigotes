@@ -1,13 +1,13 @@
 <?php
 	session_start();
 
-	// IF THE USER HAS ALREADY LOGGED IN
+	
 	if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
 	{
 		header('Location: index.php');
 		exit();
 	}
-	// ELSE
+	
 	$pageTitle = 'Barber Admin Login';
 	include 'connect.php';
 	include 'Includes/functions/functions.php';
@@ -23,15 +23,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Señor Bigotes</title>
-    <!-- FONTS FILE -->
+    
     <link href="Design/fonts/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Nunito FONT FAMILY FILE -->
+    
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- CSS FILES -->
+   
     <link href="Design/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="Design/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="Design/css/login-adm.css">
@@ -67,7 +67,8 @@
 
                 </span>
 
-                <!-- PHP SCRIPT WHEN SUBMIT -->
+                
+                <!-- GUIÓN PHP AL ENVIAR -->
 
                 <?php
 
@@ -78,14 +79,14 @@
 						$hashedPass = sha1($password); //cifro contraseña
 						
 
-						//Check if User Exist In database
+						//Comprobar si el usuario existe en la base de datos
 
 						$stmt = $con->prepare("Select admin_id, usuario,password FROM barber_admin WHERE usuario = ? and password = ?");
 						$stmt->execute(array($usuario,$hashedPass));
 						$row = $stmt->fetch();
 						$count = $stmt->rowCount();
 
-						// Check if count > 0 which mean that the database contain a record about this usuario
+						// Comprueba si cuenta > 0, lo que significa que la base de datos contiene un registro sobre este usuario
 
 						if($count > 0)
 						{
@@ -99,15 +100,15 @@
 						else
 						{
 							?>
-
-                <div class="alert alert-danger">
-                    <button data-dismiss="alert" class="close close-sm" type="button">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <div class="messages">
-                        <div>¡Usuario o contraseña incorrecto!</div>
-                    </div>
-                </div>
+                              <!-- si se ingresan mal los campos , largar un mensaje -->
+                                <div class="alert alert-danger">
+                                    <button data-dismiss="alert" class="close close-sm" type="button">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <div class="messages">
+                                        <div>¡Usuario o contraseña incorrecto!</div>
+                                    </div>
+                                </div>
 
                 <?php
 						}
@@ -115,7 +116,7 @@
 
 				?>
 
-                <!-- USERNAME INPUT -->
+                <!-- USERNAME INPUT  validar input de formularios--> 
 
                 <div class="form-input">
                     <span class="txt1">Usuario</span>
@@ -124,7 +125,7 @@
                     <span class="invalid-feedback" id="required_username">Usuario Requerido!</span>
                 </div>
 
-                <!-- PASSWORD INPUT -->
+                <!-- PASSWORD -->
 
                 <div class="form-input">
                     <span class="txt1">Contraseña</span>
@@ -133,20 +134,11 @@
                         autocomplete="new-password">
                     <span class="invalid-feedback" id="required_password">Contraseña requerida!</span>
                 </div>
-
-                <!-- SIGN IN BUTTON -->
-
                 <p>
-                    <button type="Submit" name="signin-button">Iniciar Sesion</button>
+                    <button type="submit" name="signin-button">Iniciar Sesion</button>
                 </p>
-
-                <!-- FORGOT YOUR PASSWORD LINK -->
-
                 <span class="forgotPW">Olvido su contraseña? <a href="#">Restablecer</a></span>
             </form>
-
-
-
         </div>
 
         <img class="image-container" src="img/sr Bigote .logo.png" alt="">

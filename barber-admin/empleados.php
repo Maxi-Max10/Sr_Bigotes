@@ -2,7 +2,7 @@
     ob_start();
     session_start();
 
-    //Page Title
+    //Título de la página
     $pageTitle = 'Empleado';
 
     //Includes
@@ -10,26 +10,16 @@
     include 'Includes/functions/functions.php'; 
     include 'Includes/templates/header.php';
 
-    //Extra JS FILES
+    //ARCHIVOS JS adicionales
     echo "<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>";
 
-    //Check If user is already logged in
+    //Comprobar si el usuario ya ha iniciado sesión
     if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
     {
 ?>
-        <!-- Begin Page Content -->
+        <!-- Contenido de la página inicial -->
         <div class="container-fluid">
-    
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Empleados</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generar Informe
-                </a>
-            </div>
-
-            <?php
+        <?php
                 $do = '';
 
                 if(isset($_GET['do']) && in_array($_GET['do'], array('Add','Edit')))
@@ -54,13 +44,13 @@
                             </div>
                             <div class="card-body">
                                 
-                                <!-- ADD NEW Employee BUTTON -->
-                                <a href="employees.php?do=Add" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
+                            <!-- AÑADIR NUEVO BOTÓN DE EMPLEADO -->
+                                <a href="empleados.php?do=Add" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
                                     <i class="fa fa-plus"></i> 
                                     Agregar Empleado
                                 </a>
 
-                                <!-- Employees Table -->
+                                <!-- Tabla de empleados -->
                                 <div class="table-responsive">
                                     <table class="table table-bordered">
                                         <thead>
@@ -94,22 +84,22 @@
                                                     ?>
                                                         <ul class="list-inline m-0">
 
-                                                            <!-- EDIT BUTTON -->
+                                                            <!-- BOTÓN EDITAR -->
 
                                                             <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                                                 <button class="btn btn-success btn-sm rounded-0">
-                                                                    <a href="employees.php?do=Edit&empleado_id=<?php echo $employee['empleado_id']; ?>" style="color: white;">
+                                                                    <a href="empleados.php?do=Edit&empleado_id=<?php echo $employee['empleado_id']; ?>" style="color: white;">
                                                                         <i class="fa fa-edit"></i>
                                                                     </a>
                                                                 </button>
                                                             </li>
 
-                                                            <!-- DELETE BUTTON -->
+                                                            <!-- BOTÓN ELIMINAR -->
 
                                                             <li class="list-inline-item" data-toggle="tooltip" title="Borrar">
                                                                 <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
-                                                                <!-- Delete Modal -->
+                                                                <!-- Eliminar Modal -->
 
                                                                 <div class="modal fade" id="<?php echo $delete_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $delete_data; ?>" aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">
@@ -153,7 +143,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">Agregar nuevo empleado</h6>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="employees.php?do=Add">
+                            <form method="POST" action="empleados.php?do=Add">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -245,7 +235,7 @@
                                     </div>
                                 </div>
 
-                                <!-- SUBMIT BUTTON -->
+                               <!-- BOTÓN ENVIAR -->
 
                                 <button type="Submit" name="add_new_employee" class="btn btn-primary">Agregar empleado</button>
 
@@ -253,7 +243,7 @@
 
                             <?php
 
-                                /*** ADD NEW EMPLOYEE ***/
+                                /*** AÑADIR NUEVO EMPLEADO ***/
 
                                 if(isset($_POST['add_new_employee']) && $_SERVER['REQUEST_METHOD'] == 'POST' && $flag_add_employee_form == 0)
                                 {
@@ -268,12 +258,12 @@
                                         $stmt->execute(array($employee_fname,$employee_lname,$employee_phone,$employee_email));
                                         
                                         ?> 
-                                            <!-- SUCCESS MESSAGE -->
+                                            <!-- MENSAJE DE ÉXITO -->
 
                                             <script type="text/javascript">
-                                                swal("New Employee","The new employee has been inserted successfully", "success").then((value) => 
+                                                swal("Nuevo empleado","Nuevo empleado insertado correctamente", "success").then((value) => 
                                                 {
-                                                    window.location.replace("employees.php");
+                                                    window.location.replace("empleados.php");
                                                 });
                                             </script>
 
@@ -312,8 +302,8 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Editar Empleado</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form method="POST" action="employees.php?do=Edit&empleado_id=<?php echo $empleado_id; ?>">
-                                        <!-- Employee ID -->
+                                    <form method="POST" action="empleados.php?do=Edit&empleado_id=<?php echo $empleado_id; ?>">
+                                        <!-- Empleado ID -->
                                         <input type="hidden" name="empleado_id" value="<?php echo $employee['empleado_id'];?>">
 
                                         <div class="row">
@@ -407,13 +397,13 @@
                                             </div>
                                         </div>
 
-                                        <!-- SUBMIT BUTTON -->
+                                        <!-- BUTTON de enviar -->
                                         <button type="Submit" name="edit_employee_sbmt" class="btn btn-primary">
                                             Editar empleado
                                         </button>
                                     </form>
                                     <?php
-                                        /*** EDIT EMPLOYEE ***/
+                                        /*** Editar empleado ***/
                                         if(isset($_POST['edit_employee_sbmt']) && $_SERVER['REQUEST_METHOD'] == 'POST' && $flag_edit_employee_form == 0)
                                         {
                                             $employee_fname = test_input($_POST['employee_fname']);
@@ -428,12 +418,12 @@
                                                 $stmt->execute(array($employee_fname,$employee_lname,$employee_phone,$employee_email,$empleado_id));
                                                 
                                                 ?> 
-                                                    <!-- SUCCESS MESSAGE -->
+                                                    <!-- MENSAJE DE ÉXITO -->
 
                                                     <script type="text/javascript">
-                                                        swal("Employee Updated","The employee has been updated successfully", "success").then((value) => 
+                                                        swal("Empleado actualizado","Se a actualizado correctamente", "success").then((value) => 
                                                         {
-                                                            window.location.replace("employees.php");
+                                                            window.location.replace("empleados.php");
                                                         });
                                                     </script>
 
@@ -455,13 +445,13 @@
                         }
                         else
                         {
-                            header('Location: employees.php');
+                            header('Location: empleados.php');
                             exit();
                         }
                     }
                     else
                     {
-                        header('Location: employees.php');
+                        header('Location: empleados.php');
                         exit();
                     }
                 }

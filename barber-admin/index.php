@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 
-	//Check If user is already logged in
+	//SI EXISTE UNA SESION CON USERNAME Y PASSWORD INGRESA AL INDEX
 	if(isset($_SESSION['username_barbershop_Xw211qAAsq4']) && isset($_SESSION['password_barbershop_Xw211qAAsq4']))
 	{
         //Page Title
@@ -19,10 +19,7 @@
 		<!-- Page Heading -->
 		<div class="d-sm-flex align-items-center justify-content-between mb-4">
 			<h1 class="h3 mb-0 text-gray-800">Tablero</h1>
-			<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-				<i class="fas fa-download fa-sm text-white-50"></i>
-				Generar Informe
-			</a>
+			
 		</div>
 
 		<!-- Content Row -->
@@ -54,7 +51,7 @@
 					  			<div class="text-xs font-weight-bold text-success text-uppercase mb-1">
 					  				Servicios Totales
 					  			</div>
-					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("servicio_id","servicios")?></div>
+					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php  echo countItems("servicio_id","servicios")?></div>
 							</div>
 							<div class="col-auto">
 					  			<i class="bs bs-scissors-1 fa-2x text-gray-300"></i>
@@ -92,7 +89,7 @@
 				  		<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 					  			<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-					  				citas
+					  				Citas
 					  			</div>
 					  			<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo countItems("id_citas","citas")?></div>
 							</div>
@@ -244,7 +241,7 @@
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                                            <button type="button" data-id = "<?php echo $row['id_citas']; ?>" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
+                                                                            <button type="button" data-id = "<?php echo $row['id_citas']; ?>" class="btn btn-danger cancel_appointment_button">Si, Cancelar</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -300,7 +297,7 @@
 
                                     echo "<tr>";
                                         echo "<td colspan='5' style='text-align:center;'>";
-                                            echo "List of your all bookings will be presented here";
+                                            echo "Lista de todas sus reservas se mostrará aquí.";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
@@ -356,13 +353,13 @@
                   		<thead>
                             <tr>
                                 <th>
-                                hora de inicio
+                                Hora de inicio
                                 </th>
                                 <th>
                                     Cliente
                                 </th>
                                 <th>
-                                Motivo de anulación
+                                Motivo de cancelación
                                 </th>
                             </tr>
                         </thead>
@@ -423,6 +420,7 @@
 		//Include Footer
 		include 'Includes/templates/footer.php';
 	}
+    // si no existe me redirige al login
 	else
     {
     	header('Location: login.php');
