@@ -163,7 +163,7 @@ $('#add_category_bttn').click(function()
 /*
     ======================================
     
-    SERVICIO CATEGORIAS PAGINA ==== > SE HACE CLIC EN EL BOTÓN AÑADIR CATEGORÍA DE SERVICIO
+    SERVICIO CATEGORIAS PAGINA ==== > SE HACE CLIC EN EL BOTÓN ELIMINAR CATEGORÍA DE SERVICIO
 
     ========================================
 */
@@ -203,6 +203,14 @@ $('.delete_category_bttn').click(function()
       });
 });
 
+/*
+    ======================================
+    
+    SERVICIO CATEGORIAS PAGINA ==== > SE HACE CLIC EN EL BOTÓN EDITAR CATEGORÍA DE SERVICIO
+
+    ========================================
+*/
+
 
 $('.edit_category_bttn').click(function()
 {
@@ -227,11 +235,11 @@ $('.edit_category_bttn').click(function()
             {
                 if(data['alert'] == "Warning")
                 {
-                    swal("Advertencia",data['message'], "warning").then((value) => {});
+                    swal("Advertencia","Esta seguro que desea editar categoria?", "warning").then((value) => {});
                 }
                 if(data['alert'] == "Success")
                 {
-                    swal("Nueva Categoria",data['message'], "success").then((value) => 
+                    swal("Nueva Categoria","Editada correctamente", "success").then((value) => 
                     {
                         window.location.replace("servic-categoria.php");
                     });

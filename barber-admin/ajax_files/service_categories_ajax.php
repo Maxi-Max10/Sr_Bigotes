@@ -13,7 +13,7 @@
         if($checkItem != 0)
         {
             $data['alert'] = "Warning";
-            $data['message'] = "This category name already exists!";
+            $data['message'] = "El nombre de la categoria ya existe!";
             echo json_encode($data);
             exit();
         }
@@ -24,7 +24,7 @@
             $stmt->execute(array($nombre_categoria));
 
             $data['alert'] = "Success";
-            $data['message'] = "The new category has been inserted successfully !";
+            $data['message'] = "Nueva categoria creada exitosamente !";
             echo json_encode($data);
             exit();
         }
@@ -61,7 +61,7 @@
             $stmt->execute(array($id_categoria));
             $con->commit();
             $data['alert'] = "Success";
-            $data['message'] = "The new category has been inserted successfully !";
+            $data['message'] = "Nueva categria insertada correctamente !";
             echo json_encode($data);
             exit();
 
@@ -90,7 +90,7 @@
         if($checkItem != 0)
         {
             $data['alert'] = "Warning";
-            $data['message'] = "This category name already exists!";
+            $data['message'] = "El nombre de la categoria ya existe!";
             echo json_encode($data);
             exit();
         }
@@ -103,7 +103,7 @@
                 $stmt->execute(array($nombre_categoria, $id_categoria));
 
                 $data['alert'] = "Success";
-                $data['message'] = "Category name has been updated successfully!";
+                $data['message'] = "Categoria actualizada correctamente!";
                 echo json_encode($data);
                 exit();
             }   

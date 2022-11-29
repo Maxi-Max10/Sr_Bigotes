@@ -100,7 +100,7 @@
 						else
 						{
 							?>
-                              // si se ingresan mal los campos , largar un mensaje
+                              <!-- si se ingresan mal los campos , largar un mensaje -->
                                 <div class="alert alert-danger">
                                     <button data-dismiss="alert" class="close close-sm" type="button">
                                         <span aria-hidden="true">×</span>
@@ -134,20 +134,11 @@
                         autocomplete="new-password">
                     <span class="invalid-feedback" id="required_password">Contraseña requerida!</span>
                 </div>
-
-               
-
                 <p>
-                    <button type="Submit" name="signin-button">Iniciar Sesion</button>
+                    <button type="submit" name="signin-button">Iniciar Sesion</button>
                 </p>
-
-            
-
                 <span class="forgotPW">Olvido su contraseña? <a href="#">Restablecer</a></span>
             </form>
-
-
-
         </div>
 
         <img class="image-container" src="img/sr Bigote .logo.png" alt="">
