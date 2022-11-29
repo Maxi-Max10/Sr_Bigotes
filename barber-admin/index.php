@@ -241,7 +241,7 @@
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                                            <button type="button" data-id = "<?php echo $row['id_citas']; ?>" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
+                                                                            <button type="button" data-id = "<?php echo $row['id_citas']; ?>" class="btn btn-danger cancel_appointment_button">Si, Cancelar</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -297,7 +297,7 @@
 
                                     echo "<tr>";
                                         echo "<td colspan='5' style='text-align:center;'>";
-                                            echo "List of your all bookings will be presented here";
+                                            echo "Lista de todas sus reservas se mostrará aquí.";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
@@ -353,13 +353,13 @@
                   		<thead>
                             <tr>
                                 <th>
-                                hora de inicio
+                                Hora de inicio
                                 </th>
                                 <th>
                                     Cliente
                                 </th>
                                 <th>
-                                Motivo de anulación
+                                Motivo de cancelación
                                 </th>
                             </tr>
                         </thead>

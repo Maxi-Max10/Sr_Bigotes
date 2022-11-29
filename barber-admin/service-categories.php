@@ -2,7 +2,7 @@
     session_start();
 
   
-    $pageTitle = 'Categoria';
+    $pageTitle = 'Categoría';
 
  
     include 'connect.php';
@@ -37,7 +37,7 @@
                     <!-- Agregar nueva catedoria modal -->
                     <button class="btn btn-success btn-sm" style="margin-bottom: 10px;" type="button" data-toggle="modal" data-target="#add_new_category" data-placement="top">
                         <i class="fa fa-plus"></i> 
-                       Agregar categoria
+                       Agregar categoría
                     </button>
 
                     <!-- Agregar nueva categoria -->
@@ -45,23 +45,23 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Añadir nueva categoría</h5>
+                                    <h5 class="modal-title">Añadir Nueva Categoría</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label for="nombre_categoria">Categoria Nombre</label>
-                                        <input type="text" id="category_name_input" class="form-control" placeholder="Categoria nombre" name="nombre_categoria">
+                                        <label for="nombre_categoria">Categoría Nombre</label>
+                                        <input type="text" id="category_name_input" class="form-control" placeholder="Categoría nombre" name="nombre_categoria">
                                         <div class="invalid-feedback" id="required_category_name" style="display: none;">
-                                            Categoria nombre es requerido!
+                                            Categoría nombre es requerido!
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-info" id="add_category_bttn">Agregar Categoria</button>
+                                    <button type="button" class="btn btn-info" id="add_category_bttn">Agregar Categoría</button>
                                 </div>
                             </div>
                         </div>
@@ -72,8 +72,8 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Categoria ID</th>
-                                    <th>Nombre de categoria</th>
+                                    <th>Categoría ID</th>
+                                    <th>Nombre de categoría</th>
                                     <th>Opción</th>
                                 </tr>
                             </thead> 
@@ -105,17 +105,17 @@
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Editar Categoría</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <div class="form-group">
-                                                                        <label for="nombre_categoria">Nombre de categoria</label>
+                                                                        <label for="nombre_categoria">Nombre de categoría</label>
                                                                         <input type="text" class="form-control" id="<?php echo "input_category_name_".$category["id_categoria"]; ?>" value="<?php echo $category["nombre_categoria"]; ?>">
                                                                         <div class="invalid-feedback" id = "<?php echo "invalid_input_".$category["id_categoria"]; ?>">
-                                                                            Nombre de categoria requerido.
+                                                                            Nombre de categoría requerido.
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -137,13 +137,13 @@
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Categoria</h5>
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Categoría</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    Seguro desea eliminar categoria?"<?php echo $category['nombre_categoria']; ?>"?
+                                                                    Seguro desea eliminar categoría "<?php echo $category['nombre_categoria']; ?>"?
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

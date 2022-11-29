@@ -139,14 +139,14 @@ $('#add_category_bttn').click(function()
             {
                 if(data['alert'] == "Warning")
                 {
-                    swal("Advertencia",data['message'], "warning").then((value) => {});
+                    swal("Advertencia","Cuidado", "warning").then((value) => {});
                 }
                 if(data['alert'] == "Success")
                 {
                     $('#add_new_category').modal('hide');
-                    swal("Nueva categoria",data['message'], "success").then((value) => 
+                    swal("Nueva Categoría","Categoría creada correctamente", "success").then((value) => 
                     {
-                        window.location.replace("servic-categoria.php");
+                        window.location("service-categories.php");
                     });
                 }
                 
@@ -189,9 +189,9 @@ $('.delete_category_bttn').click(function()
                 }
                 if(data['alert'] == "Success")
                 {
-                    swal("Nueva Categoria",data['message'], "success").then((value) => 
+                    swal("Nueva Categoría",data['message'], "success").then((value) => 
                     {
-                        window.location.replace("servic-categoria.php");
+                        window.location.replace("service-categories.php");
                     });
                 }     
         },
@@ -235,13 +235,13 @@ $('.edit_category_bttn').click(function()
             {
                 if(data['alert'] == "Warning")
                 {
-                    swal("Advertencia","Esta seguro que desea editar categoria?", "warning").then((value) => {});
+                    swal("Advertencia","Esta seguro que desea editar categoría?", "warning").then((value) => {});
                 }
                 if(data['alert'] == "Success")
                 {
-                    swal("Nueva Categoria","Editada correctamente", "success").then((value) => 
+                    swal("Nueva Categoría","Editada correctamente", "success").then((value) => 
                     {
-                        window.location.replace("servic-categoria.php");
+                        window.location.replace("service-categories.php");
                     });
                 }     
             },

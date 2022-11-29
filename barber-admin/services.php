@@ -20,14 +20,6 @@
      
         <div class="container-fluid">
     
-           
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Servicios</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generar Informe
-                </a>
-            </div>
             
             <?php
                 $do = '';
@@ -66,7 +58,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Servicio Nombre</th>
-                                        <th scope="col">Servicio Categoria</th>
+                                        <th scope="col">Servicio Categoría</th>
                                         <th scope="col">Descripción</th>
                                         <th scope="col">Precio</th>
                                         <th scope="col">Duración</th>
@@ -187,7 +179,7 @@
                                             $rows_categories = $stmt->fetchAll();
                                         ?>
                                         <div class="form-group">
-                                            <label for="service_category">Categoria del Servicio</label>
+                                            <label for="service_category">Categoría del Servicio</label>
                                             <select class="custom-select" name="service_category">
                                                 <?php
                                                     foreach($rows_categories as $category)
