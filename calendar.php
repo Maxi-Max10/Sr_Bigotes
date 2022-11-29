@@ -1,7 +1,7 @@
 
     <?php
     
-    //PHP INCLUDES
+    //PHP INCLUYE
 
 	include "connect.php";
 
@@ -10,7 +10,7 @@
 
 		?>
 
-        <!-- CALENDAR STYLE -->
+        <!-- ESTILO EN EL CALENDARIO -->
         
         <style type="text/css">
             
@@ -94,13 +94,13 @@
 
         </style>
 
-        <!-- END CALENDAR STYLE -->
+        <!-- FINAL DE ESTILO DEL CALENDARIO -->
 
-        <!-- START CALENDAR SLOT -->
+        <!-- RANURA DEL CALENDARIO DE INICIO -->
 
         <div class="calendar_slots" style="min-width: 600px;">
 
-            <!-- NEXT 10 DAYS -->
+            <!-- PROXIMO 10 DIAS-->
 
             <div class="appointments_days">
                 <?php
@@ -124,18 +124,18 @@
             </div>
             
 
-            <!-- DAY HOURS -->
+            <!-- HORARIOS DE DIAS-->
 
             <div class = 'available_booking_hours'>
                 <?php
 
-                    //SELECTED SERVICES
+                    //SERVICIOS SELECCIONADOS
 		            $desired_services = $_POST['selected_services'];
 		            
-                    //SELECTED EMPLOYEE
+                    //SELECCION DE EMPLEADOS
 		            $selected_employee = $_POST['selected_employee'];
 
-            		//Services Duration - End time expected
+            		//DURACCION DE LOS SERVICIOS:HORA DE FINALIZACION PREVISTAS
 		            $sum_duration = 0;
 		            
                     foreach($desired_services as $service)
@@ -178,7 +178,7 @@
                             
                             while($start >= $open_time && $result <= $close_time)
                             {
-                                // Check If the employee is available
+                                // COMPROBACION SI EL EMPLEADO ESTA DISPONIBLE
 
                                 $stmt_emp = $con->prepare("
                                     Select empleado_id
@@ -192,12 +192,12 @@
                                 $stmt_emp->execute(array($selected_employee,$day_id,$start, $result));
                                 $emp = $stmt_emp->fetchAll();
 
-                                //If employee is available
+                                //SI EL EMPLEADO ESTA DISPONIBLE
 
                                 if($stmt_emp->rowCount() != 0)
                                 {
 
-                                    //Check If there are no intersecting citas with the current one
+                                    //Comprobar si no hay citas que crucen con la actual
                                     $stmt = $con->prepare("
                                         Select * 
                                         from citas a
@@ -220,7 +220,7 @@
                         
                                     if($stmt->rowCount() != 0)
                                     {
-                                        //Show blank cell
+                                        //MOSTRAR CELDA EN BLANCO
                                     }
                                     else
                                     {
@@ -232,7 +232,7 @@
                                 }
                                 else
                                 {
-                                    //Show Blank cell
+                                    //MOSTRAR CELDAS EN BLANCO
                                 }
                                 
 
