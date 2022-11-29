@@ -151,8 +151,12 @@
                                         ?>
                                     </div>
 
+<<<<<<< HEAD
+                                    <!-- SAVE SCHEDULE BUTTON -->
+=======
                                     
                                     <!-- BOTÓN GUARDAR HORARIO -->
+>>>>>>> fb834f66291cc3286cdbba6fde9df7e353f6ee1c
 
                                     <div class="form-group">
                                         <button type="submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
