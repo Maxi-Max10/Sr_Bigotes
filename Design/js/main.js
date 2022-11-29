@@ -32,52 +32,7 @@ function phonenumber(inputtxt)
         return false;
     }
 }
-
-/* ============ SEND CONTACT FORM ============== */
-
-
-$('#contact_send').click(function()
-{
-    var contact_name = $('#contact_name').val();
-    var contact_email = $('#contact_email').val();
-    var contact_subject = $('#contact_subject').val();
-    var contact_message = $('#contact_message').val();
-
-    if($.trim(contact_name) === "" || $.trim(contact_email) === "" || $.trim(contact_subject) === "" || $.trim(contact_message) === "")
-    {
-        $('#contact_status_message').html("<div class = 'alert alert-danger'>One or more fields are empty!<div>");
-    }
-    else
-    {
-        if(!ValidateEmail(contact_email))
-        {
-            $('#contact_status_message').html("<div class = 'alert alert-danger'>please, enter a valid email!<div>");
-        }
-        else
-        {
-            $.ajax({
-                url: "Includes/php-files-ajax/contact.php",
-                type: "POST",
-                data:{contact_name:contact_name, contact_email:contact_email, contact_subject:contact_subject, contact_message:contact_message},
-                cache: false,
-                beforeSend: function(){
-                    $('#contact_ajax_loader').show();
-                },
-                complete: function(){
-                    $('#contact_ajax_loader').hide();
-                },
-                success: function (data) 
-                {
-                    $('#contact_status_message').html(data);
-                },
-                error: function(xhr, status, error) 
-                {
-                    alert("Internal ERROR has occured, please, try later!");
-                }
-            });
-        }
-    }
-});                               
+                            
 
 /* ============ TOGGLE MOBILE NAVBAR ============== */
 
@@ -220,7 +175,7 @@ function validateForm()
                 },
                 error: function(xhr, status, error) 
                 {
-                    alert('AN ERROR HAS BEEN ENCOUNTERED WHILE TRYING TO EXECUTE YOUR REQUEST');
+                    alert('A ocurrido un error en la solicitud');
                 }
             });
 

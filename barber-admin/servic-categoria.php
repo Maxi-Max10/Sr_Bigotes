@@ -105,17 +105,17 @@
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <div class="form-group">
-                                                                        <label for="nombre_categoria">Category Name</label>
+                                                                        <label for="nombre_categoria">Nombre de categoria</label>
                                                                         <input type="text" class="form-control" id="<?php echo "input_category_name_".$category["id_categoria"]; ?>" value="<?php echo $category["nombre_categoria"]; ?>">
                                                                         <div class="invalid-feedback" id = "<?php echo "invalid_input_".$category["id_categoria"]; ?>">
-                                                                            Category name is required.
+                                                                            Nombre de categoria requerido.
                                                                         </div>
                                                                     </div>
                                                                 </div>

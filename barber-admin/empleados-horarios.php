@@ -151,10 +151,15 @@
                                         ?>
                                     </div>
 
+<<<<<<< HEAD
                                     <!-- SAVE SCHEDULE BUTTON -->
+=======
+                                    
+                                    <!-- BOTÓN GUARDAR HORARIO -->
+>>>>>>> fb834f66291cc3286cdbba6fde9df7e353f6ee1c
 
                                     <div class="form-group">
-                                        <button type="Submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
+                                        <button type="submit" name="save_schedule_sbmt" class="btn btn-info">Guardar horario</button>
                                     </div>
                                 </form>
                         <?php
@@ -168,13 +173,13 @@
 
                         if(isset($_POST['save_schedule_sbmt']))
                         {
-                            $days = array("1"=>"Monday",
-                                "2"=>"Tuesday",
-                                "3"=>"Wednsday",
-                                "4"=>"Thursday",
-                                "5"=>"Friday",
-                                "6"=>"Saturday",
-                                "7"=>"Sunday") ;
+                            $days = array("1"=>"Lunes",
+                            "2"=>"Martes",
+                            "3"=>"Miércoles",
+                            "4"=>"Jueves",
+                            "5"=>"Viernes",
+                            "6"=>"Sábado",
+                            "7"=>"Domingo") ;
                             $stmt = $con->prepare("delete from horario_empleados where empleado_id = ?");
                             $stmt->execute(array($_POST['empleado_id']));
                             
@@ -185,12 +190,12 @@
                                     $stmt = $con->prepare("insert into horario_empleados(empleado_id,id_dia,desde_hora,hasta_hora) values(?, ?, ?,?)");
                                     $stmt->execute(array($_POST['empleado_id'],$key,$_POST[$value.'-from'],$_POST[$value.'-to']));
                                     
-                                    $message = "Se a actializado con exito el horario de los empleados!";
+                                    $message = "Se a actualizado con exito el horario de los empleados!";
                                     
                                     ?>
 
                                         <script type="text/javascript">
-                                            swal("Establecer horario de empleados","Ha establecido con éxito el horario!", "success").then((value) => {}); 
+                                            swal("Horario de empleados","Ha establecido con éxito el horario!", "success").then((value) => {}); 
                                         </script>
 
                                     <?php
