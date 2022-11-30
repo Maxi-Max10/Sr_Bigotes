@@ -117,7 +117,7 @@
                                                                                 </button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                            ¿Está seguro de que quiere eliminar este Servicio? "<?php echo $service['nombre_servicio']; ?>"?
+                                                                            ¿Está seguro de que quiere eliminar este servicio <?php echo $service['nombre_servicio']; ?>"?
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -524,7 +524,7 @@
                                         </div>
                                         
                                        
-                                        <button type="Submit" name="edit_service_sbmt" class="btn btn-primary">Guardar ediciones</button>
+                                        <button type="Submit" name="edit_service_sbmt" class="btn btn-primary">Guardar modificaciones</button>
                                     </form>
                                     
                                     <?php
@@ -559,7 +559,7 @@
                                             catch(Exception $e)
                                             {
                                                 echo "<div class = 'alert alert-danger' style='margin:10px 0px;'>";
-                                                    echo 'Error occurred: ' .$e->getMessage();
+                                                    echo 'Error : ' .$e->getMessage();
                                                 echo "</div>";
                                             }
                                             
