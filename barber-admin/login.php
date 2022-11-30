@@ -7,14 +7,11 @@
 		header('Location: index.php');
 		exit();
 	}
-	
-	$pageTitle = 'Barber Admin Login';
 	include 'connect.php';
 	include 'Includes/functions/functions.php';
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -25,7 +22,8 @@
     <title>Señor Bigotes</title>
     
     <link href="Design/fonts/css/all.min.css" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" type="text/css" href="Design/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Design/css/bootstrap.bundle.min.js">
     
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -54,22 +52,32 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <style>
+        .bg{
+            
+            background: #360033;  
+            background: -webkit-linear-gradient( right, #0b8793, #4e1c4c);  
+            background: linear-gradient( right, #0b8793, #360033); 
+            
+        }
+    </style>
 	
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login">
+    <div class="container mt-5 shadow-sm rounded-lg mb-5">
+        <div class="row ">
+            <div class="col bg img-fluid shadow-sm">
+                <img src="img/srBigote.png" >
+            </div>
+            <div class="col mt-3 mb-4 p-5">
             <form class="login-container validate-form" name="login-form" method="POST" action="login.php"
                 onsubmit="return validateLogInForm()">
-                <span class="login100-form-title p-b-32">
+                <span class="login100-form-title p-b-32 ">
                     Bienvenido
-
-                </span>
-
-                
+                </span>        
                 <!-- GUIÓN PHP AL ENVIAR -->
-
                 <?php
 
 					if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signin-button']))
@@ -117,44 +125,37 @@
 				?>
 
                 <!-- USERNAME INPUT  validar input de formularios--> 
-
-                <div class="form-input">
-                    <span class="txt1">Usuario</span>
-                    <input type="text" name="usuario" class="form-control"
-                        oninput="getElementById('required_username').style.display = 'none'" autocomplete="off">
-                    <span class="invalid-feedback" id="required_username">Usuario Requerido!</span>
+                <div class="mb-4">
+                    <div class="form-input">
+                        <span>Usuario</span>
+                        <input type="text" name="usuario" class="form-control"
+                            oninput="getElementById('required_username').style.display = 'none'" autocomplete="off">
+                        <span class="invalid-feedback" id="required_username">Usuario Requerido!</span>
+                    </div>
                 </div>
-
+                
                 <!-- PASSWORD -->
-
-                <div class="form-input">
-                    <span class="txt1">Contraseña</span>
-                    <input type="password" name="password" class="form-control"
-                        oninput="getElementById('required_password').style.display = 'none'"
-                        autocomplete="new-password">
-                    <span class="invalid-feedback" id="required_password">Contraseña requerida!</span>
+                <div class="mb-5">
+                    <div class="form-input">
+                        <span>Contraseña</span>
+                        <input type="password" name="password" class="form-control"
+                            oninput="getElementById('required_password').style.display = 'none'"
+                            autocomplete="new-password">
+                        <span class="invalid-feedback" id="required_password">Contraseña requerida!</span>
+                    </div>
                 </div>
-                <p>
-                    <button type="submit" name="signin-button">Iniciar Sesion</button>
-                </p>
-                <span class="forgotPW">Olvido su contraseña? <a href="#">Restablecer</a></span>
+                <div class="d-grid mb-3 mt-1">
+                
+                    <button class="btn" type="submit" name="signin-button">Iniciar Sesión</button>
+                
+                </div>
+               
             </form>
+            </div>
         </div>
-
-        <img class="image-container" src="img/sr Bigote .logo.png" alt="">
-
     </div>
 
 
-
-
-
-
-
-
-
-
-    <!-- End of Footer -->
 
     <!-- INCLUDE JS SCRIPTS -->
     <script src="Design/js/jquery.min.js"></script>

@@ -1,13 +1,11 @@
 
-
-/* ============ TITLE TOOLTIP TOOGLE ============== */
 	
 $(function () 
 {
 	$('[data-toggle="tooltip"]').tooltip();
 });
 
-/* ============ VALIDATE EMAIL ============== */
+/* ============ VALIDAR EMAIL ============== */
 
 function ValidateEmail(mail) 
 {
@@ -18,7 +16,7 @@ function ValidateEmail(mail)
     return (false);
 }
 
-/* ============ VALIDATE PHONE NUMBER ============== */
+/* ============ VALIDATE NUMERO DE TELEFONO ============== */
 
 function phonenumber(inputtxt)
 {
@@ -34,7 +32,7 @@ function phonenumber(inputtxt)
 }
                             
 
-/* ============ TOGGLE MOBILE NAVBAR ============== */
+/* ============ BARRA DE NAVEGACION MOVIL ============== */
 
 $(".mob-menu-toggle").click(function()
 {
@@ -52,14 +50,13 @@ $('.a-mob-menu').click(function()
 });
 
 
-/* ============ APPOINTMENT PAGE TOGGLE CHECKBOX ============== */
 
 $('.service_label').click(function() 
 {
     $(this).button('toggle');
 }); 
 
-/* ============ APPOINTMENT PAGE MULTISTEPS FORM JS CODE ============== */
+/* ============ SOLICITAR CITA NAVEGACION ============== */
 
 var currentTab = 0;
 showTab(currentTab);

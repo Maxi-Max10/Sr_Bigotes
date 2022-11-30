@@ -94,9 +94,9 @@
                                                 $delete_data = "delete_".$category["id_categoria"];
                                                 $edit_data = "edit_".$category["id_categoria"];
                                             ?>
-                                            <!-- eLIMINAR Y EDITAR -->
+                                            <!-- ELIMINAR Y EDITAR  SERVICIO CATEGORIA-->
                                             <ul>
-                                                <li class="list-inline-item" data-toggle="tooltip" title="Edit">
+                                                <li class="list-inline-item" data-toggle="tooltip" title="Editar">
                                                     <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $edit_data; ?>" data-placement="top"><i class="fa fa-edit"></i></button>
 
                                                     <!-- EDITAR Modal -->
@@ -120,8 +120,8 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-success edit_category_bttn">Save</button>
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                    <button type="button" data-id = "<?php echo $category['id_categoria']; ?>" class="btn btn-success edit_category_bttn">Guardar</button>
                                                                 </div>
                                                             </div>
                                                         </div>

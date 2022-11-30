@@ -86,7 +86,7 @@ $('.cancel_appointment_button').click(function()
 
 
     $.ajax({
-        url: "ajax_files/appointments_ajax.php",
+        url: "ajax_files/citas_ajax.php",
         type: "POST",
         data:{do:do_,id_citas:id_citas,razon_cancelacion:razon_cancelacion},
         success: function (data) 
@@ -131,7 +131,7 @@ $('#add_category_bttn').click(function()
     {
         $.ajax(
         {
-            url:"ajax_files/service_categories_ajax.php",
+            url:"ajax_files/servicio_categoria_ajax.php",
             method:"POST",
             data:{nombre_categoria:nombre_categoria,do:do_},
             dataType:"JSON",
@@ -177,7 +177,7 @@ $('.delete_category_bttn').click(function()
 
     $.ajax(
     {
-        url:"ajax_files/service_categories_ajax.php",
+        url:"ajax_files/servicio_categoria_ajax.php",
         method:"POST",
         data:{id_categoria:id_categoria,action:action},
         dataType:"JSON",
@@ -189,7 +189,7 @@ $('.delete_category_bttn').click(function()
                 }
                 if(data['alert'] == "Success")
                 {
-                    swal("Nueva Categoría",data['message'], "success").then((value) => 
+                    swal("Eliminada",data['message'], "success").then((value) => 
                     {
                         window.location.replace("service-categories.php");
                     });
@@ -227,7 +227,7 @@ $('.edit_category_bttn').click(function()
     {
         $.ajax(
         {
-            url:"ajax_files/service_categories_ajax.php",
+            url:"ajax_files/servicio_categoria_ajax.php",
             method:"POST",
             data:{id_categoria:id_categoria,nombre_categoria:nombre_categoria,action:action},
             dataType:"JSON",
@@ -239,7 +239,7 @@ $('.edit_category_bttn').click(function()
                 }
                 if(data['alert'] == "Success")
                 {
-                    swal("Nueva Categoría","Editada correctamente", "success").then((value) => 
+                    swal("Categoría editada!","Editada correctamente", "success").then((value) => 
                     {
                         window.location.replace("service-categories.php");
                     });
@@ -324,7 +324,7 @@ $(".sb-worktime-day-switch").click(function()
 
     $.ajax(
     {
-        url:"ajax_files/employees_ajax.php",
+        url:"ajax_files/empleados_ajax.php",
         method:"POST",
         data:{empleado_id:empleado_id,do:do_},
         success: function (data) 

@@ -84,9 +84,9 @@
                                                     ?>
                                                         <ul class="list-inline m-0">
 
-                                                            <!-- BOTÓN EDITAR -->
+                                                            <!-- BOTÓN EDITAR EMPLEADO-->
 
-                                                            <li class="list-inline-item" data-toggle="tooltip" title="Edit">
+                                                            <li class="list-inline-item" data-toggle="tooltip" title="Editar">
                                                                 <button class="btn btn-success btn-sm rounded-0">
                                                                     <a href="empleados.php?do=Edit&empleado_id=<?php echo $employee['empleado_id']; ?>" style="color: white;">
                                                                         <i class="fa fa-edit"></i>
@@ -94,12 +94,12 @@
                                                                 </button>
                                                             </li>
 
-                                                            <!-- BOTÓN ELIMINAR -->
+                                                            <!-- BOTÓN ELIMINAR EMPLEADO-->
 
-                                                            <li class="list-inline-item" data-toggle="tooltip" title="Borrar">
+                                                            <li class="list-inline-item" data-toggle="tooltip" title="Eliminar">
                                                                 <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $delete_data; ?>" data-placement="top"><i class="fa fa-trash"></i></button>
 
-                                                                <!-- Eliminar Modal -->
+                                                                <!-- Eliminar Modal  Empleado-->
 
                                                                 <div class="modal fade" id="<?php echo $delete_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $delete_data; ?>" aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">

@@ -1,51 +1,11 @@
 
-body{
-    background-image: linear-gradient(to top, #141416 0%, #000000 100%);
-}
-
-.login 
-{
-    padding: 2rem;
-    height: 33em;/*altura*/
-    width: 40%;/*ancho*/
-    margin: 6em auto;/*margen*/
-    background-color: #fff;
-    
-    position: relative;/*posición*/
-    top: 20px; right: 200px; 
-    border-radius:10px;
-    /*top= arriba 20px y se desplaza hacia la derecha 80 px */
-    
-    
-}
 .image-container{
-    
-    padding: 2rem;/*establece el espacio con relleno*/
-    width: 40%; /*ancho*/ 
-    height: 33em;/*altura*/
     background: #360033;  
     background: -webkit-linear-gradient(to right, #0b8793, #4e1c4c);  
     background: linear-gradient(to right, #0b8793, #360033); 
-    position: relative;
-    left: 725px;
-    bottom:604px;
-   border-radius: 0px 10px 10px 0px;
+
 }
 
-@media (max-width: 560px) 
-{
-    .login 
-    {
-        padding-left: 15px;
-        padding-right: 15px;
-        margin: 30px;
-    }
-}
-
-.form-input
-{
-    margin-bottom: 50px;
-}
 
 
 .login input[type="text"],
@@ -77,13 +37,10 @@ body{
 
 
 
-.login button[type="submit"] 
+.btn[type="submit"] 
 {
-   
-    width: 80%;
-    height: 20%;
-    letter-spacing: 1px;
-    color: white;
+    width: 100%;
+    color: #e6e6e6;
     border: none;
     border-radius: 5px;
     background: #360033;  
@@ -93,20 +50,7 @@ body{
 }
 
 
-input:focus .border
-{
-    width :100%;
-    height: 100%;
-}
 
-.login .forgotPW
-{
-  font-size: 13px;
-  padding: 10px;
-  text-align: center;
-  display: block;
-  margin: 0;
-}
 
 .login100-form-title 
 {
