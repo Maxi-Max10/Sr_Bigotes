@@ -25,15 +25,7 @@ Esta función devuelve el número de elementos en una tabla dada
 		return $stat_->fetchColumn();
 	}
 
-    /*
-	
-	** Check Items Function
-	** Function to Check Item In Database [Function with Parameters]
-	** $select = the item to select [Example : user, item, category]
-	** $from = the table to select from [Example : users, items, categories]
-	** $value = The value of select [Example: Ossama, Box, Electronics]
-
-	*/
+ 
 	function checkItem($select, $from, $value)
 	{
 		global $con;

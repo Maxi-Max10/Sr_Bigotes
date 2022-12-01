@@ -139,7 +139,7 @@ $('#add_category_bttn').click(function()
             {
                 if(data['alert'] == "Warning")
                 {
-                    swal("Advertencia","Cuidado", "warning").then((value) => {});
+                    swal("Advertencia",data["message"], "warning").then((value) => {});
                 }
                 if(data['alert'] == "Success")
                 {
